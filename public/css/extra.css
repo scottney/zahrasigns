@@ -1,0 +1,135 @@
+#app {
+    font-family: 'Franklin Gothic';
+}
+
+#mainNavMenu {
+    width: 100%;
+    background: #E1F4FD;
+    position: fixed;
+    z-index: 1000;
+}
+
+#mainLogo {
+    height: 50px;
+    width: 175px;
+}
+
+#mainLogoText {
+    font-family: ;
+}
+
+#mainNavMenuLink {
+    color: #000000;
+    font-size: 24px;
+}
+
+#mainNavMenuLink:hover {
+    color: #2E3191;
+}
+
+#navbarTogglerColor {
+    background-color: #FFFFFF;
+}
+
+#mainNavMenuLinkHolder:hover {
+    border-top: 1px solid #000000;
+    border-right: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-bottom: 3px solid #000000;
+    border-radius: 15px;
+}
+
+#mainContentHolder {
+    margin-top: 65px;
+}
+
+@media screen and (max-width: 300px) {
+    #zarasignsMainCarouselImagesHolder {
+        width: 100%;
+        height: 300px;
+    }
+
+    .slide1, .slide2, .slide3 {
+        width: 100%;
+        height: 300px;
+    }   
+}
+
+@media screen and (min-width: 300px) {
+    #zarasignsMainCarouselImagesHolder {
+        width: 100%;
+        height: 300px;
+    }
+
+    .slide1, .slide2, .slide3 {
+        width: 100%;
+        height: 300px;
+    }   
+}
+
+@media screen and (min-width: 600px) {
+    #zarasignsMainCarouselImagesHolder {
+        width: 100%;
+        height: 450px;
+    }
+
+    .slide1, .slide2, .slide3 {
+        width: 100%;
+        height: 450px;
+    }   
+}
+
+@media screen and (min-width: 1200px) {
+    #zarasignsMainCarouselImagesHolder {
+        width: 100%;
+        height: 600px;
+    }
+
+    .slide1, .slide2, .slide3 {
+        width: 100%;
+        height: 600px;
+    }   
+}
+
+@media screen and (min-width: 1800px) {
+    #zarasignsMainCarouselImagesHolder {
+        width: 100%;
+        height: 900px;
+    }
+
+    .slide1, .slide2, .slide3 {
+        width: 100%;
+        height: 900px;
+    }   
+}
+
+@media screen and (min-width: 2400px) {
+    #zarasignsMainCarouselImagesHolder {
+        width: 100%;
+        height: 1200px;
+    }
+
+    .slide1, .slide2, .slide3 {
+        width: 100%;
+        height: 1200px;
+    }   
+}
+
+@media screen and (min-width: 3600px) {
+    #zarasignsMainCarouselImagesHolder {
+        width: 100%;
+        height: 1800px;
+    }
+
+    .slide1, .slide2, .slide3 {
+        width: 100%;
+        height: 1800px;
+    }   
+}
+
+
+
+
+
+
+
