@@ -76,8 +76,8 @@
                                 <!-- <b class="text-white" id="mainLogoText">{{ config('app.name', 'Zahrasigns') }}</b> -->
                             </a>
 
-                            <button class="navbar-toggler" id="navbarTogglerColor" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                                <span class="navbar-toggler-icon"></span>
+                            <button class="navbar-toggler" id="navbarToggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                                <span class="navbar-toggler-icon" id="navbarTogglerIcon"></span>
                             </button>
 
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">

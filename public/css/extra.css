@@ -24,10 +24,6 @@
     text-transform: uppercase;
 }
 
-#navbarTogglerColor {
-    background-color: #FFFFFF;
-}
-
 #mainNavMenuLinkHolder:hover {
     border-radius: 15px;
     background: #2E3191;
@@ -37,7 +33,21 @@
     margin-top: 65px;
 }
 
+/*************************** Start of very small screen styling ***************************/
+
 @media screen and (max-width: 300px) {
+    #navbarToggler {
+        background-color: #FFFFFF;
+        height: 35px;
+        width: 35px;
+    }
+
+    #navbarTogglerIcon {
+        background-color: #FFFFFF;
+        height: 15px;
+        width: 15px;
+    }
+
     #zahrasignsMainCarouselImagesHolder {
         width: 100%;
         height: 300px;
@@ -46,10 +56,51 @@
     .slide1, .slide2, .slide3 {
         width: 100%;
         height: 300px;
-    }   
+    }
+
+     #zahrasignsMainCarouselTextArea {
+        /*border: 1px solid #FFFFFF;*/
+        height: 30%;
+        width: 45%;
+        position: absolute;
+        margin-left: 25px;
+        margin-top: -225px;
+        border-radius: 15px;
+        padding: 0.5px;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    #zahrasignsMainCarouselText {
+        font-size: 12px;
+        display: none;
+    }
+
+    #zahrasignsMainCarouselTextDescription {
+        font-size: 10px;
+        text-transform: uppercase;
+        margin-top: 15px;
+        margin-left: 15px;
+    }
 }
+
+/*************************** End of very small screen styling ***************************/
+
+/*************************** Start of small-medium screen styling ***************************/
 
 @media screen and (min-width: 300px) {
+    #navbarToggler {
+        background-color: #FFFFFF;
+        height: 45px;
+        width: 45px4
+    }
+
+    #navbarTogglerIcon {
+        background-color: #FFFFFF;
+        height: 25px;
+        width: 25px;
+    }
+
     #zahrasignsMainCarouselImagesHolder {
         width: 100%;
         height: 300px;
@@ -58,10 +109,52 @@
     .slide1, .slide2, .slide3 {
         width: 100%;
         height: 300px;
-    }   
+    }
+
+    #zahrasignsMainCarouselTextArea {
+        /*border: 1px solid #FFFFFF;*/
+        height: 30%;
+        width: 45%;
+        position: absolute;
+        margin-left: 25px;
+        margin-top: -225px;
+        border-radius: 15px;
+        padding: 0.5px;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    #zahrasignsMainCarouselText {
+        font-size: 12px;
+        display: none;
+    }
+
+    #zahrasignsMainCarouselTextDescription {
+        font-size: 10px;
+        text-transform: uppercase;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
 }
+
+/*************************** End of small-medium screen styling ***************************/
+
+/*************************** Start of tablet screen styling ***************************/
 
 @media screen and (min-width: 600px) {
+    #navbarToggler {
+        background-color: #FFFFFF;
+        height: 45px;
+        width: 45px4
+    }
+
+    #navbarTogglerIcon {
+        background-color: #FFFFFF;
+        height: 25px;
+        width: 25px;
+    }
+
     #zahrasignsMainCarouselImagesHolder {
         width: 100%;
         height: 450px;
@@ -70,8 +163,37 @@
     .slide1, .slide2, .slide3 {
         width: 100%;
         height: 450px;
-    }   
+    }
+
+    #zahrasignsMainCarouselTextArea {
+        /*border: 1px solid #FFFFFF;*/
+        height: 30%;
+        width: 45%;
+        position: absolute;
+        margin-left: 35px;
+        margin-top: -395px;
+        border-radius: 35px;
+        padding: 0.5px;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    #zahrasignsMainCarouselText {
+        font-size: 18px;
+        display: none;
+    }
+
+    #zahrasignsMainCarouselTextDescription {
+        font-size: 16px;
+        text-transform: uppercase;
+        margin-top: 15px;
+        margin-left: 15px;
+    }  
 }
+
+/*************************** End of tablet screen styling ***************************/
+
+/*************************** Start of medium screen styling ***************************/
 
 @media screen and (min-width: 1200px) {
     #zahrasignsMainCarouselImagesHolder {
@@ -89,8 +211,8 @@
         height: 40%;
         width: 45%;
         position: absolute;
-        margin-left: 7.5%;
-        margin-top: -40%;
+        margin-left: 45px;
+        margin-top: -525px;
         border-radius: 55px;
         padding: 5px;
         background: rgb(0, 0, 0);
@@ -103,10 +225,16 @@
     }
 
     #zahrasignsMainCarouselTextDescription {
-        font-size: 32px;
+        font-size: 30px;
         text-transform: uppercase;
+        margin-top: 25px;
+        margin-left: 25px;
     }
 }
+
+/*************************** End of medium screen styling ***************************/
+
+/*************************** Start of large screen styling ***************************/
 
 @media screen and (min-width: 1800px) {
     #zahrasignsMainCarouselImagesHolder {
@@ -117,8 +245,37 @@
     .slide1, .slide2, .slide3 {
         width: 100%;
         height: 900px;
-    }   
+    }
+
+     #zahrasignsMainCarouselTextArea {
+        /*border: 1px solid #FFFFFF;*/
+        height: 30%;
+        width: 45%;
+        position: absolute;
+        margin-left: 45px;
+        margin-top: -795px;
+        border-radius: 55px;
+        padding: 5px;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    #zahrasignsMainCarouselText {
+        font-size: 32px;
+        display: none;
+    }
+
+    #zahrasignsMainCarouselTextDescription {
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-top: 45px;
+        margin-left: 45px;
+    }
 }
+
+/*************************** End of large screen styling ***************************/
+
+/*************************** Start of extra large screen styling ***************************/
 
 @media screen and (min-width: 2400px) {
     #zahrasignsMainCarouselImagesHolder {
@@ -129,8 +286,37 @@
     .slide1, .slide2, .slide3 {
         width: 100%;
         height: 1200px;
-    }   
+    }
+
+    #zahrasignsMainCarouselTextArea {
+        /*border: 1px solid #FFFFFF;*/
+        height: 20%;
+        width: 45%;
+        position: absolute;
+        margin-left: 45px;
+        margin-top: -995px;
+        border-radius: 55px;
+        padding: 5px;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    #zahrasignsMainCarouselText {
+        font-size: 36px;
+        display: none;
+    }
+
+    #zahrasignsMainCarouselTextDescription {
+        font-size: 34px;
+        text-transform: uppercase;
+        margin-top: 55px;
+        margin-left: 55px;
+    }
 }
+
+/*************************** End of extra large screen styling ***************************/
+
+/*************************** Start of extremely large screen styling ***************************/
 
 @media screen and (min-width: 3600px) {
     #zahrasignsMainCarouselImagesHolder {
@@ -141,8 +327,35 @@
     .slide1, .slide2, .slide3 {
         width: 100%;
         height: 1800px;
-    }   
+    }
+
+    #zahrasignsMainCarouselTextArea {
+        /*border: 1px solid #FFFFFF;*/
+        height: 15%;
+        width: 45%;
+        position: absolute;
+        margin-left: 145px;
+        margin-top: -1595px;
+        border-radius: 55px;
+        padding: 5px;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    #zahrasignsMainCarouselText {
+        font-size: 48px;
+        display: none;
+    }
+
+    #zahrasignsMainCarouselTextDescription {
+        font-size: 46px;
+        text-transform: uppercase;
+        margin-top: 65px;
+        margin-left: 65px;
+    }
 }
+
+/*************************** End of extremely large screen styling ***************************/
 
 
 

@@ -28,7 +28,7 @@
 	<div id="zahrasignsMainCarouselTextArea">
 		<h1 class="text-white text-center mt-3" id="zahrasignsMainCarouselText"><u>ZAHRA SIGN SYSTEMS LTD</u></h1>
 
-		<h2 class="text-white mt-5 ms-5" id="zahrasignsMainCarouselTextDescription"><span class="typed-text"></span><span class="ourCursor">&nbsp;</span></h2>
+		<h2 class="text-white" id="zahrasignsMainCarouselTextDescription"><span class="typed-text"></span><span class="ourCursor">&nbsp;</span></h2>
 	</div>
 
 	<!-- <button class="carousel-control-prev" type="button" data-bs-target="#zahrasignsMainCarousel" data-bs-slide="prev">
