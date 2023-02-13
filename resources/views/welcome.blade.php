@@ -33,6 +33,100 @@
 				<h2 class="text-white" id="zahrasignsMainCarouselTextDescription"><span class="typed-text"></span><span class="ourCursor">&nbsp;</span></h2>
 			</div>
 
+			<div class="bg-dark rounded" id="zahrasignsGetQuoteFormArea">
+				<h3 class="text-center text-white mt-1" id="zahrasignsGetQuoteFormTitle">Request a Quote</h3>
+
+				<form action="{{ route('requestQuote.store') }}" method="POST" class="mt-3" role="form" accept-charset="UTF-8" enctype="multipart/form-data">
+					@csrf
+
+					<div class="row p-2">
+						<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+							<label for="input_full_names" class="form-label text-white" id="label_input_full_names">Full Names:</label>
+
+							<input type="text" name="full_names" class="form-control @error('full_names') is-invalid @enderror border border-secondary" id="input_full_names" minlength="3" maxlength="50" placeholder="John Doe" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="The full names should contain between 3-50 characters" autofocus>
+
+							@error('full_names')
+                               	<span class="invalid-feedback alert alert-warning" role="alert">
+                                	<strong class="text-danger"><i class="fa-solid fa-circle-exclamation"></i>{{$message}}</strong>
+                               	</span>
+                            @enderror
+						</div>
+
+						<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+							<label for="input_email" class="form-label text-white" id="label_input_email">Email:</label>
+
+							<input type="email" name="email" class="form-control @error('email') is-invalid @enderror border border-secondary" id="input_email" minlength="3" maxlength="50" placeholder="Johndoe@gmail.com" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="The email address should contain between 3-50 characters" autofocus>
+
+							@error('email')
+                               	<span class="invalid-feedback alert alert-warning" role="alert">
+                                	<strong class="text-danger"><i class="fa-solid fa-circle-exclamation"></i>{{$message}}</strong>
+                               	</span>
+                            @enderror
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+							<label for="input_phone_number" class="form-label text-white" id="label_input_phone_number">Phone Number:</label>
+
+							<input type="tel" name="phone_number" class="form-control @error('phone_number') is-invalid @enderror border border-secondary" id="input_phone_number" minlength="7" maxlength="15" placeholder="+254000000000" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="The phone number should contain between 7-15 characters inclusive of your country code" autofocus>
+
+							@error('phone_number')
+                               	<span class="invalid-feedback alert alert-warning" role="alert">
+                                	<strong class="text-danger"><i class="fa-solid fa-circle-exclamation"></i>{{$message}}</strong>
+                               	</span>
+                            @enderror
+						</div>
+
+						<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+							<label for="input_postal_code" class="form-label text-white" id="label_input_postal_code">Postal Code:</label>
+
+							<input type="text" name="postal_code" class="form-control @error('postal_code') is-invalid @enderror border border-secondary" id="input_postal_code" minlength="3" maxlength="20" placeholder="90210" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="The postal code should contain between 3-30 characters" autofocus>
+
+							@error('postal_code')
+                               	<span class="invalid-feedback alert alert-warning" role="alert">
+                                	<strong class="text-danger"><i class="fa-solid fa-circle-exclamation"></i>{{$message}}</strong>
+                               	</span>
+                            @enderror
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+							<label for="input_quote" class="form-label text-white" id="label_input_quote">Request Quote:</label>
+
+							<textarea name="quote" class="form-control @error('quote') is-invalid @enderror border border-secondary" id="input_quote" minlength="25" maxlength="255" placeholder="Please provide us with information about your quotation from here" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="The requested quote should contain between 25-255 characters" rows="3" autofocus></textarea>
+
+							@error('quote')
+                               	<span class="invalid-feedback alert alert-warning" role="alert">
+                                	<strong class="text-danger"><i class="fa-solid fa-circle-exclamation"></i>{{$message}}</strong>
+                               	</span>
+                            @enderror
+						</div>
+					</div>
+
+					<div class="row p-2">
+						<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+							<label for="inputUploadFile" class="form-label text-white" id="label_input_upload_file">Please upload any files from here</label>
+							<input type="file" name="file_upload" class="form-control @error('file_upload') is-invalid @enderror border border-secondary" id="input_upload_file" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="File uploads...">
+
+							@error('file_upload')
+                               	<span class="invalid-feedback alert alert-warning" role="alert">
+                                	<strong class="text-danger"><i class="fa-solid fa-circle-exclamation"></i>{{$message}}</strong>
+                               	</span>
+                            @enderror
+						</div>
+					</div>
+
+					<div class="row pt-5 pb-5">
+						<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+							<button type="submit" class="btn btn-primary rounded-pill ms-3" id="zahrasignsGetQuoteFormButton">Submit Request</button>
+						</div>
+					</div>
+					
+				</form>
+			</div>
+
 			<!-- <button class="carousel-control-prev" type="button" data-bs-target="#zahrasignsMainCarousel" data-bs-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Previous</span>
@@ -334,39 +428,149 @@
 
 <!------------------------------ Start of numbers counter section ------------------------------>
 
-<div class="row m-0 pb-5 darkShade" id="statisticsCounter">
+<div class="row m-0 pb-5" id="statisticsCounter">
 	<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-		<h2 class="text-center text-white pb-5" id="statisticsCounterTitle">We are result driven, the numbers don't lie</h2>
+		<h2 class="text-center pb-5" id="statisticsCounterTitle">We are result driven</h2>
 
 		<div class="row">
 			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 text-center p-3">
-				<i class="fa fa-clock text-white" id="portFolioIcon"></i>
-				<p class="text-white" id="portFolioNumber"><span class="counter">100000</span><span>+</span></p>
-				<p class="text-white" id="portFolioText">Working Hours</p>
+				<i class="fa fa-clock" id="portFolioIcon"></i>
+				<p id="portFolioNumber"><span class="counter">100000</span><span>+</span></p>
+				<p id="portFolioText">Working Hours</p>
 			</div>
 
 			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 text-center p-3">
-				<i class="fa fa-briefcase text-white" id="portFolioIcon"></i>
-				<p class="text-white" id="portFolioNumber"><span class="counter">2500</span><span>+</span></p>
-				<p class="text-white" id="portFolioText">Completed Projects</p>
+				<i class="fa fa-briefcase" id="portFolioIcon"></i>
+				<p id="portFolioNumber"><span class="counter">2500</span><span>+</span></p>
+				<p id="portFolioText">Completed Projects</p>
 			</div>
 
 			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 text-center p-3">
-				<i class="fa fa-briefcase text-white" id="portFolioIcon"></i>
-				<p class="text-white" id="portFolioNumber"><span class="counter">5000</span><span>+</span></p>
-				<p class="text-white" id="portFolioText">Happy Clients</p>
+				<i class="fa fa-briefcase" id="portFolioIcon"></i>
+				<p id="portFolioNumber"><span class="counter">5000</span><span>+</span></p>
+				<p id="portFolioText">Happy Clients</p>
 			</div>
 
 			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 text-center p-3">
-				<i class="fa fa-history text-white" id="portFolioIcon"></i>
-				<p class="text-white" id="portFolioNumber"><span class="counter">60</span><span>+</span></p>
-				<p class="text-white" id="portFolioText">Years of Experience</p>
+				<i class="fa fa-history" id="portFolioIcon"></i>
+				<p id="portFolioNumber"><span class="counter">60</span><span>+</span></p>
+				<p id="portFolioText">Years of Experience</p>
 			</div>
 		</div>
 	</div>
 </div>
 
 <!------------------------------ End of numbers counter section ------------------------------>
+
+<!------------------------------ Start of testimonials section ------------------------------>
+
+<div class="row m-0" id="testimonialSection">
+	<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 darkShade">
+		<h2 class="text-center text-white" id="testimonialsTitle">Testimonials</h2>
+
+		<div class="row">
+			<div class="col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1"></div>
+
+			<div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
+				<div class="card bg-dark rounded" id="testimonialsCard">
+					<!--<div class="card-header"></div>-->
+
+					<div class="card-body">
+						<div id="zahrasignsMainTestimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+							<div class="carousel-inner" id="zahrasignsMainCarouselTestimonialsHolder">
+								<div class="carousel-item active">
+									<div class="row">
+										<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 d-flex justify-content-center">
+											<div id="clientTestimonialsImage"></div>
+										</div>
+
+										<div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+											<q class="text-white"><b>Zahra Sign Systems LTD</b> provided us with top-notch 3D signage that perfectly captured the essence of our brand. Their team was incredibly knowledgeable and dedicated, helping us every step of the way. Their attention to detail and commitment to excellence truly sets them apart from the competition. I would highly recommend <b>Zahra Sign Systems LTD</b> to anyone in need of professional, high-quality signage solutions.</q>
+
+											<div class="row pt-3">
+												<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+													<p class="text-center text-white"><b>Company/Business Name:</b></p>
+													<p class="text-center text-white"><b>Employee/Client Name:</b></p>
+													<p class="text-center text-white"><b>Employee Position:</b></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="carousel-item">
+									<div class="row">
+										<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 d-flex justify-content-center">
+											<div id="clientTestimonialsImage"></div>
+										</div>
+
+										<div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+											<q class="text-white">As a business owner, it was important for me to find a 3D signage company that I could trust to deliver on their promises. <b>Zahra Sign Systems LTD</b> exceeded all of my expectations. From the initial consultation to the final installation, their team was professional, efficient, and extremely helpful. Their innovative designs and cutting-edge technology brought my brand to life in a way I never thought possible. I am truly grateful to have found <b>Zahra Sign Systems LTD.</b></q>
+
+											<div class="row pt-3">
+												<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+													<p class="text-center text-white"><b>Company/Business Name:</b></p>
+													<p class="text-center text-white"><b>Employee/Client Name:</b></p>
+													<p class="text-center text-white"><b>Employee Position:</b></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="carousel-item">
+									<div class="row">
+										<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 d-flex justify-content-center">
+											<div id="clientTestimonialsImage"></div>
+										</div>
+
+										<div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
+											<q class="text-white">I had the pleasure of working with <b>Zahra Sign Systems LTD</b> on a recent project and was blown away by their expertise and professionalism. Their 3D signage solutions transformed the look and feel of our space, adding a level of sophistication and style that was exactly what we were looking for. The team at <b>Zahra Sign Systems LTD</b> went above and beyond to ensure our complete satisfaction and I would not hesitate to work with them again in the future.</q>
+
+											<div class="row pt-3">
+												<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+													<p class="text-center text-white"><b>Company/Business Name:</b></p>
+													<p class="text-center text-white"><b>Employee/Client Name:</b></p>
+													<p class="text-center text-white"><b>Employee Position:</b></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<button class="carousel-control-prev darkShade" id="zahrasignsMainTestimonialsCarouselButtons" type="button" data-bs-target="#zahrasignsMainTestimonialsCarousel" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+
+							<button class="carousel-control-next darkShade" id="zahrasignsMainTestimonialsCarouselButtons" type="button" data-bs-target="#zahrasignsMainTestimonialsCarousel" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+					</div>
+
+					<!--<div class="card-footer"></div>-->
+				</div>
+			</div>
+
+			<div class="col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1"></div>
+		</div>
+	</div>
+</div>
+
+<!------------------------------ End of testimonials section ------------------------------>
+
+<!------------------------------ Start of map section ------------------------------>
+
+<div class="row m-0">
+	<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 p-0">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15955.009857006935!2d36.86585!3d-1.3244026!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f118ae78d2ba9%3A0x72a2b4136896c349!2sZahra%20Sign%20Systems%20Ltd!5e0!3m2!1sen!2ske!4v1675960879502!5m2!1sen!2ske" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mainMapSection"></iframe>
+	</div>
+</div>
+
+<!------------------------------ End of map section ------------------------------>
 
 @endsection
 

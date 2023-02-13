@@ -25,8 +25,12 @@
     text-decoration: none;
 }
 
-#mainNavMenuLinkHolder:hover {
-    border-radius: 15px;
+#mainNavMenuLink {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+#mainNavMenuLink:hover {
     background: #2E3191;
 }
 
@@ -50,6 +54,12 @@
     width: 100%;
     background-size: cover;
     background-position: center;
+}
+
+#input_full_names:hover, #input_email:hover, #input_phone_number:hover, #input_postal_code:hover, 
+#input_quote:hover {
+    background: #CCEEFF;
+    cursor: pointer;
 }
 
 #introductionSectionBackground {
@@ -126,12 +136,20 @@
 }
 
 #portFolioSection {
-    background-image: url('');
+    background-image: url('/images/CITY-BG.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
     height: auto;
+}
+
+#portFolioCardCol a {
+    text-decoration: none;
+}
+
+#portFolioCardCol a #portFolioCard #portFolioCardText {
+    font-weight: 900;
 }
 
 #portFolioCard:hover {
@@ -182,6 +200,289 @@
     font-size: 18px;
     font-weight: 600;
 }
+
+#statisticsCounter {
+    background-image: url('/images/special-background/BG-2 - Copy.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#statisticsCounterTitle {
+    color: #2E3191;
+    font-weight: 700;
+}
+
+#portFolioIcon {
+    color: #00ADEE;
+}
+
+#portFolioText {
+    color: #00ADEE;
+}
+
+#testimonialSection {
+    background-image: url('/images/sign3.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+}
+
+#zahrasignsMainTestimonialsCarouselButtons {
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+}
+
+#clientTestimonialsImage {
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    width: 255px;
+    height: 255px;
+}
+
+#mainMapSection {
+    width: 100%;
+    height: 475px;
+}
+
+#footerTitleText {
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+#footerContactsIcons {
+    color: #FFFFFF;
+}
+
+#footerContactsIconsLinks {
+    color: #FFFFFF;
+    font-size: 10px;
+}
+
+#footerContactsIconsLinks a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#footerContactsIconsLinks:hover a {
+    color: #007AFF;
+    cursor: pointer;
+}
+
+#mainFooterLogo {
+    height: 72px;
+    width: 275px;
+}
+
+#argoneTech {
+    text-decoration: none;
+    color: #FFFF33;
+}
+
+/******************************* Start of Contact Us Icons styling *******************************/
+
+#sy-whatshelp {
+  right: 25px;
+  bottom: 25px;
+  position: fixed;
+  z-index: 9999;
+}
+
+#sy-whatshelp a {
+  position: relative;
+}
+
+#sy-whatshelp a.sywh-open-services {
+  background-color: #129bf4;
+  color: #fff;
+  line-height: 55px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 23px;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  box-shadow: 2px 2px 8px -3px #000;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  display: inline-block;
+}
+
+#sy-whatshelp a.sywh-open-services i {
+  line-height: 55px;
+}
+
+#sy-whatshelp a.sywh-open-services i.fa-times {
+  display: none;
+}
+
+#sy-whatshelp .sywh-services {
+  width: 55px;
+  height: auto;
+}
+
+#sy-whatshelp .sywh-services a {
+  display: none;
+}
+
+#sy-whatshelp .sywh-services a i {
+  background-color: #129bf4;
+  color: #fff;
+  line-height: 55px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 23px;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  box-shadow: 2px 2px 8px -3px #000;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+}
+
+#sy-whatshelp .sywh-services a.facebook i {
+  background-color: #0084ff;
+}
+
+#sy-whatshelp .sywh-services a.whatsapp i {
+  background-color: #25d366;
+}
+
+#sy-whatshelp .sywh-services a.call i {
+  background-color: #ff6600;
+}
+
+#sy-whatshelp .sywh-services a.instagram i {
+  background-color: #660066;
+}
+
+#sy-whatshelp .sywh-services a.mailAddress i {
+  background-color: #0084ff;
+}
+
+#sy-whatshelp .sywh-services a.twitter i {
+    background-color: #0084ff;
+}
+
+a[data-tooltip] {
+  position: relative;
+}
+
+a[data-tooltip]::before,
+a[data-tooltip]::after {
+  position: absolute;
+  display: none;
+  opacity: 0.85;
+  transition: all 0.3s ease-in-out;
+}
+
+a[data-tooltip]::before {
+  content: attr(data-tooltip);
+  background: #000;
+  color: #fff;
+  font-size: 13px;
+  padding: 7px 11px;
+  border-radius: 5px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+a[data-tooltip]::after {
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  content: "";
+}
+
+a[data-tooltip]:hover::before,
+a[data-tooltip]:hover::after {
+  display: block;
+}
+
+a.sywh-open-services[data-tooltip]::before,
+a.sywh-open-services[data-tooltip]::after {
+  display: block;
+}
+
+a.data-tooltip-hide[data-tooltip]::before,
+a.data-tooltip-hide[data-tooltip]::after {
+  display: none !important;
+}
+
+a.sywh-open-services[data-tooltip][data-placement="left"]::before {
+  top: 11px;
+}
+
+a[data-tooltip][data-placement="left"]::before {
+  top: -7px;
+  right: 100%;
+  line-height: normal;
+  margin-right: 10px;
+}
+
+a[data-tooltip][data-placement="left"]::after {
+  border-left-color: #000;
+  border-right: none;
+  top: 50%;
+  right: 100%;
+  margin-top: -6px;
+  margin-right: 4px;
+}
+
+a[data-tooltip][data-placement="right"]::before {
+  top: -7px;
+  left: 100%;
+  line-height: normal;
+  margin-left: 10px;
+}
+
+a[data-tooltip][data-placement="right"]::after {
+  border-right-color: #000;
+  border-left: none;
+  top: 50%;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: 4px;
+}
+
+a[data-tooltip][data-placement="top"]::before {
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 10px;
+}
+
+a[data-tooltip][data-placement="top"]::after {
+  border-top-color: #000;
+  border-bottom: none;
+  bottom: 100%;
+  left: 10px;
+  margin-bottom: 4px;
+}
+
+a[data-tooltip][data-placement="bottom"]::before {
+  top: 100%;
+  left: 0;
+  margin-top: 10px;
+}
+
+a[data-tooltip][data-placement="bottom"]::after {
+  border-bottom-color: #000;
+  border-top: none;
+  top: 100%;
+  left: 10px;
+  margin-top: 4px;
+}
+
+
+/******************************* End of Contact Us Icons styling *******************************/
 
 /*************************** Start of very small screen styling ***************************/
 
@@ -274,7 +575,7 @@
         font-size: 12px;
     }
 
-    #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle {
+    #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle {
         font-size: 30px;
         margin-top: 45px;
     }
@@ -284,6 +585,7 @@
     }
 
     #portFolioNumber {
+        color: #E60000;
         font-size: 20px;
     }
 
@@ -396,7 +698,7 @@
         font-size: 12px;
     }
 
-    #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle {
+    #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle {
         font-size: 32px;
         margin-top: 45px;
     }
@@ -537,7 +839,7 @@
         font-size: 16px;
     }
 
-    #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle {
+    #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle {
         font-size: 34px;
         margin-top: 45px;
     }
@@ -582,6 +884,41 @@
         padding: 5px;
         background: rgb(0, 0, 0);
         background: rgba(0, 0, 0, 0.5);
+    }
+
+    #zahrasignsGetQuoteFormArea {
+        width: 500px;
+        height: 555px;
+        position: relative;
+        margin-top: -585px;
+        margin-right: 45px;
+        float: right;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    #zahrasignsGetQuoteFormArea::-webkit-scrollbar {
+      width: 5px;               /* width of the entire scrollbar */
+    }
+
+    #zahrasignsGetQuoteFormArea::-webkit-scrollbar-track {
+      background: linear-gradient(to right, black, #007AFF);        /* color of the tracking area */
+    }
+
+    #zahrasignsGetQuoteFormArea::-webkit-scrollbar-thumb {
+      background-color: blue;    /* color of the scroll thumb */
+      border-radius: 2px;       /* roundness of the scroll thumb */
+      border: 1px solid #FFFFFF;  /* creates padding around scroll thumb */
+    }
+
+    #zahrasignsGetQuoteFormTitle {
+        text-decoration: underline;
+        text-transform: uppercase;
+    }
+
+    #zahrasignsGetQuoteFormButton {
+        text-transform: uppercase;
+        font-weight: 600;
     }
 
     #zahrasignsMainCarouselText {
@@ -636,7 +973,7 @@
         font-size: 16px;
     }
 
-    #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle {
+    #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle {
         font-size: 38px;
         margin-top: 45px;
     }
@@ -744,7 +1081,7 @@
         font-size: 24px;
     }
 
-    #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle {
+    #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle {
         font-size: 42px;
         margin-top: 45px;
     }
@@ -852,7 +1189,7 @@
         font-size: 32px;
     }
 
-    #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle {
+    #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle {
         font-size: 42px;
         margin-top: 45px;
     }

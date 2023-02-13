@@ -13,16 +13,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+/*************** Start of XSS protection ***************/
+
+Route::group(['middleware' => ['XSS']], function() {
+
+    /*************** Start of guest protection ***************/
+
+    Route::group(['middleware' => ['guest']], function() {
+
+        // Route that redirects to the main homepage
+        Route::get('/', function () {
+            return view('welcome');
+        });
+
+        // Resource route that handles the request a quote
+        Route::resource('requestQuote', 'RequestQuoteController');
+
+    });
+
+    /*************** End of guest protection ***************/
+
+    Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])->group(function () {
+        Route::get('/dashboard', function () {
+            return view('dashboard');
+        })->name('dashboard');
+    });
+
 });
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
+/*************** End of XSS protection ***************/
+
+
+
