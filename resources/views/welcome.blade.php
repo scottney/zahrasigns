@@ -33,9 +33,10 @@
 				<h2 class="text-white" id="zahrasignsMainCarouselTextDescription"><span class="typed-text"></span><span class="ourCursor">&nbsp;</span></h2>
 			</div>
 
-			<div class="bg-dark rounded" id="zahrasignsGetQuoteFormArea">
+			<!-- <div class="bg-dark rounded" id="zahrasignsGetQuoteFormArea">
 				<h3 class="text-center text-white mt-1" id="zahrasignsGetQuoteFormTitle">Request a Quote</h3>
-
+				
+				{{--
 				<form action="{{ route('requestQuote.store') }}" method="POST" class="mt-3" role="form" accept-charset="UTF-8" enctype="multipart/form-data">
 					@csrf
 
@@ -125,7 +126,8 @@
 					</div>
 					
 				</form>
-			</div>
+				--}}
+			</div> -->
 
 			<!-- <button class="carousel-control-prev" type="button" data-bs-target="#zahrasignsMainCarousel" data-bs-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -301,14 +303,10 @@
 <div class="row m-0" id="extraContentSection">
 	<div class="col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1"></div>
 
-	<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+	<div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
 		<div id="extraContentSectionTitleHolder">
-			<h2 id="extraContentSectionTitle">Bringing your <br> <span id="extraContentSectionTitleKey1">vision</span> to <span id="extraContentSectionTitleKey2">life</span></h2>	
+			<h2 class="text-center" id="extraContentSectionTitle">Bringing your <span id="extraContentSectionTitleKey1">vision</span> to <span id="extraContentSectionTitleKey2">life</span></h2>	
 		</div>
-	</div>
-
-	<div class="col-sm-7 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-		<p id="extraContentSectionDescription">By understanding that your business is more than just a logo and a name, that it's a reflection of your vision and values. That's why we are dedicated to bringing your vision to life with our innovative and eye-catching 3D signage solutions. Our team of expert designers and craftsmen will work with you to create custom signs that perfectly embody your brand, while also providing the functionality you need to succeed. From illuminated signs to dimensional letters, we have the expertise and experience to turn your vision into a reality. Choose Zahra Signs Systems LTD for signs that truly reflect the spirit of your business.</p>
 	</div>
 
 	<div class="col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1"></div>

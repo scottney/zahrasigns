@@ -23,11 +23,9 @@
     font-size: 18px;
     text-transform: uppercase;
     text-decoration: none;
-}
-
-#mainNavMenuLink {
     border-left: 1px solid white;
     border-right: 1px solid white;
+    padding: 5px;
 }
 
 #mainNavMenuLink:hover {
@@ -117,21 +115,11 @@
 #extraContentSectionTitle {
     padding: 25px;
     font-family: 'Paytone One', sans-serif;
+    font-size: 48px;
 }
 
-#extraContentSectionDescription {
-    text-indent: 75px;
-    padding-right: 35px;
-    padding-left: 35px;
-}
-
-#extraContentSectionTitleKey1 {
+#extraContentSectionTitleKey1, #extraContentSectionTitleKey2 {
     color: #00ADEE;
-    text-transform: uppercase;
-}
-
-#extraContentSectionTitleKey2 {
-    color: #E60000;
     text-transform: uppercase;
 }
 
@@ -218,33 +206,6 @@
 
 #portFolioText {
     color: #00ADEE;
-}
-
-#testimonialSection {
-    background-image: url('/images/sign3.jpg');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 500px;
-}
-
-#zahrasignsMainTestimonialsCarouselButtons {
-    border: 1px solid #FFFFFF;
-    border-radius: 50%;
-    height: 35px;
-    width: 35px;
-}
-
-#clientTestimonialsImage {
-    border: 1px solid #FFFFFF;
-    border-radius: 50%;
-    width: 255px;
-    height: 255px;
-}
-
-#mainMapSection {
-    width: 100%;
-    height: 475px;
 }
 
 #footerTitleText {
@@ -499,6 +460,12 @@ a[data-tooltip][data-placement="bottom"]::after {
         width: 15px;
     }
 
+    #mainNavMenuLink {
+        border: none;
+        border-radius: 25px;
+        color: #FFFFFF;
+    }
+
     #zahrasignsMainCarouselImagesHolder {
         width: 100%;
         height: 275px;
@@ -510,8 +477,8 @@ a[data-tooltip][data-placement="bottom"]::after {
 
     #zahrasignsMainCarouselTextArea {
         /*border: 1px solid #FFFFFF;*/
-        height: 30%;
-        width: 45%;
+        height: 75px;
+        width: 155px;
         position: absolute;
         margin-left: 25px;
         margin-top: -225px;
@@ -603,6 +570,41 @@ a[data-tooltip][data-placement="bottom"]::after {
         overflow: hidden;
     }
 
+    #testimonialSection {
+        background-image: url('/images/sign3.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 700px;
+    }
+
+    #clientTestimonialsImage {
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        width: 105px;
+        height: 105px;
+    }
+
+    #zahrasignsMainCarouselTestimonialsHolder q {
+        font-size: 10px;
+    }
+
+    #zahrasignsMainCarouselTestimonialsHolder b {
+        font-size: 12px;
+    }
+
+    #zahrasignsMainTestimonialsCarouselButtons {
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+    }
+
+    #mainMapSection {
+        width: 100%;
+        height: 675px;
+    }
+
 }
 
 /*************************** End of very small screen styling ***************************/
@@ -633,8 +635,8 @@ a[data-tooltip][data-placement="bottom"]::after {
 
     #zahrasignsMainCarouselTextArea {
         /*border: 1px solid #FFFFFF;*/
-        height: 30%;
-        width: 45%;
+        height: 105px;
+        width: 195px;
         position: absolute;
         margin-left: 25px;
         margin-top: -225px;
@@ -645,15 +647,21 @@ a[data-tooltip][data-placement="bottom"]::after {
     }
 
     #zahrasignsMainCarouselText {
-        font-size: 12px;
+        font-size: 16px;
         display: none;
     }
 
     #zahrasignsMainCarouselTextDescription {
-        font-size: 10px;
+        font-size: 14px;
         text-transform: uppercase;
         margin-top: 10px;
         margin-left: 10px;
+    }
+
+    #mainNavMenuLink {
+        border: none;
+        border-radius: 25px;
+        color: #FFFFFF;
     }
 
     #introTitleStatement {
@@ -725,13 +733,48 @@ a[data-tooltip][data-placement="bottom"]::after {
         overflow: hidden;
     }
 
+    #testimonialSection {
+        background-image: url('/images/sign3.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 700px;
+    }
+
+    #clientTestimonialsImage {
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        width: 105px;
+        height: 105px;
+    }
+
+    #zahrasignsMainCarouselTestimonialsHolder q {
+        font-size: 10px;
+    }
+
+    #zahrasignsMainCarouselTestimonialsHolder b {
+        font-size: 12px;
+    }
+
+    #zahrasignsMainTestimonialsCarouselButtons {
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+    }
+
+    #mainMapSection {
+        width: 100%;
+        height: 675px;
+    }
+
 }
 
 /*************************** End of small-medium screen styling ***************************/
 
 /*************************** Start of special screen styling ***************************/
 
-@media screen and (min-width: 575px) and (max-width: 1100px) {
+@media screen and (min-width: 575px) and (max-width: 1199px) {
     .swiper {
         width: 100%;
         height: 575px;
@@ -777,6 +820,41 @@ a[data-tooltip][data-placement="bottom"]::after {
         height: 275px;
         overflow: hidden;
     }
+
+    #testimonialSection {
+        background-image: url('/images/sign3.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 600px;
+    }
+
+    #clientTestimonialsImage {
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        width: 135px;
+        height: 135px;
+    }
+
+    #zahrasignsMainCarouselTestimonialsHolder q {
+        font-size: 12px;
+    }
+
+    #zahrasignsMainCarouselTestimonialsHolder b {
+        font-size: 14px;
+    }
+
+    #zahrasignsMainTestimonialsCarouselButtons {
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        height: 35px;
+        width: 35px;
+    }
+
+    #mainMapSection {
+        width: 100%;
+        height: 575px;
+    }
 }
 
 /*************************** End of special screen styling ***************************/
@@ -807,8 +885,8 @@ a[data-tooltip][data-placement="bottom"]::after {
 
     #zahrasignsMainCarouselTextArea {
         /*border: 1px solid #FFFFFF;*/
-        height: 30%;
-        width: 45%;
+        height: 155px;
+        width: 275px;
         position: absolute;
         margin-left: 35px;
         margin-top: -395px;
@@ -819,12 +897,12 @@ a[data-tooltip][data-placement="bottom"]::after {
     }
 
     #zahrasignsMainCarouselText {
-        font-size: 18px;
+        font-size: 26px;
         display: none;
     }
 
     #zahrasignsMainCarouselTextDescription {
-        font-size: 16px;
+        font-size: 22px;
         text-transform: uppercase;
         margin-top: 15px;
         margin-left: 15px;
@@ -857,6 +935,41 @@ a[data-tooltip][data-placement="bottom"]::after {
         font-weight: 500;
     }
 
+    #testimonialSection {
+        background-image: url('/images/sign3.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 600px;
+    }
+
+    #clientTestimonialsImage {
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        width: 135px;
+        height: 135px;
+    }
+
+    #zahrasignsMainCarouselTestimonialsHolder q {
+        font-size: 12px;
+    }
+
+    #zahrasignsMainCarouselTestimonialsHolder b {
+        font-size: 14px;
+    }
+
+    #zahrasignsMainTestimonialsCarouselButtons {
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        height: 35px;
+        width: 35px;
+    }
+
+    #mainMapSection {
+        width: 100%;
+        height: 575px;
+    }
+
 }
 
 /*************************** End of tablet screen styling ***************************/
@@ -875,8 +988,8 @@ a[data-tooltip][data-placement="bottom"]::after {
 
     #zahrasignsMainCarouselTextArea {
         /*border: 1px solid #FFFFFF;*/
-        height: 30%;
-        width: 45%;
+        height: 205px;
+        width: 475px;
         position: absolute;
         margin-left: 45px;
         margin-top: -525px;
@@ -1000,6 +1113,41 @@ a[data-tooltip][data-placement="bottom"]::after {
         overflow: hidden;
     }
 
+    #testimonialSection {
+        background-image: url('/images/sign3.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 555px;
+    }
+
+    #clientTestimonialsImage {
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        width: 255px;
+        height: 255px;
+    }
+
+    #zahrasignsMainCarouselTestimonialsHolder q {
+        font-size: 14px;
+    }
+
+    #zahrasignsMainCarouselTestimonialsHolder b {
+        font-size: 16px;
+    }
+
+    #zahrasignsMainTestimonialsCarouselButtons {
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        height: 35px;
+        width: 35px;
+    }
+
+    #mainMapSection {
+        width: 100%;
+        height: 475px;
+    }
+
 }
 
 /*************************** End of medium screen styling ***************************/
@@ -1018,8 +1166,8 @@ a[data-tooltip][data-placement="bottom"]::after {
 
     #zahrasignsMainCarouselTextArea {
         /*border: 1px solid #FFFFFF;*/
-        height: 30%;
-        width: 45%;
+        height: 235px;
+        width: 675px;
         position: absolute;
         margin-left: 45px;
         margin-top: -795px;
@@ -1030,12 +1178,12 @@ a[data-tooltip][data-placement="bottom"]::after {
     }
 
     #zahrasignsMainCarouselText {
-        font-size: 32px;
+        font-size: 38px;
         display: none;
     }
 
     #zahrasignsMainCarouselTextDescription {
-        font-size: 30px;
+        font-size: 40px;
         text-transform: uppercase;
         margin-top: 45px;
         margin-left: 45px;
@@ -1108,6 +1256,41 @@ a[data-tooltip][data-placement="bottom"]::after {
         overflow: hidden;
     }
 
+    #testimonialSection {
+        background-image: url('/images/sign3.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 555px;
+    }
+
+    #clientTestimonialsImage {
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        width: 355px;
+        height: 355px;
+    }
+
+    #zahrasignsMainCarouselTestimonialsHolder q {
+        font-size: 16px;
+    }
+
+    #zahrasignsMainCarouselTestimonialsHolder b {
+        font-size: 18px;
+    }
+
+    #zahrasignsMainTestimonialsCarouselButtons {
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        height: 45px;
+        width: 45px;
+    }
+
+    #mainMapSection {
+        width: 100%;
+        height: 475px;
+    }
+
 }
 
 /*************************** End of large screen styling ***************************/
@@ -1126,8 +1309,8 @@ a[data-tooltip][data-placement="bottom"]::after {
 
     #zahrasignsMainCarouselTextArea {
         /*border: 1px solid #FFFFFF;*/
-        height: 20%;
-        width: 45%;
+        height: 275px;
+        width: 725px;
         position: absolute;
         margin-left: 45px;
         margin-top: -995px;
@@ -1138,12 +1321,12 @@ a[data-tooltip][data-placement="bottom"]::after {
     }
 
     #zahrasignsMainCarouselText {
-        font-size: 36px;
+        font-size: 46px;
         display: none;
     }
 
     #zahrasignsMainCarouselTextDescription {
-        font-size: 34px;
+        font-size: 44px;
         text-transform: uppercase;
         margin-top: 55px;
         margin-left: 55px;
@@ -1214,6 +1397,41 @@ a[data-tooltip][data-placement="bottom"]::after {
         width: 475px;
         height: 475px;
         overflow: hidden;
+    }
+
+    #testimonialSection {
+        background-image: url('/images/sign3.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 555px;
+    }
+
+    #clientTestimonialsImage {
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        width: 355px;
+        height: 355px;
+    }
+
+    #zahrasignsMainCarouselTestimonialsHolder q {
+        font-size: 16px;
+    }
+
+    #zahrasignsMainCarouselTestimonialsHolder b {
+        font-size: 18px;
+    }
+
+    #zahrasignsMainTestimonialsCarouselButtons {
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        height: 45px;
+        width: 45px;
+    }
+
+    #mainMapSection {
+        width: 100%;
+        height: 475px;
     }
 }
 

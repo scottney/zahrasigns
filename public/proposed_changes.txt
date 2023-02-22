@@ -1,0 +1,17 @@
+1). White outline in logo
+
+2). Use circle elements
+
+3). Headliner fonts closer to logo font
+
+4). Port folio section
+	=> Door Panels to Door ID
+	=> Remove word 'signs' on categories
+	=> Add Categories
+	=> Update Petroleum Image
+	=> Change portfolio background image
+
+5). We are result driven
+	=> Change background with circle elements
+
+6). Number the slides in the slider area

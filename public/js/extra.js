@@ -36,9 +36,9 @@ function toolTips() {
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".ourCursor");
 const textArray = ["Stunningly eye-catching and bespoke signs", "We design & create custom signs for branded environments", "Experience style, experience design"];
-const typingDelay = 200;
+const typingDelay = 20;
 const erasingDelay = 100;
-const newTextDelay = 2000;
+const newTextDelay = 9000;
 let textArrayIndex = 0;
 let charIndex = 0;
 

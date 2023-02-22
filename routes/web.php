@@ -27,7 +27,13 @@ Route::group(['middleware' => ['XSS']], function() {
         });
 
         // Resource route that handles the request a quote
-        Route::resource('requestQuote', 'RequestQuoteController');
+        // Route::resource('requestQuote', 'RequestQuoteController');
+
+        // Route that redirects to the products page
+        Route::get('/products', 'PagesController@products_index')->name('routeProductsIndex');
+
+        // Route that redirects to the services page
+        //Route::get()->name();
 
     });
 

@@ -95,15 +95,19 @@
                             <!-- Left Side Of Navbar -->
                             <ul class="navbar-nav me-auto">
                                 <li class="nav-item">
-                                    <a href="" class="p-3" id="mainNavMenuLink">Products</a>
+                                    <a href="{{ route('routeProductsIndex') }}" id="mainNavMenuLink">Products</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="" class="p-3" id="mainNavMenuLink">Services</a>
+                                    <a href="" id="mainNavMenuLink">Services</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="" class="p-3" id="mainNavMenuLink">About Us</a>
+                                    <a href="" id="mainNavMenuLink">About Us</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="" id="mainNavMenuLink">Community Service</a>
                                 </li>
                                 
                             <!-- @auth
