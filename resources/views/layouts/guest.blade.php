@@ -70,6 +70,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/extra.css') }}" rel="stylesheet">
+    <link href="{{ asset('fonts/ColonnaMT.ttf') }}" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])

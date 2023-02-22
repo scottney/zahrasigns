@@ -542,9 +542,14 @@ a[data-tooltip][data-placement="bottom"]::after {
         font-size: 12px;
     }
 
+    #signageSwiperSlideNumber {
+        font-size: 24px;
+    }
+
     #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle {
-        font-size: 30px;
+        font-size: 50px;
         margin-top: 45px;
+        font-family: 'Colonna MT';
     }
 
     #portFolioIcon {
@@ -706,9 +711,14 @@ a[data-tooltip][data-placement="bottom"]::after {
         font-size: 12px;
     }
 
+    #signageSwiperSlideNumber {
+        font-size: 24px;
+    }
+
     #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle {
-        font-size: 32px;
+        font-size: 52px;
         margin-top: 45px;
+        font-family: 'Colonna MT';
     }
 
     #portFolioIcon {
@@ -782,7 +792,7 @@ a[data-tooltip][data-placement="bottom"]::after {
 
     .swiper-slide {
         width: 275px;
-        height: 475px;
+        height: 495px;
         background: #00ADEE;
         padding-left: 15px;
         padding-right: 15px;
@@ -806,6 +816,10 @@ a[data-tooltip][data-placement="bottom"]::after {
     #signageSwiperSlide1 p, #signageSwiperSlide2 p, #signageSwiperSlide3 p, #signageSwiperSlide4 p, 
     #signageSwiperSlide5 p, #signageSwiperSlide6 p {
         font-size: 14px;
+    }
+
+    #signageSwiperSlideNumber {
+        font-size: 24px;
     }
 
     #portFolioCardRow #portFolioCardCol {
@@ -918,8 +932,9 @@ a[data-tooltip][data-placement="bottom"]::after {
     }
 
     #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle {
-        font-size: 34px;
+        font-size: 54px;
         margin-top: 45px;
+        font-family: 'Colonna MT';
     }
 
     #portFolioIcon {
@@ -1086,9 +1101,14 @@ a[data-tooltip][data-placement="bottom"]::after {
         font-size: 16px;
     }
 
+    #signageSwiperSlideNumber {
+        font-size: 24px;
+    }
+
     #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle {
-        font-size: 38px;
+        font-size: 58px;
         margin-top: 45px;
+        font-family: 'Colonna MT';
     }
 
     #portFolioIcon {
@@ -1229,9 +1249,14 @@ a[data-tooltip][data-placement="bottom"]::after {
         font-size: 24px;
     }
 
+    #signageSwiperSlideNumber {
+        font-size: 28px;
+    }
+
     #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle {
-        font-size: 42px;
+        font-size: 62px;
         margin-top: 45px;
+        font-family: 'Colonna MT';
     }
 
     #portFolioIcon {
@@ -1372,9 +1397,14 @@ a[data-tooltip][data-placement="bottom"]::after {
         font-size: 32px;
     }
 
+    #signageSwiperSlideNumber {
+        font-size: 24px;
+    }
+
     #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle {
-        font-size: 42px;
+        font-size: 62px;
         margin-top: 45px;
+        font-family: 'Colonna MT';
     }
 
     #portFolioIcon {

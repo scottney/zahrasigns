@@ -182,6 +182,10 @@
 							<h3 class="text-center text-white mt-3">Requirements Analysis</h3>
 
 							<p class="text-center text-white mt-3">We will work with you to understand your specific needs and requirements to ensure we create a solution that perfectly fits your brand and vision. During this process, we gather information such as your desired design, size, and placement to create a tailored plan.</p>
+
+							<div class="d-flex justify-content-center">
+								<span class="text-white" id="signageSwiperSlideNumber">1</span>
+							</div>
 						</div>
 
 						<div class="col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1"></div>
@@ -202,6 +206,10 @@
 							<h3 class="text-center text-white mt-3">Consultation</h3>
 
 							<p class="text-center text-white mt-3"><b><i>Zahra Signs Systems LTD</i></b> offers expert assistance for your project by providing innovative ideas based on a comprehensive brief. Enhance your project with our expert input by scheduling in-person meetings, convenient phone calls, or efficient email communication.</p>
+
+							<div class="d-flex justify-content-center">
+								<span class="text-white" id="signageSwiperSlideNumber">2</span>
+							</div>
 						</div>
 
 						<div class="col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1"></div>
@@ -222,6 +230,10 @@
 							<h3 class="text-center text-white mt-3">Design & Modelling</h3>
 
 							<p class="text-center text-white mt-3">Our team of experienced designers use the latest software and technology to bring your ideas to life, using precise measurements and attention to detail. Through this process, we can present you with a detailed, 3D model of your sign, which allows you to see how it will look in real-life.</p>
+
+							<div class="d-flex justify-content-center">
+								<span class="text-white" id="signageSwiperSlideNumber">3</span>
+							</div>
 						</div>
 
 						<div class="col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1"></div>
@@ -242,6 +254,10 @@
 							<h3 class="text-center text-white mt-3">Design Mockups</h3>
 
 							<p class="text-center text-white mt-3">Our team of skilled designers will take your ideas and translate them into a 3D image, giving you a clear visual representation of what your final sign will look like. Our mockups are highly detailed and provide you with an accurate representation of the size, materials, and overall look of your sign.</p>
+
+							<div class="d-flex justify-content-center">
+								<span class="text-white" id="signageSwiperSlideNumber">4</span>
+							</div>
 						</div>
 
 						<div class="col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1"></div>
@@ -261,7 +277,11 @@
 						<div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
 							<h3 class="text-center text-white mt-3">Design Production</h3>
 
-							<p class="text-center text-white mt-3">Our advanced software ensures that every design detail is captured and optimized. We also check for errors while making necessary adjustments to ensure the final product meets your expectations. With our attention to detail and commitment to quality, be assured that your 3D signage will look stunning.</p>
+							<p class="text-center text-white mt-3">Our advanced software ensures that every detail is captured and optimized. We make adjustments to ensure the final product meets your expectations. With our attention to detail and commitment to quality, be assured that your 3D signage will look stunning.</p>
+
+							<div class="d-flex justify-content-center">
+								<span class="text-white" id="signageSwiperSlideNumber">5</span>
+							</div>
 						</div>
 
 						<div class="col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1"></div>
@@ -282,6 +302,10 @@
 							<h3 class="text-center text-white mt-3">Installation</h3>
 
 							<p class="text-center text-white mt-3">Our team of experienced technicians will carefully handle and install the signage at your desired location, making sure that it is securely in place and meets all safety standards. Our installation process is quick and efficient, minimizing any disruption to your business operations.</p>
+
+							<div class="d-flex justify-content-center">
+								<span class="text-white" id="signageSwiperSlideNumber">6</span>
+							</div>
 						</div>
 
 						<div class="col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1"></div>
