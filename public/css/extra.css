@@ -2,6 +2,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.textIndent {
+    text-indent: 55px;
+}
+
 #mainNavMenu {
     width: 100%;
     background: #000000;
@@ -93,7 +97,7 @@
     background: rgba(0, 0, 0, 0.75);
 }
 
-#signageProcessRow {
+#signageProcessRow, #aboutUsSpecialBackground {
     background-image: url('/images/portfolio_images/portfolio.jpg');
     background-position: center;
     background-size: cover;
@@ -108,22 +112,7 @@
     padding-bottom: 75px;
 }
 
-#extraContentSectionTitleHolder {
-    border: 10px solid #2E3191;
-}   
-
-#extraContentSectionTitle {
-    padding: 25px;
-    font-family: 'Paytone One', sans-serif;
-    font-size: 48px;
-}
-
-#extraContentSectionTitleKey1, #extraContentSectionTitleKey2 {
-    color: #00ADEE;
-    text-transform: uppercase;
-}
-
-#portFolioSection {
+#productsSection {
     background-image: url('/images/CITY-BG.jpg');
     background-position: center;
     background-size: cover;
@@ -132,59 +121,59 @@
     height: auto;
 }
 
-#portFolioCardCol a {
+#productsCardCol a {
     text-decoration: none;
 }
 
-#portFolioCardCol a #portFolioCard #portFolioCardText {
+#productsCardCol a #productsCard #productsCardText {
     font-weight: 900;
 }
 
-#portFolioCard:hover {
+#productsCard:hover {
     background: #2E3191;
     color: #FFFFFF;
     cursor: pointer;
 }
 
-#portFolioCardBody1, #portFolioCardBody2, #portFolioCardBody3, #portFolioCardBody4, #portFolioCardBody5, 
-#portFolioCardBody6, #portFolioCardBody7, #portFolioCardBody8 {
+#productsCardBody1, #productsCardBody2, #productsCardBody3, #productsCardBody4, #productsCardBody5, 
+#productsCardBody6, #productsCardBody7, #productsCardBody8 {
     background-position: center;
     background-size: cover;
 }
 
-#portFolioCardBody1 {
+#productsCardBody1 {
     background-image: url('/images/portfolio_images/00251906_a42259fc38ff2a09de6efa4d97b38469_arc614x376_w614_us1.jpg');
 }
 
-#portFolioCardBody2 {
+#productsCardBody2 {
     background-image: url('/images/portfolio_images/Energy.jpg');
 }
 
-#portFolioCardBody3 {
+#productsCardBody3 {
     background-image: url('/images/portfolio_images/WhatsApp Image 2023-01-26 at 8.45.39 PM.jpeg');
 }
 
-#portFolioCardBody4 {
+#productsCardBody4 {
     background-image: url('/images/portfolio_images/PM-PDC-ARTWORK.jpg');
 }
 
-#portFolioCardBody5 {
+#productsCardBody5 {
     background-image: url('/images/portfolio_images/Door Panels.jpg');
 }
 
-#portFolioCardBody6 {
+#productsCardBody6 {
     background-image: url('/images/portfolio_images/Non illuminated signs.jpg');
 }
 
-#portFolioCardBody7 {
+#productsCardBody7 {
     background-image: url('/images/portfolio_images/3D Illuminated signs.jpg');
 }
 
-#portFolioCardBody8 {
+#productsCardBody8 {
     background-image: url('/images/portfolio_images/Branding.jpg');
 }
 
-#portFolioCardText {
+#productsCardText {
     font-size: 18px;
     font-weight: 600;
 }
@@ -240,6 +229,35 @@
 #argoneTech {
     text-decoration: none;
     color: #FFFF33;
+}
+
+#psBackground, #aboutUsBackground, #communityServiceBackground {
+    background-image: url('/images/special-background/BG-2 - Copy.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+#ourMajorClients {
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+#ourMajorClients::-webkit-scrollbar {
+  width: 1px;               /* width of the entire scrollbar */
+}
+
+#ourMajorClients::-webkit-scrollbar-track {
+  background: #000000;        /* color of the tracking area */
+}
+
+#ourMajorClients::-webkit-scrollbar-thumb {
+  background-color: blue;    /* color of the scroll thumb */
+  border-radius: 2px;       /* roundness of the scroll thumb */
+  border: 0.75px solid #FFFFFF;  /* creates padding around scroll thumb */
 }
 
 /******************************* Start of Contact Us Icons styling *******************************/
@@ -546,10 +564,26 @@ a[data-tooltip][data-placement="bottom"]::after {
         font-size: 24px;
     }
 
-    #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle {
-        font-size: 50px;
-        margin-top: 45px;
+    #productsTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle, #psTitle, #aboutUsTitle, 
+    #communityServiceTitle {
+        font-size: 30px;
+        margin-top: 25px;
         font-family: 'Colonna MT';
+    }
+
+    #extraContentSectionTitleHolder {
+    border: 10px solid #2E3191;
+    }   
+
+    #extraContentSectionTitle {
+        padding: 25px;
+        font-family: 'Paytone One', sans-serif;
+        font-size: 30px;
+    }
+
+    #extraContentSectionTitleKey1, #extraContentSectionTitleKey2 {
+        color: #00ADEE;
+        text-transform: uppercase;
     }
 
     #portFolioIcon {
@@ -566,7 +600,7 @@ a[data-tooltip][data-placement="bottom"]::after {
         font-weight: 300;
     }
 
-    #portFolioCard {
+    #productsCard {
         background: #FFFFFF;
         color: #000000;
         border-radius: 10px;
@@ -715,10 +749,26 @@ a[data-tooltip][data-placement="bottom"]::after {
         font-size: 24px;
     }
 
-    #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle {
-        font-size: 52px;
-        margin-top: 45px;
+    #productsTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle, #psTitle, #aboutUsTitle, 
+    #communityServiceTitle {
+        font-size: 32px;
+        margin-top: 25px;
         font-family: 'Colonna MT';
+    }
+
+    #extraContentSectionTitleHolder {
+    border: 10px solid #2E3191;
+    }   
+
+    #extraContentSectionTitle {
+        padding: 25px;
+        font-family: 'Paytone One', sans-serif;
+        font-size: 32px;
+    }
+
+    #extraContentSectionTitleKey1, #extraContentSectionTitleKey2 {
+        color: #00ADEE;
+        text-transform: uppercase;
     }
 
     #portFolioIcon {
@@ -734,7 +784,7 @@ a[data-tooltip][data-placement="bottom"]::after {
         font-weight: 400;
     }
 
-    #portFolioCard {
+    #productsCard {
         background: #FFFFFF;
         color: #000000;
         border-radius: 10px;
@@ -822,11 +872,11 @@ a[data-tooltip][data-placement="bottom"]::after {
         font-size: 24px;
     }
 
-    #portFolioCardRow #portFolioCardCol {
+    #productsCardRow #productsCardCol {
         width: 50%;
     }
 
-    #portFolioCard {
+    #productsCard {
         background: #FFFFFF;
         color: #000000;
         border-radius: 10px;
@@ -931,10 +981,26 @@ a[data-tooltip][data-placement="bottom"]::after {
         font-size: 16px;
     }
 
-    #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle {
-        font-size: 54px;
-        margin-top: 45px;
+    #productsTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle, #psTitle, #aboutUsTitle, 
+    #communityServiceTitle {
+        font-size: 44px;
+        margin-top: 25px;
         font-family: 'Colonna MT';
+    }
+
+    #extraContentSectionTitleHolder {
+    border: 10px solid #2E3191;
+    }   
+
+    #extraContentSectionTitle {
+        padding: 25px;
+        font-family: 'Paytone One', sans-serif;
+        font-size: 44px;
+    }
+
+    #extraContentSectionTitleKey1, #extraContentSectionTitleKey2 {
+        color: #00ADEE;
+        text-transform: uppercase;
     }
 
     #portFolioIcon {
@@ -1105,10 +1171,26 @@ a[data-tooltip][data-placement="bottom"]::after {
         font-size: 24px;
     }
 
-    #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle {
-        font-size: 58px;
-        margin-top: 45px;
+    #productsTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle, #psTitle, #aboutUsTitle, 
+    #communityServiceTitle {
+        font-size: 48px;
+        margin-top: 25px;
         font-family: 'Colonna MT';
+    }
+
+    #extraContentSectionTitleHolder {
+    border: 10px solid #2E3191;
+    }   
+
+    #extraContentSectionTitle {
+        padding: 25px;
+        font-family: 'Paytone One', sans-serif;
+        font-size: 48px;
+    }
+
+    #extraContentSectionTitleKey1, #extraContentSectionTitleKey2 {
+        color: #00ADEE;
+        text-transform: uppercase;
     }
 
     #portFolioIcon {
@@ -1124,7 +1206,7 @@ a[data-tooltip][data-placement="bottom"]::after {
         font-weight: 600;
     }
 
-    #portFolioCard {
+    #productsCard {
         background: #FFFFFF;
         color: #000000;
         border-radius: 10px;
@@ -1253,10 +1335,26 @@ a[data-tooltip][data-placement="bottom"]::after {
         font-size: 28px;
     }
 
-    #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle {
-        font-size: 62px;
-        margin-top: 45px;
+    #productsTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle, #psTitle, #aboutUsTitle, 
+    #communityServiceTitle {
+        font-size: 52px;
+        margin-top: 25px;
         font-family: 'Colonna MT';
+    }
+
+    #extraContentSectionTitleHolder {
+    border: 10px solid #2E3191;
+    }   
+
+    #extraContentSectionTitle {
+        padding: 25px;
+        font-family: 'Paytone One', sans-serif;
+        font-size: 52px;
+    }
+
+    #extraContentSectionTitleKey1, #extraContentSectionTitleKey2 {
+        color: #00ADEE;
+        text-transform: uppercase;
     }
 
     #portFolioIcon {
@@ -1272,7 +1370,7 @@ a[data-tooltip][data-placement="bottom"]::after {
         font-weight: 900;
     }
 
-    #portFolioCard {
+    #productsCard {
         background: #FFFFFF;
         color: #000000;
         border-radius: 10px;
@@ -1401,10 +1499,26 @@ a[data-tooltip][data-placement="bottom"]::after {
         font-size: 24px;
     }
 
-    #portFolioTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle {
-        font-size: 62px;
-        margin-top: 45px;
+    #productsTitle, #statisticsCounterTitle, #signageProcessTitle, #testimonialsTitle, #psTitle, #aboutUsTitle, 
+    #communityServiceTitle {
+        font-size: 56px;
+        margin-top: 25px;
         font-family: 'Colonna MT';
+    }
+
+    #extraContentSectionTitleHolder {
+    border: 10px solid #2E3191;
+    }   
+
+    #extraContentSectionTitle {
+        padding: 25px;
+        font-family: 'Paytone One', sans-serif;
+        font-size: 56px;
+    }
+
+    #extraContentSectionTitleKey1, #extraContentSectionTitleKey2 {
+        color: #00ADEE;
+        text-transform: uppercase;
     }
 
     #portFolioIcon {
@@ -1420,7 +1534,7 @@ a[data-tooltip][data-placement="bottom"]::after {
         font-weight: 900;
     }
 
-    #portFolioCard {
+    #productsCard {
         background: #FFFFFF;
         color: #000000;
         border-radius: 10px;

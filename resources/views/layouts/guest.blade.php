@@ -96,19 +96,19 @@
                             <!-- Left Side Of Navbar -->
                             <ul class="navbar-nav me-auto">
                                 <li class="nav-item">
-                                    <a href="{{ route('routeProductsIndex') }}" id="mainNavMenuLink">Products</a>
+                                    <a href="{{ route('mainIndex') }}#productsSection" id="mainNavMenuLink">Products & Services</a>
                                 </li>
 
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a href="" id="mainNavMenuLink">Services</a>
+                                </li> -->
+
+                                <li class="nav-item">
+                                    <a href="{{ route('aboutUsIndex') }}" id="mainNavMenuLink">About Us</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="" id="mainNavMenuLink">About Us</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="" id="mainNavMenuLink">Community Service</a>
+                                    <a href="{{ route('communityServiceIndex') }}" id="mainNavMenuLink">Community Service</a>
                                 </li>
                                 
                             <!-- @auth
@@ -237,7 +237,38 @@
                             </div>
 
                             <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
-                                <h5 class="text-white" id="footerTitleText">Resources</h5>
+                                <h5 class="text-white" id="footerTitleText">Quick Links</h5>
+
+                                <i class="fa-solid fa-circle-arrow-right fa-1x p-2" id="footerContactsIcons">
+                                    <span class="textFooter" id="footerContactsIconsLinks">
+                                        <a href="{{ route('mainIndex') }}#productsSection">Products</a>
+                                    </span>
+                                </i>
+
+                                <br>
+
+                                <i class="fa-solid fa-circle-arrow-right fa-1x p-2" id="footerContactsIcons">
+                                    <span class="textFooter" id="footerContactsIconsLinks">
+                                        <a href="">Services</a>
+                                    </span>
+                                </i>
+
+                                <br>
+
+                                <i class="fa-solid fa-circle-arrow-right fa-1x p-2" id="footerContactsIcons">
+                                    <span class="textFooter" id="footerContactsIconsLinks">
+                                        <a href="">About Us</a>
+                                    </span>
+                                </i>
+
+                                <br>
+
+                                <i class="fa-solid fa-circle-arrow-right fa-1x p-2" id="footerContactsIcons">
+                                    <span class="textFooter" id="footerContactsIconsLinks">
+                                        <a href="">Community Service</a>
+                                    </span>
+                                </i>
+
                             </div>
 
                             <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">

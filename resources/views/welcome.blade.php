@@ -164,7 +164,7 @@
 
 <div class="row m-0" id="signageProcessRow">
 	<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 p-0 pb-5 darkShade">
-		<h2 class="text-center text-white pb-5" id="signageProcessTitle">Our Signage Process</h2>
+		<h2 class="text-center text-white pb-3" id="signageProcessTitle">Our Signage Process</h2>
 
 		<div class="swiper">
 			<div class="swiper-wrapper">
@@ -338,106 +338,106 @@
 
 <!------------------------------ Start of extra content section ------------------------------>
 
-<!------------------------------ Start of portfolio section ------------------------------>
+<!------------------------------ Start of products section ------------------------------>
 
-<div class="row m-0" id="portFolioSection">
+<div class="row m-0" id="productsSection">
 	<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 p-0 darkShade">
-		<h2 class="text-center text-white pb-5" id="portFolioTitle">Our Portfolio</h2>
+		<h2 class="text-center text-white pb-3" id="productsTitle">Our Products & Services</h2>
 
-		<div class="row pt-1 pb-1 m-0" id="portFolioCardRow">
-			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 d-flex justify-content-center p-3" id="portFolioCardCol">
-				<a href="">
-					<div class="card" id="portFolioCard">
-						<div class="card-body" id="portFolioCardBody1"></div>
+		<div class="row pt-1 pb-1 m-0" id="productsCardRow">
+			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 d-flex justify-content-center p-3" id="productsCardCol">
+				<a href="{{ route('mallsAndBuildingsIndex') }}" target="_blank">
+					<div class="card" id="productsCard">
+						<div class="card-body" id="productsCardBody1"></div>
 
 						<div class="card-footer text-center">
-							<p id="portFolioCardText">Malls and Buildings</p>
+							<p id="productsCardText">Malls and Buildings Signs</p>
 						</div>
 					</div>
 				</a>
 			</div>
 
-			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 d-flex justify-content-center p-3" id="portFolioCardCol">
+			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 d-flex justify-content-center p-3" id="productsCardCol">
 				<a href="">
-					<div class="card" id="portFolioCard">
-						<div class="card-body" id="portFolioCardBody2"></div>
+					<div class="card" id="productsCard">
+						<div class="card-body" id="productsCardBody2"></div>
 
 						<div class="card-footer text-center">
-							<p id="portFolioCardText">Energy and Petroleum</p>
+							<p id="productsCardText">Energy and Petroleum Signs</p>
 						</div>
 					</div>
 				</a>
 			</div>
 
-			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 d-flex justify-content-center p-3" id="portFolioCardCol">
+			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 d-flex justify-content-center p-3" id="productsCardCol">
 				<a href="">
-					<div class="card" id="portFolioCard">
-						<div class="card-body" id="portFolioCardBody3"></div>
+					<div class="card" id="productsCard">
+						<div class="card-body" id="productsCardBody3"></div>
 
 						<div class="card-footer text-center">
-							<p id="portFolioCardText">Pylon Signs</p>
+							<p id="productsCardText">Pylon Signs</p>
 						</div>
 					</div>
 				</a>
 			</div>
 
-			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 d-flex justify-content-center p-3" id="portFolioCardCol">
+			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 d-flex justify-content-center p-3" id="productsCardCol">
 				<a href="">
-					<div class="card" id="portFolioCard">
-						<div class="card-body" id="portFolioCardBody4"></div>
+					<div class="card" id="productsCard">
+						<div class="card-body" id="productsCardBody4"></div>
 
 						<div class="card-footer text-center">
-							<p id="portFolioCardText">Warning Signs</p>
+							<p id="productsCardText">Warning Signs</p>
 						</div>
 					</div>
 				</a>
 			</div>
 		</div>
 
-		<div class="row pb-5 m-0" id="portFolioCardRow">
-			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 d-flex justify-content-center p-3" id="portFolioCardCol">
+		<div class="row pb-5 m-0" id="productsCardRow">
+			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 d-flex justify-content-center p-3" id="productsCardCol">
 				<a href="">
-					<div class="card" id="portFolioCard">
-						<div class="card-body" id="portFolioCardBody5"></div>
+					<div class="card" id="productsCard">
+						<div class="card-body" id="productsCardBody5"></div>
 
 						<div class="card-footer text-center">
-							<p id="portFolioCardText">Door Panels</p>
+							<p id="productsCardText">Door Panels</p>
 						</div>
 					</div>
 				</a>
 			</div>
 
-			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 d-flex justify-content-center p-3" id="portFolioCardCol">
+			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 d-flex justify-content-center p-3" id="productsCardCol">
 				<a href="">
-					<div class="card" id="portFolioCard">
-						<div class="card-body" id="portFolioCardBody6"></div>
+					<div class="card" id="productsCard">
+						<div class="card-body" id="productsCardBody6"></div>
 
 						<div class="card-footer text-center">
-							<p id="portFolioCardText">Non-Illuminated Signs</p>
+							<p id="productsCardText">Non-Illuminated Signs</p>
 						</div>
 					</div>
 				</a>
 			</div>
 
-			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 d-flex justify-content-center p-3" id="portFolioCardCol">
+			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 d-flex justify-content-center p-3" id="productsCardCol">
 				<a href="">
-					<div class="card" id="portFolioCard">
-						<div class="card-body" id="portFolioCardBody7"></div>
+					<div class="card" id="productsCard">
+						<div class="card-body" id="productsCardBody7"></div>
 
 						<div class="card-footer text-center">
-							<p id="portFolioCardText">3D Illuminated Signs</p>
+							<p id="productsCardText">3D Illuminated Signs</p>
 						</div>
 					</div>
 				</a>
 			</div>
 
-			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 d-flex justify-content-center p-3" id="portFolioCardCol">
+			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 d-flex justify-content-center p-3" id="productsCardCol">
 				<a href="">
-					<div class="card" id="portFolioCard">
-						<div class="card-body" id="portFolioCardBody8"></div>
+					<div class="card" id="productsCard">
+						<div class="card-body" id="productsCardBody8"></div>
 
 						<div class="card-footer text-center">
-							<p id="portFolioCardText">Branding</p>
+							<p id="productsCardText">Branding</p>
 						</div>
 					</div>
 				</a>
@@ -446,13 +446,13 @@
 	</div>
 </div>
 
-<!------------------------------ End of portfolio section ------------------------------>
+<!------------------------------ End of products section ------------------------------>
 
 <!------------------------------ Start of numbers counter section ------------------------------>
 
 <div class="row m-0 pb-5" id="statisticsCounter">
 	<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-		<h2 class="text-center pb-5" id="statisticsCounterTitle">We are result driven</h2>
+		<h2 class="text-center pb-3" id="statisticsCounterTitle">We are result driven</h2>
 
 		<div class="row">
 			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 text-center p-3">
@@ -488,7 +488,7 @@
 
 <div class="row m-0" id="testimonialSection">
 	<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 darkShade">
-		<h2 class="text-center text-white" id="testimonialsTitle">Testimonials</h2>
+		<h2 class="text-center text-white pb-3" id="testimonialsTitle">Testimonials</h2>
 
 		<div class="row">
 			<div class="col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1"></div>

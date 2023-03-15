@@ -24,16 +24,19 @@ Route::group(['middleware' => ['XSS']], function() {
         // Route that redirects to the main homepage
         Route::get('/', function () {
             return view('welcome');
-        });
+        })->name('mainIndex');
 
         // Resource route that handles the request a quote
         // Route::resource('requestQuote', 'RequestQuoteController');
 
-        // Route that redirects to the products page
-        Route::get('/products', 'PagesController@products_index')->name('routeProductsIndex');
+        // Route that redirects to the malls and buildings page
+        Route::get('/products/malls and buildings signs', 'PagesController@malls_and_buildings_index')->name('mallsAndBuildingsIndex');
 
-        // Route that redirects to the services page
-        //Route::get()->name();
+        // Route that redirects to the about us page
+        Route::get('/about us', 'PagesController@about_us_index')->name('aboutUsIndex');
+
+        // Route that redirects to the community service page
+        Route::get('/community service', 'PagesController@community_service_index')->name('communityServiceIndex');
 
     });
 
