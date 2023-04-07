@@ -75,7 +75,7 @@
 				</div>
 
 				<div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
-					<img class="border border-light rounded" src="/images/portfolio_images/outdoor-signs/WhatsApp Image 2023-02-03 at 3.37.04 PM (15).jpeg" class="" id="portfolioImage">
+					<img class="border border-light rounded" src="/images/portfolio_images/outdoor-signs/WhatsApp Image 2023-01-26 at 1.20.49 PM.jpeg" class="" id="portfolioImage">
 				</div>
 
 				<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
@@ -119,7 +119,7 @@
 				</div>
 
 				<div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
-					<img class="border border-light rounded" src="/images/portfolio_images/outdoor-signs/WhatsApp Image 2023-01-26 at 1.19.57 PM (1).jpeg" class="" id="portfolioImage">
+					<img class="border border-light rounded" src="/images/portfolio_images/outdoor-signs/WhatsApp Image 2023-01-26 at 1.19.26 PM (2).jpeg" class="" id="portfolioImage">
 				</div>
 
 				<div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
@@ -128,16 +128,24 @@
 			</div>
 
 			<div class="row mt-3">
-				<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+				<div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
 					<img class="border border-light rounded" src="/images/portfolio_images/outdoor-signs/WhatsApp Image 2023-01-26 at 1.20.24 PM (1).jpeg" class="" id="portfolioImage">
 				</div>
 
-				<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+				<div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
 					<img class="border border-light rounded" src="/images/portfolio_images/outdoor-signs/WhatsApp Image 2023-01-26 at 1.20.09 PM.jpeg" class="" id="portfolioImage">
 				</div>
 
-				<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+				<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
 					<img class="border border-light rounded" src="/images/portfolio_images/outdoor-signs/WhatsApp Image 2023-01-26 at 1.18.39 PM (3).jpeg" class="" id="portfolioImage">
+				</div>
+
+				<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+					<img class="border border-light rounded" src="/images/portfolio_images/outdoor-signs/WhatsApp Image 2023-01-26 at 1.20.40 PM.jpeg" class="" id="portfolioImage">
+				</div>
+
+				<div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
+					<img class="border border-light rounded" src="/images/portfolio_images/outdoor-signs/WhatsApp Image 2023-02-03 at 3.37.01 PM (5).jpeg" class="" id="portfolioImage">
 				</div>
 			</div>
 
@@ -165,7 +173,7 @@
 
 			<div class="row mt-3">
 				<div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
-					<img class="border border-light rounded" src="/images/portfolio_images/outdoor-signs/WhatsApp Image 2023-02-03 at 3.37.01 PM (5).jpeg" class="" id="portfolioImage">
+					<img class="border border-light rounded" src="/images/portfolio_images/outdoor-signs/WhatsApp Image 2023-01-26 at 1.20.27 PM.jpeg" class="" id="portfolioImage">
 				</div>
 
 				<div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
