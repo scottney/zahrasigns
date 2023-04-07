@@ -108,7 +108,7 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="{{ route('communityServiceIndex') }}" id="mainNavMenuLink">Community Service</a>
+                                    <a href="" id="mainNavMenuLink">Blog</a>
                                 </li>
                                 
                             <!-- @auth
@@ -261,14 +261,6 @@
                                     </span>
                                 </i>
 
-                                <br>
-
-                                <i class="fa-solid fa-circle-arrow-right fa-1x p-2" id="footerContactsIcons">
-                                    <span class="textFooter" id="footerContactsIconsLinks">
-                                        <a href="">Community Service</a>
-                                    </span>
-                                </i>
-
                             </div>
 
                             <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
@@ -310,7 +302,7 @@
                             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                 <small class="text-light">Developed and Maintained by <a href="https://www.argonetech.com" class="" id="argoneTech">ArgoneTech</a></small><br>
                                 <small class="text-light">All Rights Reserved.</small>
-                                <small class="d-block text-light">© {{date('Y')}}</small>
+                                <small class="d-block text-light">© 2023 - {{date('Y')}}</small>
                             </div>
                         </div>
 

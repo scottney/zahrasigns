@@ -29,15 +29,15 @@ Route::group(['middleware' => ['XSS']], function() {
         // Resource route that handles the request a quote
         // Route::resource('requestQuote', 'RequestQuoteController');
 
-        // Route that redirects to the malls and buildings page
-        Route::get('/products/malls and buildings signs', 'PagesController@malls_and_buildings_index')->name('mallsAndBuildingsIndex');
+        // Route that redirects to the indoor signs page
+        Route::get('/products/indoor/signs', 'PagesController@indoor_signs_index')->name('indoorSignsIndex');
+
+        // Route that redirects to the outdoor signs page
+        Route::get('/products/outdoor/signs', 'PagesController@outdoor_signs_index')->name('outdoorSignsIndex');
 
         // Route that redirects to the about us page
         Route::get('/about us', 'PagesController@about_us_index')->name('aboutUsIndex');
-
-        // Route that redirects to the community service page
-        Route::get('/community service', 'PagesController@community_service_index')->name('communityServiceIndex');
-
+        
     });
 
     /*************** End of guest protection ***************/

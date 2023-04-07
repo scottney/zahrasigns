@@ -17,22 +17,22 @@ class PagesController extends Controller
         //
     }
 
-    // Handles the products landing page
-    public function malls_and_buildings_index()
+    // Handles the indoor products and services landing page
+    public function indoor_signs_index()
     {
-        return view('pages.products.malls_and_buildings');
+        return view('pages.products-and-services.indoor-signs.indoor-signs');
+    }
+
+    // Handles the outdoor products and services landing page
+    public function outdoor_signs_index()
+    {
+        return view('pages.products-and-services.outdoor-signs.outdoor-signs');
     }
 
     // Handles the about us landing page
     public function about_us_index()
     {
         return view('pages.about_us');
-    }
-
-    // Handles the community service landing page
-    public function community_service_index()
-    {
-        return view('pages.community_service');
     }
 
     /**

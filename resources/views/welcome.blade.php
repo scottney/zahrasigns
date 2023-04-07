@@ -345,8 +345,30 @@
 		<h2 class="text-center text-white pb-3" id="productsTitle">Our Products & Services</h2>
 
 		<div class="row pt-1 pb-1 m-0" id="productsCardRow">
+			<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 p-3">
+				<a href="{{ route('indoorSignsIndex') }}">
+					<div class="card-body" id="indoorSigns">
+						<div class="d-flex justify-content-center" id="cardSignsDarkShade">
+							<h5 id="cardSignsText">Indoor</h5>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 p-3">
+				<a href="{{ route('outdoorSignsIndex') }}">
+					<div class="card-body" id="outdoorSigns">
+						<div class="d-flex justify-content-center" id="cardSignsDarkShade">
+							<h5 id="cardSignsText">Outdoor</h5>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<!-- <div class="row pt-1 pb-1 m-0" id="productsCardRow">
 			<div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3 d-flex justify-content-center p-3" id="productsCardCol">
-				<a href="{{ route('mallsAndBuildingsIndex') }}" target="_blank">
+				<a href="" target="_blank">
 					<div class="card" id="productsCard">
 						<div class="card-body" id="productsCardBody1"></div>
 
@@ -442,7 +464,8 @@
 					</div>
 				</a>
 			</div>
-		</div>
+		</div> -->
+
 	</div>
 </div>
 

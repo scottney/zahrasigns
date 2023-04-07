@@ -21,6 +21,7 @@ window.addEventListener('load', eraseText);
 window.addEventListener('load', numbersCounter);
 window.addEventListener('load', cardsSwiper);
 window.addEventListener('load', contactUsIcons);
+window.addEventListener('scroll', reveal);
 window.addEventListener('scroll', topReveal);
 window.addEventListener('scroll', bottomReveal);
 
@@ -66,6 +67,23 @@ function eraseText() {
 		if(textArrayIndex >= textArray.length) textArrayIndex = 0;
 		setTimeout(typeText, typingDelay);
 	}
+}
+
+//Start Of Function That Reveals AboutUs Text On Scroll
+function reveal() {
+	var reveals = document.querySelectorAll(".reveal");
+
+	for (var i = 0; i < reveals.length; i++) {
+		var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+       	var elementVisible = 0;
+
+	       	if (elementTop < windowHeight - elementVisible) {
+	       		reveals[i].classList.add("active");
+	       	} else {
+	       		reveals[i].classList.remove("active");
+	       	}
+       }
 }
 
 //Start Of Function That Reveals AboutUs Text On Scroll From The Top
