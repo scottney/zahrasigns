@@ -56,7 +56,15 @@
     background-image: url('/images/sign2.jpg');
 }
 
-.slide1, .slide2, .slide3 {
+.slide4 {
+    background-image: url('/images/sign4.jpg');
+}
+
+.slide5 {
+    background-image: url('/images/sign5.jpg');
+}
+
+.slide1, .slide2, .slide3, .slide4, .slide5 {
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -350,71 +358,88 @@
   margin-top: 10px;
   border: none;
   cursor: pointer;
-  font-size: 23px;
-  width: 55px;
-  height: 55px;
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
   text-align: center;
   box-shadow: 2px 2px 8px -3px #000;
   border-radius: 100%;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   -ms-border-radius: 100%;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  padding: 10px;
 }
 
 #sy-whatshelp a.sywh-open-services i {
-  line-height: 55px;
+    line-height: 25px;
 }
 
 #sy-whatshelp a.sywh-open-services i.fa-times {
-  display: none;
+    display: none;
 }
 
 #sy-whatshelp .sywh-services {
-  width: 55px;
-  height: auto;
+    width: 35px;
+    height: auto;
 }
 
 #sy-whatshelp .sywh-services a {
-  display: none;
+    display: none;
 }
 
 #sy-whatshelp .sywh-services a i {
-  background-color: #129bf4;
-  color: #fff;
-  line-height: 55px;
-  margin-top: 10px;
-  border: none;
-  cursor: pointer;
-  font-size: 23px;
-  width: 55px;
-  height: 55px;
-  text-align: center;
-  box-shadow: 2px 2px 8px -3px #000;
-  border-radius: 100%;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
-  -ms-border-radius: 100%;
+    background-color: #129bf4;
+    color: #fff;
+    line-height: 55px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 8px -3px #000;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
 
 #sy-whatshelp .sywh-services a.facebook i {
-  background-color: #0084ff;
+    background-color: #0084ff;
 }
 
-#sy-whatshelp .sywh-services a.whatsapp i {
-  background-color: #25d366;
+#sy-whatshelp .sywh-services a.main_whatsapp i {
+    background-color: #25d366;
 }
 
-#sy-whatshelp .sywh-services a.call i {
-  background-color: #ff6600;
+#sy-whatshelp .sywh-services a.alternative_whatsapp i {
+    background-color: #195e33;
+}
+
+#sy-whatshelp .sywh-services a.main_phone_number i {
+    background-color: #ff6600;
+}
+
+#sy-whatshelp .sywh-services a.alternative_phone_number i {
+    background-color: #6e4021;
 }
 
 #sy-whatshelp .sywh-services a.instagram i {
-  background-color: #660066;
+    background-color: #660066;
 }
 
-#sy-whatshelp .sywh-services a.mailAddress i {
-  background-color: #0084ff;
+#sy-whatshelp .sywh-services a.main_email_address i {
+    background-color: #0084ff;
+}
+
+#sy-whatshelp .sywh-services a.alternative_email_address i {
+    background-color: #214363;
 }
 
 #sy-whatshelp .sywh-services a.twitter i {
@@ -559,7 +584,7 @@ a[data-tooltip][data-placement="bottom"]::after {
         height: 275px;
     }
 
-    .slide1, .slide2, .slide3 {
+    .slide1, .slide2, .slide3, .slide4, .slide5 {
         height: 275px;
     }
 
@@ -738,7 +763,7 @@ a[data-tooltip][data-placement="bottom"]::after {
         height: 300px;
     }
 
-    .slide1, .slide2, .slide3 {
+    .slide1, .slide2, .slide3, .slide4, .slide5 {
         height: 300px;
     }
 
@@ -1013,7 +1038,7 @@ a[data-tooltip][data-placement="bottom"]::after {
         height: 450px;
     }
 
-    .slide1, .slide2, .slide3 {
+    .slide1, .slide2, .slide3, .slide4, .slide5 {
         height: 450px;
     }
 
@@ -1133,7 +1158,7 @@ a[data-tooltip][data-placement="bottom"]::after {
         height: 600px;
     }
 
-    .slide1, .slide2, .slide3 {
+    .slide1, .slide2, .slide3, .slide4, .slide5 {
         height: 600px;
     }
 
@@ -1345,7 +1370,7 @@ a[data-tooltip][data-placement="bottom"]::after {
         height: 900px;
     }
 
-    .slide1, .slide2, .slide3 {
+    .slide1, .slide2, .slide3, .slide4, .slide5 {
         height: 900px;
     }
 
@@ -1511,7 +1536,7 @@ a[data-tooltip][data-placement="bottom"]::after {
         height: 1200px;
     }
 
-    .slide1, .slide2, .slide3 {
+    .slide1, .slide2, .slide3, .slide4, .slide5 {
         height: 1200px;
     }
 

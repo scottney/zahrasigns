@@ -182,17 +182,21 @@ function contactUsIcons() {
 			$('.sywh-services a:nth-child(4)').delay(300).fadeOut();
 			$('.sywh-services a:nth-child(5)').delay(400).fadeOut();
 			$('.sywh-services a:nth-child(6)').delay(500).fadeOut();
+			$('.sywh-services a:nth-child(7)').delay(600).fadeOut();
+			$('.sywh-services a:nth-child(8)').delay(700).fadeOut();
 		} else {
 			$('.sywh-services').addClass('active');
 			$('a.sywh-open-services i.fa-comments').hide();
 			$('a.sywh-open-services i.fa-times').show();
 			$('a.sywh-open-services').addClass('data-tooltip-hide');
-			$('.sywh-services a:nth-child(6)').delay(0).fadeIn();
-			$('.sywh-services a:nth-child(5)').delay(100).fadeIn();
-			$('.sywh-services a:nth-child(4)').delay(200).fadeIn();
-			$('.sywh-services a:nth-child(3)').delay(300).fadeIn();
-			$('.sywh-services a:nth-child(2)').delay(400).fadeIn();
-			$('.sywh-services a:nth-child(1)').delay(500).fadeIn();
+			$('.sywh-services a:nth-child(8)').delay(0).fadeIn();
+			$('.sywh-services a:nth-child(7)').delay(100).fadeIn();
+			$('.sywh-services a:nth-child(6)').delay(200).fadeIn();
+			$('.sywh-services a:nth-child(5)').delay(300).fadeIn();
+			$('.sywh-services a:nth-child(4)').delay(400).fadeIn();
+			$('.sywh-services a:nth-child(3)').delay(500).fadeIn();
+			$('.sywh-services a:nth-child(2)').delay(600).fadeIn();
+			$('.sywh-services a:nth-child(1)').delay(700).fadeIn();
 		}
 	});
 }

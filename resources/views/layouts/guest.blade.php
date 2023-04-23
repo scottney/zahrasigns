@@ -93,43 +93,44 @@
 
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             @if (Route::has('login'))
-                            <!-- Left Side Of Navbar -->
-                            <ul class="navbar-nav me-auto">
-                                <li class="nav-item">
-                                    <a href="{{ route('mainIndex') }}#productsSection" id="mainNavMenuLink">Products & Services</a>
-                                </li>
-
-                                <!-- <li class="nav-item">
-                                    <a href="" id="mainNavMenuLink">Services</a>
-                                </li> -->
-
-                                <li class="nav-item">
-                                    <a href="{{ route('aboutUsIndex') }}" id="mainNavMenuLink">About Us</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="" id="mainNavMenuLink">Blog</a>
-                                </li>
-                                
-                            <!-- @auth
-                                <li>
-                                    <a href="{{ url('/dashboard') }}" class="nav-link text-white" id="mainNavMenuLink">Dashboard</a>
-                                </li>
-                                @else -->
-
-                                <!-- Right Side Of Navbar -->
-                            <!-- < class="navbar-nav ms-auto">
-                                <li>
-                                    <a href="{{ route('login') }}" class="p-3" id="mainNavMenuLink">Log in</a>
-                                </li>
-
-                                 @if (Route::has('register'))
-                                    <li>
-                                        <a href="{{ route('register') }}" class="p-3" id="mainNavMenuLink">Register</a>
+                                <!-- Left Side Of Navbar -->
+                                <ul class="navbar-nav me-auto">
+                                    <li class="nav-item">
+                                        <a href="{{ route('mainIndex') }}#productsSection" id="mainNavMenuLink">Products & Services</a>
                                     </li>
-                                @endif
-                                @endauth -->
-                            </ul>    
+
+                                    <!-- <li class="nav-item">
+                                        <a href="" id="mainNavMenuLink">Services</a>
+                                    </li> -->
+
+                                    <li class="nav-item">
+                                        <a href="{{ route('aboutUsIndex') }}" id="mainNavMenuLink">About Us</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="" id="mainNavMenuLink">Blog</a>
+                                    </li>
+                                    
+                                @auth
+                                    <li class="nav-item">
+                                        <a href="{{ url('/dashboard') }}" class="nav-link text-white" id="mainNavMenuLink">Dashboard</a>
+                                    </li>
+                                @else
+                                </ul>
+
+                                <ul class="navbar-nav ms-auto">
+                                    <!-- Right Side Of Navbar -->
+                                    <li class="nav-item">
+                                        <a href="{{ route('login') }}" class="p-3" id="mainNavMenuLink">Log in</a>
+                                    </li>
+
+                                    @if (Route::has('register'))
+                                        <li class="nav-item">
+                                            <a href="{{ route('register') }}" class="p-3" id="mainNavMenuLink">Register</a>
+                                        </li>
+                                    @endif
+                                </ul>
+                                @endauth  
                             @endif
                         </div>
                     </div>
@@ -161,16 +162,28 @@
                                     <i class="fa-brands fa-facebook"></i>
                                 </a>
 
-                                <a href="https://api.whatsapp.com/send?phone=254722713283" class="whatsapp" data-tooltip="WhatsApp" data-placement="left" target="_blank">
+                                <a href="https://api.whatsapp.com/send?phone=254722713283" class="main_whatsapp" data-tooltip="Main WhatsApp" data-placement="left" target="_blank">
                                     <i class="fa-brands fa-whatsapp"></i>
                                 </a>
 
-                                <a href="tel:+254722713283" class="call" data-tooltip="Call" data-placement="left">
+                                <a href="https://api.whatsapp.com/send?phone=254700140900" class="alternative_whatsapp" data-tooltip="Alternative WhatsApp" data-placement="left" target="_blank">
+                                    <i class="fa-brands fa-square-whatsapp"></i>
+                                </a>
+
+                                <a href="tel:+254722713283" class="main_phone_number" data-tooltip="Main Phone Number" data-placement="left">
                                     <i class="fa-solid fa-phone"></i>
                                 </a>
 
-                                <a href="mailto:zss.nairobi@gmail.com" class="mailAddress" data-tooltip="Email" data-placement="left" target="_blank">
+                                <a href="tel:+254700140900" class="alternative_phone_number" data-tooltip="Alternative Phone Number" data-placement="left">
+                                    <i class="fa-solid fa-square-phone"></i>
+                                </a>
+
+                                <a href="mailto:zss.nairobi@gmail.com" class="main_email_address" data-tooltip="Main Email Address" data-placement="left" target="_blank">
                                     <i class="fa-solid fa-envelope"></i>
+                                </a>
+
+                                <a href="mailto:hamza5253.hb@gmail.com" class="alternative_email_address" data-tooltip="Alternative Email Address" data-placement="left" target="_blank">
+                                    <i class="fa-solid fa-square-envelope"></i>
                                 </a>
 
                                 <a href="https://instagram.com/zahra_sign_systems_ltd?igshid=Yzg5MTU1MDY=" class="instagram" data-tooltip="Instagram" data-placement="left" target="_blank">
