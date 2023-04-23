@@ -208,7 +208,7 @@
                     <div class="container-fluid text-center justify-content-center">
                         <div class="row pt-3 pb-3">
                             <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
-                                <h5 class="text-white" id="footerTitleText">Contacts</h5>
+                                <h5 class="text-white" id="footerTitleText"><b>Contacts</b></h5>
 
                                 <i class="fa-solid fa-building fa-1x p-2" id="footerContactsIcons">
                                     <span class="textFooter" id="footerContactsIconsLinks">
@@ -250,7 +250,7 @@
                             </div>
 
                             <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
-                                <h5 class="text-white" id="footerTitleText">Quick Links</h5>
+                                <h5 class="text-white" id="footerTitleText"><b>Quick Links</b></h5>
 
                                 <i class="fa-solid fa-circle-arrow-right fa-1x p-2" id="footerContactsIcons">
                                     <span class="textFooter" id="footerContactsIconsLinks">
@@ -277,7 +277,7 @@
                             </div>
 
                             <div class="col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
-                                <h5 class="text-white" id="footerTitleText">Social Media</h5>
+                                <h5 class="text-white" id="footerTitleText"><b>Social Media</b></h5>
 
                                 <i class="fa-brands fa-facebook fa-1x p-2" id="footerContactsIcons">
                                     <span class="textFooter" id="footerContactsIconsLinks">
