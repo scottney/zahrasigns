@@ -33,9 +33,9 @@ class EmailVerificationTest extends TestCase
     public function test_email_can_be_verified(): void
     {
         if (! Features::enabled(Features::emailVerification())) {
-            $this->markTestSkipped('Email verification not enabled.');
+             $this->markTestSkipped('Email verification not enabled.');
 
-            return;
+             return;
         }
 
         Event::fake();

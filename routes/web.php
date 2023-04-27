@@ -42,11 +42,29 @@ Route::group(['middleware' => ['XSS']], function() {
 
     /*************** End of guest protection ***************/
 
-    Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])->group(function () {
-        Route::get('/dashboard', function () {
-            return view('dashboard');
-        })->name('dashboard');
+    /*************** Start of account verification protection ***************/
+
+    Route::group(['middleware' => ['verified']], function() {
+
+        /*************** Start of prevent back history protection ***************/
+
+        Route::group(['middleware' => ['prevent-back-history']], function() {
+
+            Route::group(['middleware' => ['auth:sanctum'], config('jetstream.auth_session')], function() {
+
+                    Route::get('/dashboard', function () {
+                        return view('dashboard');
+                    })->name('dashboard');
+
+            });
+
+        });
+
+        /*************** End of prevent back history protection ***************/
+
     });
+
+    /*************** End of account verification protection ***************/
 
 });
 
