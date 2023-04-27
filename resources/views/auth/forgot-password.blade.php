@@ -15,7 +15,9 @@
 
                     <div class="card-body">
                         @if (session('status'))
-                            <div class="mb-4 font-medium text-sm text-green-600">{{ session('status') }}</div>
+                            <div class="alert alert-success">
+                                <p class="text-dark">{{ session('status') }}</p>
+                            </div>
                         @endif
 
                         <p>Please provide your email address and you will receive a password reset link.</p>

@@ -362,6 +362,7 @@
 
 #resetPasswordButton:hover, #confirmPasswordButton:hover {
     background: #90ff85;
+    color: #000000;
     box-shadow: 2px 2px 2px 2px;
 }
 

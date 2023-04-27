@@ -15,7 +15,7 @@
 
                     <div class="card-body">
                         @if (session('status') == 'verification-link-sent')
-                            <div class="bg-success">
+                            <div class="alert alert-success">
                                 <p class="text-dark">A new verification link has been sent to the email address you provided in your profile settings.</p>
                             </div>
                         @endif
@@ -31,7 +31,7 @@
                             </div>
                         </form>
 
-                        <div>
+                        <div class="pt-5 pb-3">
                             <a href="{{ route('profile.show') }}" class="underline text-sm text-gray-600 hover:text-gray-900">Edit Profile</a>
 
                             <form action="{{ route('logout') }}" method="POST" class="inline" role="form" accept-charset="UTF-8" enctype="multipart/form-data">
