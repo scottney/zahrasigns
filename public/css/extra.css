@@ -356,6 +356,15 @@
     box-shadow: 2px 2px 2px 2px;
 }
 
+#resetPasswordButton, #confirmPasswordButton {
+    background: #2b5227;
+}
+
+#resetPasswordButton:hover, #confirmPasswordButton:hover {
+    background: #90ff85;
+    box-shadow: 2px 2px 2px 2px;
+}
+
 /******************************* Start of Contact Us Icons styling *******************************/
 
 #sy-whatshelp {

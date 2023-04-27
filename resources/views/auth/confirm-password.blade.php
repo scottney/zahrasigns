@@ -1,28 +1,55 @@
-<x-guest-layout>
-    <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
+@extends('layouts.guest')
 
-        <div class="mb-4 text-sm text-gray-600">
-            {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
+@section('guest-content')
+
+<div class="row m-0">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 p-0">
+        <div class="row mt-3 mb-3 ms-0 me-0">
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"></div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                <div class="card shadow rounded">
+                    <div class="card-header bg-primary">
+                        <h2 class="card-title text-center text-white text-uppercase"><b>Confirm Password Portal</b></h2>
+                    </div>
+
+                    <div class="card-body">
+                        <p>This is a secure area of the application. Please confirm your password before continuing</p>
+
+                        <form action="{{ route('password.confirm') }}" method="POST" role="form" accept-charset="UTF-8" enctype="multipart/form-data">
+                            @csrf
+                            <div class="row pt-3">
+                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                    <label for="input_password" class="form-label"><b>Password:</b></label>
+
+                                    <input type="password" name="password" class="form-control @error('password') is-invalid @enderror border border-secondary rounded" id="input_password" autofocus>
+                                    @if (Route::has('password.request'))
+                                        <a class="float-end pt-1" href="{{ route('password.request') }}">Forgot your password?</a>
+                                    @endif
+
+                                    @error('password')
+                                        <span class="invalid-feedback alert alert-warning" role="alert">
+                                            <strong class="text-danger"><i class="fa-solid fa-circle-exclamation"></i>{{$message}}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="row pt-3">
+                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"> 
+                                    <button type="submit" class="btn btn-primary rounded-pill float-end text-uppercase" id="confirmPasswordButton">Confirm Password</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"></div>
         </div>
+    </div>
+</div>
+@endsection
 
-        <x-jet-validation-errors class="mb-4" />
 
-        <form method="POST" action="{{ route('password.confirm') }}">
-            @csrf
 
-            <div>
-                <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" autofocus />
-            </div>
-
-            <div class="flex justify-end mt-4">
-                <x-jet-button class="ml-4">
-                    {{ __('Confirm') }}
-                </x-jet-button>
-            </div>
-        </form>
-    </x-jet-authentication-card>
-</x-guest-layout>
