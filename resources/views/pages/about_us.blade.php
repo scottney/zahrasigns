@@ -401,26 +401,10 @@
 		</div>
 	</div>
 
-	<div class="row pt-3 pb-3">
-		<div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
-
-		<div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
-			<ul class="list-group">
-				<li class="list-group-item list-group-item-primary">
-					<h5><b>Motto:</b> <span>Bringing your brand to life in three dimensions</span></h5>
-				</li>
-
-				<li class="list-group-item list-group-item-primary">
-					<h5><b>Mission:</b> <span>To create visually striking and impactful 3D signage that captures the essence of our clients' brands and effectively communicates their messages to their intended audiences</span></h5>
-				</li>
-
-				<li class="list-group-item list-group-item-primary">
-					<h5><b>Vision:</b> <span>To be the <b>First Choice</b> solutions provider in communication design and services regionally through quality people,products and services with a professional and personal selling touch.</span></h5>
-				</li>
-			</ul>
+	<div class="row pt-3 pb-3" id="statementsContainer">
+		<div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+			<img src="/images/about-us-images/Mission.png" class="statementsImage">
 		</div>
-
-		<div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2"></div>
 	</div>
 </div>
 

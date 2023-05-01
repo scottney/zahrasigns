@@ -8,7 +8,7 @@
             <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4"></div>
 
             <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
-                <div class="card shadow rounded">
+                <div class="card shadow rounded border border-dark">
                     <div class="card-header bg-primary">
                         <h2 class="card-title text-center text-white text-uppercase"><b>Login Portal</b></h2>
                     </div>
@@ -59,10 +59,15 @@
                                     </div>
                                     
                                     <button type="submit" class="btn btn-primary rounded-pill float-end text-uppercase" id="loginButton">Login</button>
-                                    <a class="float-start pt-3" href="{{ route('register') }}">Don't have an account ?</a>
                                 </div>
                             </div>
                         </form>
+
+                        <div class="row pt-3">
+                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                <a class="float-start pt-3" href="{{ route('register') }}">Don't have an account ?</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

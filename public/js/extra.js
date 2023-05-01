@@ -21,9 +21,12 @@ window.addEventListener('load', eraseText);
 window.addEventListener('load', numbersCounter);
 window.addEventListener('load', cardsSwiper);
 window.addEventListener('load', contactUsIcons);
+window.addEventListener('load', footerHandler);
 window.addEventListener('scroll', reveal);
 window.addEventListener('scroll', topReveal);
 window.addEventListener('scroll', bottomReveal);
+window.addEventListener('load', sidebarHandler);
+window.addEventListener('load', toggle_password_change);
 
 // Function responsible for initialising tooltips
 function toolTips() {
@@ -199,6 +202,120 @@ function contactUsIcons() {
 			$('.sywh-services a:nth-child(1)').delay(700).fadeIn();
 		}
 	});
+}
+
+function footerHandler() {
+	var footer_container = document.getElementById("footerContainer");
+	var current_window_location = window.location.href;
+	var url_location_footer_hidden = ["http://zahrasigns.com/login", "https://zahrasigns.com/login", 
+									"http://zahrasigns.com/register", "https://zahrasigns.com/register", 
+									"http://zahrasigns.com/forgot-password", "https://zahrasigns.com/forgot-password", 
+									"http://zahrasigns.com/reset-password", "https://zahrasigns.com/reset-password", 
+									"http://zahrasigns.com/user/confirm-password", "https://zahrasigns.com/user/confirm-password",
+									"http://zahrasigns.com/email/verify", "https://zahrasigns.com/email/verify"];
+
+	if(url_location_footer_hidden.includes(current_window_location)) {
+		footer_container.style.display = "none";
+	}
+}
+
+// Function responsible for showing or hiding the sidebar
+function sidebarHandler() {
+    var sidebar_button = document.querySelector("#sidebarMenuButton");
+    var sidebar = document.querySelector("#sidebar-wrapper");
+
+    sidebar_button.onclick = function() {
+        sidebar.classList.toggle("active");
+    }
+}
+
+// Functions that allows for the password to be viewed when changing the password from the profile menu
+var state = false;
+function toggle_password_change() {
+    if(window.location.href == "http://zahrasigns.com/user/profile") {
+        if (state) {
+            document.getElementById("input_current_password").setAttribute("type", "text");
+            document.getElementById("input_password").setAttribute("type", "text");
+            document.getElementById("password_confirmation").setAttribute("type", "text");
+            document.querySelector("#checkPasswordChange").classList = 'fa-solid fa-eye';
+            state = false;
+        } else {
+            document.getElementById("input_current_password").setAttribute("type", "password");
+            document.getElementById("input_password").setAttribute("type", "password");
+            document.getElementById("password_confirmation").setAttribute("type", "password");
+            document.querySelector("#checkPasswordChange").classList = 'fa-solid fa-eye-slash';
+            state = true;
+        }
+    }
+}
+
+function passwordStrength() {
+    var password = document.getElementById("input_password").value;
+    var password_rules = document.getElementById("passwordStrengthRules");
+    var password_length = document.getElementById("charactersLength");
+    var password_lowercase = document.getElementById("charactersLowercase");
+    var lowercaseLetters = /[a-z]/g;
+    var password_uppercase = document.getElementById("charactersUppercase");
+    var uppercaseLetters = /[A-Z]/g;
+    var password_number = document.getElementById("charactersNumber");
+    var passwordNumbers = /[0-9]/g;
+    var password_special = document.getElementById("charactersSpecial");
+    var passwordSpecial = /[*.!@#$%^&(){}[\]:;<>,.?/~_+=|\/-]/g;
+    var password_spaces = document.getElementById("charactersSpaces");
+    var passwordSpaces = /[' ']/g;
+    var submitButton = document.getElementById("usersRegisterButton");
+
+    if(password != null || '') {
+        password_rules.style.display = "block";
+    }
+    
+    if((password.length < 8) || (password.length > 19)) {
+        password_length.style.color = "red";
+        addErrorIfNotExists('password_length_register');
+    } else {
+        password_length.style.color = "green";
+        removeErrorIfExists('password_length_register');
+    }
+
+    if(password.match(lowercaseLetters)) {
+        password_lowercase.style.color = "green";
+        removeErrorIfExists('password_lower_case_register');
+    } else {
+        password_lowercase.style.color = "red";
+        addErrorIfNotExists('password_lower_case_register');
+    }
+
+    if(password.match(uppercaseLetters)) {
+        password_uppercase.style.color = "green";
+        removeErrorIfExists('password_upper_case_register');
+    } else {
+        password_uppercase.style.color = "red";
+        addErrorIfNotExists('password_upper_case_register');
+    }
+
+    if(password.match(passwordNumbers)) {
+        password_number.style.color = "green";
+        removeErrorIfExists('password_numbers_register');
+    } else {
+        password_number.style.color = "red";
+        addErrorIfNotExists('password_numbers_register');
+    }
+
+    if(password.match(passwordSpecial)) {
+        password_special.style.color = "green";
+        removeErrorIfExists('password_special_characters_register');
+    } else {
+        password_special.style.color = "red";
+        addErrorIfNotExists('password_special_characters_register');
+    }
+
+    if(!password.match(passwordSpaces)) {
+        password_spaces.style.color = "green";
+        removeErrorIfExists('password_spaces_register');
+    } else {
+        password_spaces.style.color = "red";
+        addErrorIfNotExists('password_spaces_register');
+    }
 }
 
 

@@ -366,6 +366,15 @@
     box-shadow: 2px 2px 2px 2px;
 }
 
+#statementsContainer {
+    /* background-image: url('/images/special-background/BG-2 - Copy.jpg'); */
+    background-image: url('/images/special-background/BG.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    overflow: hidden;
+}
+
 /******************************* Start of Contact Us Icons styling *******************************/
 
 #sy-whatshelp {
@@ -585,6 +594,221 @@ a[data-tooltip][data-placement="bottom"]::after {
 
 
 /******************************* End of Contact Us Icons styling *******************************/
+
+/******************************* Start of side-menu styling *******************************/
+
+#sidebarMenuButton {
+    line-height: 2;
+    background: #198CFF;
+    color: #FFFFFF;
+}
+
+#sidebarMenuButton:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px #E6FFE6;
+}
+
+#wrapper {
+    padding-top: 40px;
+}
+
+#sidebar-wrapper {
+    width: 75px;
+    overflow-x: hidden;
+    background: #474747;
+    transition: all 1s ease-in-out;
+    z-index: 2;
+}
+
+#sidebar-wrapper.active {
+    width: 250px;
+}
+
+#sidebar-wrapper.active .sidebar-nav li:hover {
+    background: #198CFF;
+    cursor: pointer;
+    border-radius: 25px;
+    animation: pop-out 1s infinite;
+    box-shadow: 1px 1px 1px 1px #E6FFE6;
+}
+
+#sidebar-wrapper .sidebar-nav li:hover {
+    background: #198CFF;
+    cursor: pointer;
+    border-radius: 25px;
+    animation: pop-out 1s infinite;
+    box-shadow: 1px 1px 1px 1px #E6FFE6;
+}
+
+@keyframes pop-out{
+  50%  {
+    transform: scale(1.025);
+  }
+}
+
+#sidebar-wrapper .sidebar-nav li #proceedIcon {
+    display: none;
+}
+
+#sidebar-wrapper.active .sidebar-nav li #proceedIcon {
+    display: none;
+}
+
+#sidebar-wrapper.active .sidebar-nav li:hover #proceedIcon {
+    display: inline;
+}
+
+#sidebar-wrapper .sidebar-nav li a i {
+    color: #FFFFFF;
+    display: inline;
+}
+
+#sidebar-wrapper .sidebar-nav li a span {
+    display: none;
+}
+
+#sidebar-wrapper.active .sidebar-nav li a span {
+    display: inline;
+}
+
+.sidebar-nav li a {
+    color: #FFFFFF;
+}
+
+#page-content-wrapper {
+    min-height: 100vh;
+    width: 100%;
+}
+
+/******************************* End of side-menu styling *******************************/
+
+/******************************* Start of settings styling *******************************/
+
+#input_username, #input_email, #input_password, #input_current_password, #password_confirmation, #input_code {
+    border-radius: 25px;
+    background: #FFFBE6;
+    height: 30px;
+}
+
+#input_username:hover, #input_email:hover, #input_password:hover, #input_current_password:hover, #password_confirmation:hover, 
+#input_code:hover {
+    cursor: pointer;
+    background: #FFF2B3;
+}
+
+#selectProfileImageButton, #profileInformationSaveButton, #enableTwoFactorButton, #confirmTwoFactorButton, #browserSessionsButton, 
+#confirmDeleteAccountButton {
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px 2px #000000;
+    background: #001166;
+    color: #FFFFFF;
+    transition: all 0.5s;
+}
+
+#cancelTwoFactorButton, #disableTwoFactorButton, #cancelBrowserSessionsButton, #deleteAccountButton, #closeApiTokenButton, 
+#cancelApiTokenButton, #deleteApiTokenDeleteButton {
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px 2px #000000;
+    background: #666300;
+    color: #FFFFFF;
+    transition: all 0.5s;
+}
+
+#showRecoveryCodesButton {
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px 2px #000000;
+    background: #026666;
+    color: #FFFFFF;
+    transition: all 0.5s;
+}
+
+#regenerateRecoveryCodesButton {
+    border-radius: 25px;
+    box-shadow: 2px 2px 2px 2px #000000;
+    background: #660025;
+    color: #FFFFFF;
+    transition: all 0.5s;
+}
+
+#selectProfileImageButton:hover, #profileInformationSaveButton:hover, #enableTwoFactorButton:hover, 
+#confirmTwoFactorButton:hover, #browserSessionsButton:hover, #confirmDeleteAccountButton:hover {
+    background: #116600;
+}
+
+#cancelTwoFactorButton:hover, #disableTwoFactorButton:hover, #cancelBrowserSessionsButton:hover, 
+#deleteAccountButton:hover, #closeApiTokenButton:hover, #cancelApiTokenButton:hover, 
+#deleteApiTokenDeleteButton:hover {
+    background: #660000;
+}
+
+#showRecoveryCodesButton:hover {
+    background: #660025;
+}
+
+#regenerateRecoveryCodesButton:hover {
+    background: #026666;
+}
+
+#selectProfileImageButton span, #profileInformationSaveButton span, #enableTwoFactorButton span, 
+#regenerateRecoveryCodesButton span, #confirmTwoFactorButton span, #showRecoveryCodesButton span, 
+#cancelTwoFactorButton span, #disableTwoFactorButton span, #browserSessionsButton span, 
+#cancelBrowserSessionsButton span, #deleteAccountButton span, #closeApiTokenButton span, 
+#cancelApiTokenButton span, #deleteApiTokenDeleteButton span, #confirmDeleteAccountButton span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+#selectProfileImageButton span:after, #profileInformationSaveButton span:after, #enableTwoFactorButton span:after, 
+#regenerateRecoveryCodesButton span:after, #confirmTwoFactorButton span:after, #showRecoveryCodesButton span:after, 
+#cancelTwoFactorButton span:after, #disableTwoFactorButton span:after, #browserSessionsButton span:after, 
+#cancelBrowserSessionsButton span:after, #deleteAccountButton span:after, #closeApiTokenButton span:after, 
+#cancelApiTokenButton span:after, #deleteApiTokenDeleteButton span:after, #confirmDeleteAccountButton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#selectProfileImageButton:hover span, #profileInformationSaveButton:hover span, #enableTwoFactorButton:hover span, 
+#regenerateRecoveryCodesButton:hover span, #confirmTwoFactorButton:hover span, #showRecoveryCodesButton:hover span, 
+#cancelTwoFactorButton:hover span, #disableTwoFactorButton:hover span, #browserSessionsButton:hover span, 
+#cancelBrowserSessionsButton:hover span, #deleteAccountButton:hover span, #closeApiTokenButton:hover span, 
+#cancelApiTokenButton:hover span, #deleteApiTokenDeleteButton:hover span, #confirmDeleteAccountButton:hover span {
+    padding-right: 25px;
+}
+
+#selectProfileImageButton:hover span:after, #profileInformationSaveButton:hover span:after, #enableTwoFactorButton:hover span:after, 
+#regenerateRecoveryCodesButton:hover span:after, #confirmTwoFactorButton:hover span:after, #showRecoveryCodesButton:hover span:after, 
+#cancelTwoFactorButton:hover span:after, #disableTwoFactorButton:hover span:after, #browserSessionsButton:hover span:after, 
+#cancelBrowserSessionsButton:hover span:after, #deleteAccountButton:hover span:after, #closeApiTokenButton:hover span:after, 
+#cancelApiTokenButton:hover span:after, #deleteApiTokenDeleteButton:hover span:after, #confirmDeleteAccountButton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+#checkPasswordChange {
+    float: right;
+    padding-right: 5px;
+    margin-top: -23px;
+}
+
+#checkPasswordChange:hover {
+    cursor: pointer;
+    color: #FF0000;
+}
+
+#passwordStrengthRules {
+    border: 1px solid #000000;
+    border-radius: 35px;
+    font-size: 16px;
+    background: #FFF2B3;
+    display: none;
+}
+
+/******************************* End of settings styling *******************************/
 
 /*************************** Start of very small screen styling ***************************/
 

@@ -50,13 +50,21 @@ Route::group(['middleware' => ['XSS']], function() {
 
         Route::group(['middleware' => ['prevent-back-history']], function() {
 
-            Route::group(['middleware' => ['auth:sanctum'], config('jetstream.auth_session')], function() {
+            /*************** Start of auth protection ***************/
+
+            Route::group(['middleware' => ['auth']], function() {
+                Route::group(['middleware' => ['auth:sanctum'], config('jetstream.auth_session')], function() {
 
                     Route::get('/dashboard', function () {
                         return view('dashboard');
                     })->name('dashboard');
 
+                    Route::resource('blog', 'BlogController');
+
+                });
             });
+            
+            /*************** End of auth protection ***************/
 
         });
 
