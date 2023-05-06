@@ -22,11 +22,13 @@ window.addEventListener('load', numbersCounter);
 window.addEventListener('load', cardsSwiper);
 window.addEventListener('load', contactUsIcons);
 window.addEventListener('load', footerHandler);
+window.addEventListener('load', sidebarHandler);
+window.addEventListener('load', toggle_password_change);
+window.addEventListener('load', textFormatter);
+
 window.addEventListener('scroll', reveal);
 window.addEventListener('scroll', topReveal);
 window.addEventListener('scroll', bottomReveal);
-window.addEventListener('load', sidebarHandler);
-window.addEventListener('load', toggle_password_change);
 
 // Function responsible for initialising tooltips
 function toolTips() {
@@ -316,6 +318,31 @@ function passwordStrength() {
         password_spaces.style.color = "red";
         addErrorIfNotExists('password_spaces_register');
     }
+}
+
+function textFormatter () {
+	tinymce.init({
+		selector: 'textarea#input_blog_body',
+		width: '100%',
+		height: '100%',
+        plugins: [
+            'advlist', 'autolink', 'lists' ,'link', 'image', 'charmap', 'print', 'preview', 'hr', 'anchor', 'pagebreak',
+            'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'fontsize', 'font', 'insertdatetime', 
+		     'media', 'table', 'emoticons', 'Advanced template', 'codesample', 'styleprops'],
+		toolbar: 'insertfile undo redo | styles | styleselect | bold italic underline |' +
+				'alignleft aligncenter alignright alignjustify | bullist numlist outdent indent |' + 
+				'link image | print preview media fullpage fullscreen | forecolor backcolor emoticons | codesample',
+		menu: {
+			favs: {
+				title: 'Menu',
+				items: 'code visualid | searchreplace | emoticons'
+			}
+		},
+		menubar: 'favs file edit view insert format tools table',
+		content_style: 'body{font-family:Helvetica,sans-serif,Arial,Serif,Times New Roman;' + 
+							 'font-size:10px,12px,14px,16px,18px,20px,22px,24px,28px,30px,32px,34px,' + 
+							 '36px,38px,40px,42px,44px,46px,48px,50px,52px,54px,56px,58px,60px}'
+	});
 }
 
 

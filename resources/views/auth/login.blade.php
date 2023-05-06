@@ -63,11 +63,11 @@
                             </div>
                         </form>
 
-                        <div class="row pt-3">
+                        {{--<div class="row pt-3">
                             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                 <a class="float-start pt-3" href="{{ route('register') }}">Don't have an account ?</a>
                             </div>
-                        </div>
+                        </div>--}}
                     </div>
                 </div>
             </div>

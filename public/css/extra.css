@@ -697,7 +697,7 @@ a[data-tooltip][data-placement="bottom"]::after {
 }
 
 #selectProfileImageButton, #profileInformationSaveButton, #enableTwoFactorButton, #confirmTwoFactorButton, #browserSessionsButton, 
-#confirmDeleteAccountButton {
+#confirmDeleteAccountButton, #createBlogPostButton {
     border-radius: 25px;
     box-shadow: 2px 2px 2px 2px #000000;
     background: #001166;
@@ -731,7 +731,8 @@ a[data-tooltip][data-placement="bottom"]::after {
 }
 
 #selectProfileImageButton:hover, #profileInformationSaveButton:hover, #enableTwoFactorButton:hover, 
-#confirmTwoFactorButton:hover, #browserSessionsButton:hover, #confirmDeleteAccountButton:hover {
+#confirmTwoFactorButton:hover, #browserSessionsButton:hover, #confirmDeleteAccountButton:hover, 
+#createBlogPostButton:hover {
     background: #116600;
 }
 
@@ -753,7 +754,8 @@ a[data-tooltip][data-placement="bottom"]::after {
 #regenerateRecoveryCodesButton span, #confirmTwoFactorButton span, #showRecoveryCodesButton span, 
 #cancelTwoFactorButton span, #disableTwoFactorButton span, #browserSessionsButton span, 
 #cancelBrowserSessionsButton span, #deleteAccountButton span, #closeApiTokenButton span, 
-#cancelApiTokenButton span, #deleteApiTokenDeleteButton span, #confirmDeleteAccountButton span {
+#cancelApiTokenButton span, #deleteApiTokenDeleteButton span, #confirmDeleteAccountButton span, 
+#createBlogPostButton span {
     display: inline-block;
     position: relative;
     transition: 0.5s;
@@ -763,7 +765,8 @@ a[data-tooltip][data-placement="bottom"]::after {
 #regenerateRecoveryCodesButton span:after, #confirmTwoFactorButton span:after, #showRecoveryCodesButton span:after, 
 #cancelTwoFactorButton span:after, #disableTwoFactorButton span:after, #browserSessionsButton span:after, 
 #cancelBrowserSessionsButton span:after, #deleteAccountButton span:after, #closeApiTokenButton span:after, 
-#cancelApiTokenButton span:after, #deleteApiTokenDeleteButton span:after, #confirmDeleteAccountButton span:after {
+#cancelApiTokenButton span:after, #deleteApiTokenDeleteButton span:after, #confirmDeleteAccountButton span:after, 
+#createBlogPostButton span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -776,7 +779,8 @@ a[data-tooltip][data-placement="bottom"]::after {
 #regenerateRecoveryCodesButton:hover span, #confirmTwoFactorButton:hover span, #showRecoveryCodesButton:hover span, 
 #cancelTwoFactorButton:hover span, #disableTwoFactorButton:hover span, #browserSessionsButton:hover span, 
 #cancelBrowserSessionsButton:hover span, #deleteAccountButton:hover span, #closeApiTokenButton:hover span, 
-#cancelApiTokenButton:hover span, #deleteApiTokenDeleteButton:hover span, #confirmDeleteAccountButton:hover span {
+#cancelApiTokenButton:hover span, #deleteApiTokenDeleteButton:hover span, #confirmDeleteAccountButton:hover span, 
+#createBlogPostButton:hover span {
     padding-right: 25px;
 }
 
@@ -784,7 +788,8 @@ a[data-tooltip][data-placement="bottom"]::after {
 #regenerateRecoveryCodesButton:hover span:after, #confirmTwoFactorButton:hover span:after, #showRecoveryCodesButton:hover span:after, 
 #cancelTwoFactorButton:hover span:after, #disableTwoFactorButton:hover span:after, #browserSessionsButton:hover span:after, 
 #cancelBrowserSessionsButton:hover span:after, #deleteAccountButton:hover span:after, #closeApiTokenButton:hover span:after, 
-#cancelApiTokenButton:hover span:after, #deleteApiTokenDeleteButton:hover span:after, #confirmDeleteAccountButton:hover span:after {
+#cancelApiTokenButton:hover span:after, #deleteApiTokenDeleteButton:hover span:after, #confirmDeleteAccountButton:hover span:after, 
+#createBlogPostButton:hover span:after {
     opacity: 1;
     right: 0;
 }
@@ -809,6 +814,85 @@ a[data-tooltip][data-placement="bottom"]::after {
 }
 
 /******************************* End of settings styling *******************************/
+
+/******************************* Start of blog styling *******************************/
+
+#blogCards {
+    height: 300px;
+    box-shadow: 5px 10px 35px #0067ff;
+}
+
+#blogCards:hover {
+    animation: pop-out 1s infinite;
+}
+
+@keyframes pop-out{
+    50%  {
+      transform: scale(1.025);
+    }
+}
+
+#blogCardsHeader, #blogCardsFooter {
+    background: #001166;
+}
+
+#redirectToPage {
+    color: #fff;
+}
+
+#redirectToPage:hover {
+    color: #eeea00;
+}
+
+#create-blog-image, #view-blog-image {
+    width: 100%;
+    height: 100%;
+}
+
+#blog_management_title_card {
+    width: 225px;
+}
+
+#preview_main_faatured_image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: url('/images/dashboard-images/main-featured-image.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+#preview_main_faatured_image:hover {
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+#input_blog_featured_image, #input_blog_title, #input_blog_slug , #input_blog_publish_time, #input_blog_publish_date, #input_blog_status, #input_meta_title {
+    border-radius: 25px;
+    background: #FFFBE6;
+    height: 30px;
+}
+
+#input_blog_featured_image:hover, #input_blog_title:hover, #input_blog_slug:hover, #input_blog_publish_time:hover, #input_blog_publish_date:hover, #input_blog_tags:hover, 
+#input_blog_status:hover, #input_meta_title:hover, #input_meta_description:hover {
+    cursor: pointer;
+    background: #FFF2B3;
+}
+
+#input_blog_is_featured:hover {
+    cursor: pointer;
+}
+
+#input_blog_excerpt[read-only] {
+    background: #B2BEB5;
+}
+
+#input_blog_excerpt[read-only]:hover {
+    background: #B2BEB5;
+	cursor: not-allowed;
+}
+
+/******************************* End of blog styling *******************************/
 
 /*************************** Start of very small screen styling ***************************/
 

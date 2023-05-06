@@ -24,7 +24,12 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.auth-pages.blog-pages.pages.blog-index', ["source"=>"create"]);
+    }
+
+    public function show_all()
+    {
+        return view('pages.auth-pages.blog-pages.pages.blog-index', ["source"=>"show_all"]);
     }
 
     /**
