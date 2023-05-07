@@ -28,8 +28,8 @@
                             <h5 class="text-center text-white text-uppercase"><b>Create Blog Post</b></h5>
                         </div>
 
-                        <div class="card-body darkShade p-0" id="blogCardsBody">
-                            <img src="/images/dashboard-images/create-blogs.jpg" id="create-blog-image">
+                        <div class="card-body d-flex justify-content-center p-0" id="blogCardsBody">
+                            <img src="/images/dashboard-images/create-blog.png" id="create-blog-image">
                         </div>
 
                         <div class="card-footer text-center" id="blogCardsFooter">
@@ -46,8 +46,8 @@
                             <h5 class="text-center text-white text-uppercase"><b>View All Blog Posts</b></h5>
                         </div>
 
-                        <div class="card-body darkShade p-0" id="blogCardsBody">
-                            <img src="/images/dashboard-images/view-blogs.jpg" id="view-blog-image">
+                        <div class="card-body d-flex justify-content-center p-0" id="blogCardsBody">
+                            <img src="/images/dashboard-images/view-blog.png" id="view-blog-image">
                         </div>
 
                         <div class="card-footer text-center" id="blogCardsFooter">

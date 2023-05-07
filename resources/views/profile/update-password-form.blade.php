@@ -51,7 +51,7 @@
                                 </div>
                             </x-jet-action-message>
 
-                            <x-jet-button wire:loading.attr="disabled" wire:target="photo" id="profileInformationSaveButton" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Proceed with saving the currently provided information"><span>Save</span></x-jet-button>
+                            <x-jet-button wire:loading.attr="disabled" wire:target="photo" id="profileInformationPasswordSaveButton" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Proceed with saving the currently provided information"><span>Save</span></x-jet-button>
                         </x-slot>
                     </div>
                 </div>

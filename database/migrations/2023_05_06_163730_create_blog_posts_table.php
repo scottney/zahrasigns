@@ -43,7 +43,7 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('no action');
-            $table->foreign('blog_category_id')->references('id')->on('blog_posts_categories')->onDelete('no action');
+            $table->foreign('blog_category_id')->references('id')->on('blog_post_categories')->onDelete('no action');
         });
     }
 

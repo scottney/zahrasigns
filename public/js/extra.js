@@ -251,6 +251,25 @@ function toggle_password_change() {
     }
 }
 
+// Functions responsible for checking the password strength
+var user_register_errors = [
+		'password_length_register', 'password_lower_case_register', 'password_upper_case_register', 
+		'password_numbers_register', 'password_special_characters_register', 'password_spaces_register',
+    ];
+
+function removeErrorIfExists(user_register_error) {
+    var user_register_index = user_register_errors.indexOf(user_register_error);
+    if (user_register_index !== -1) {
+        user_register_errors.splice(user_register_index, 1);
+    }
+}
+
+function addErrorIfNotExists(user_register_error) {
+    if (user_register_errors.indexOf(user_register_error) === -1) {
+        user_register_errors.push(user_register_error);
+    }
+}
+
 function passwordStrength() {
     var password = document.getElementById("input_password").value;
     var password_rules = document.getElementById("passwordStrengthRules");
@@ -344,6 +363,37 @@ function textFormatter () {
 							 '36px,38px,40px,42px,44px,46px,48px,50px,52px,54px,56px,58px,60px}'
 	});
 }
+
+function showImage(input) {
+    var image_input = document.getElementById('input_blog_featured_image');
+    var image_preview = document.getElementById('preview_main_featured_image');
+
+    if (image_input.files && image_input.files[0]) {
+        var file_reader = new FileReader();
+
+        file_reader.onload = function (e) {
+            image_preview.src = e.target.result;
+        }
+
+        file_reader.readAsDataURL(image_input.files[0]);
+    }
+}
+
+function readURL(input) {
+	if (input.files && input.files[0]) {
+	  var reader = new FileReader();
+	  reader.onload = function(e) {
+		$('#preview_main_featured_image').attr('src', e.target.result);
+		$('#preview_main_featured_image').hide();
+		$('#preview_main_featured_image').fadeIn(650);
+	  }
+	  reader.readAsDataURL(input.files[0]);
+	}
+  }
+
+$("#input_blog_featured_image").change(function() {
+	readURL(this);
+  });
 
 
 

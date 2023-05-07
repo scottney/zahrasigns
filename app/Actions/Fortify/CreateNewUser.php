@@ -4,11 +4,13 @@ namespace App\Actions\Fortify;
 
 use App\Models\Team;
 use App\Models\User;
+use App\Models\PasswordSecurity;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Jetstream\Jetstream;
+use Illuminate\Support\Str;
 
 class CreateNewUser implements CreatesNewUsers
 {
@@ -28,13 +30,20 @@ class CreateNewUser implements CreatesNewUsers
         ])->validate();
 
         return DB::transaction(function () use ($input) {
-            return tap(User::create([
+            return tap($user_data = User::create([
                 'name' => $input['name'],
                 'email' => $input['email'],
                 'password' => Hash::make($input['password']),
+                'user_number' => (int)strtotime("now"),
+                'user_UUID' => Str::uuid()->toString()
             ]), function (User $user) {
                 $this->createTeam($user);
-            });
+            },PasswordSecurity::create([
+                'user_id' => $user_data->id,
+                'user_number' => $user_data->user_number,
+                'user_UUID' => $user_data->user_UUID,
+                'password_expiry_days' => 90,
+            ]));
         });
     }
 

@@ -26,7 +26,14 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var string<int, string>
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 
+        'email', 
+        'password',
+        'user_number',
+        'user_UUID',
+        'account_locked',
+        'account_state',
+        'credentials_expired'
     ];
 
     /**
@@ -58,4 +65,12 @@ class User extends Authenticatable implements MustVerifyEmail
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function security_password()
+    {
+        return $this->hasOne(PasswordSecurity::class);
+    }
+
+
+
 }

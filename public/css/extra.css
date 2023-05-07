@@ -684,20 +684,22 @@ a[data-tooltip][data-placement="bottom"]::after {
 
 /******************************* Start of settings styling *******************************/
 
-#input_username, #input_email, #input_password, #input_current_password, #password_confirmation, #input_code {
+#input_name, #input_username, #input_email, #input_password, #input_current_password, #password_confirmation, #input_code, #password-confirmation, 
+#input_sessions_password, #input_blog_category_name, #input_blog_category_slug {
     border-radius: 25px;
     background: #FFFBE6;
     height: 30px;
 }
 
-#input_username:hover, #input_email:hover, #input_password:hover, #input_current_password:hover, #password_confirmation:hover, 
-#input_code:hover {
+#input_name:hover, #input_username:hover, #input_email:hover, #input_password:hover, #input_current_password:hover, #password_confirmation:hover, 
+#input_code:hover, #password-confirmation:hover, #input_sessions_password:hover, #input_blog_category_name:hover, #input_blog_category_slug:hover, 
+#input_blog_category_type:hover, #input_blog_category_description:hover {
     cursor: pointer;
     background: #FFF2B3;
 }
 
 #selectProfileImageButton, #profileInformationSaveButton, #enableTwoFactorButton, #confirmTwoFactorButton, #browserSessionsButton, 
-#confirmDeleteAccountButton, #createBlogPostButton {
+#confirmDeleteAccountButton, #createBlogPostButton, #profileInformationPasswordSaveButton, #createBlogPostCategoryButton {
     border-radius: 25px;
     box-shadow: 2px 2px 2px 2px #000000;
     background: #001166;
@@ -732,7 +734,8 @@ a[data-tooltip][data-placement="bottom"]::after {
 
 #selectProfileImageButton:hover, #profileInformationSaveButton:hover, #enableTwoFactorButton:hover, 
 #confirmTwoFactorButton:hover, #browserSessionsButton:hover, #confirmDeleteAccountButton:hover, 
-#createBlogPostButton:hover {
+#createBlogPostButton:hover, #profileInformationPasswordSaveButton:hover, 
+#createBlogPostCategoryButton:hover {
     background: #116600;
 }
 
@@ -755,7 +758,7 @@ a[data-tooltip][data-placement="bottom"]::after {
 #cancelTwoFactorButton span, #disableTwoFactorButton span, #browserSessionsButton span, 
 #cancelBrowserSessionsButton span, #deleteAccountButton span, #closeApiTokenButton span, 
 #cancelApiTokenButton span, #deleteApiTokenDeleteButton span, #confirmDeleteAccountButton span, 
-#createBlogPostButton span {
+#createBlogPostButton span, #profileInformationPasswordSaveButton span, #createBlogPostCategoryButton span {
     display: inline-block;
     position: relative;
     transition: 0.5s;
@@ -766,7 +769,8 @@ a[data-tooltip][data-placement="bottom"]::after {
 #cancelTwoFactorButton span:after, #disableTwoFactorButton span:after, #browserSessionsButton span:after, 
 #cancelBrowserSessionsButton span:after, #deleteAccountButton span:after, #closeApiTokenButton span:after, 
 #cancelApiTokenButton span:after, #deleteApiTokenDeleteButton span:after, #confirmDeleteAccountButton span:after, 
-#createBlogPostButton span:after {
+#createBlogPostButton span:after, #profileInformationPasswordSaveButton span:after, 
+#createBlogPostCategoryButton span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -780,7 +784,8 @@ a[data-tooltip][data-placement="bottom"]::after {
 #cancelTwoFactorButton:hover span, #disableTwoFactorButton:hover span, #browserSessionsButton:hover span, 
 #cancelBrowserSessionsButton:hover span, #deleteAccountButton:hover span, #closeApiTokenButton:hover span, 
 #cancelApiTokenButton:hover span, #deleteApiTokenDeleteButton:hover span, #confirmDeleteAccountButton:hover span, 
-#createBlogPostButton:hover span {
+#createBlogPostButton:hover span, #profileInformationPasswordSaveButton:hover span, 
+#createBlogPostCategoryButton:hover span {
     padding-right: 25px;
 }
 
@@ -789,7 +794,7 @@ a[data-tooltip][data-placement="bottom"]::after {
 #cancelTwoFactorButton:hover span:after, #disableTwoFactorButton:hover span:after, #browserSessionsButton:hover span:after, 
 #cancelBrowserSessionsButton:hover span:after, #deleteAccountButton:hover span:after, #closeApiTokenButton:hover span:after, 
 #cancelApiTokenButton:hover span:after, #deleteApiTokenDeleteButton:hover span:after, #confirmDeleteAccountButton:hover span:after, 
-#createBlogPostButton:hover span:after {
+#createBlogPostButton:hover span:after, #profileInformationPasswordSaveButton:hover span:after, #createBlogPostCategoryButton:hover span:after {
     opacity: 1;
     right: 0;
 }
@@ -816,6 +821,10 @@ a[data-tooltip][data-placement="bottom"]::after {
 /******************************* End of settings styling *******************************/
 
 /******************************* Start of blog styling *******************************/
+
+#system-notification-container {
+    height: 35px;
+}
 
 #blogCards {
     height: 300px;
@@ -845,24 +854,22 @@ a[data-tooltip][data-placement="bottom"]::after {
 }
 
 #create-blog-image, #view-blog-image {
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 255px;
 }
 
 #blog_management_title_card {
     width: 225px;
 }
 
-#preview_main_faatured_image {
+#preview_main_featured_image {
     width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: url('/images/dashboard-images/main-featured-image.jpg');
+    height: 400px;
     background-position: center;
     background-size: cover;
 }
 
-#preview_main_faatured_image:hover {
+#preview_main_featured_image:hover {
     cursor: pointer;
     opacity: 0.75;
 }

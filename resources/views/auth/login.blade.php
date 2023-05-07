@@ -15,8 +15,20 @@
 
                     <div class="card-body">
                         @if (session('status'))
-                            <div class="mb-4 font-medium text-sm text-green-600">{{ session('status') }}</div>
+                            <div class="alert alert-success">
+                                <p class="text-dark">{{ session('status') }}</p>
+                            </div>
                         @endif
+
+                        <!-- Start of system notifications area -->
+                        
+                        @if(Session::has('password_changed_logout_notification'))
+                            <div class="alert alert-success p-1" id="system-notification-container">
+                                <p class="p-1">{!! Session::get('password_changed_logout_notification') !!}<button type="button" class="btn btn-close float-end" data-bs-dismiss="alert">&times;</button></p>
+                            </div>
+                        @endif
+
+                    <!-- End of system notifications area -->
 
                         <form action="{{ route('login') }}" method="POST" role="form" accept-charset="UTF-8" enctype="multipart/form-data">
                             @csrf

@@ -60,6 +60,7 @@ Route::group(['middleware' => ['XSS']], function() {
                     })->name('dashboard');
 
                     Route::get('blog/show/all', 'BlogController@show_all')->name('show-all-index');
+                    Route::post('blog/create/categories', 'BlogController@store_categories')->name('blog-categories-store');
                     Route::resource('blog', 'BlogController');
 
                 });
