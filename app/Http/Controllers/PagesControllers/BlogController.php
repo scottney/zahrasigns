@@ -38,6 +38,11 @@ class BlogController extends Controller
         }
     }
 
+    public function create_blog_post_category()
+    {
+        return view('pages.auth-pages.blog-pages.pages.blog-index', ["source" => "create-blog-post-category"]);
+    }
+
     public function show_all()
     {
         return view('pages.auth-pages.blog-pages.pages.blog-index', ["source"=>"show_all"]);
@@ -69,9 +74,9 @@ class BlogController extends Controller
             ]);
 
             if($data_categories) {
-                return redirect()->back()->with('create-blog-post-category-success', 'You successfully created a blog post category');
+                return redirect()->route('blog.create')->with('create-blog-post-category-success', 'You successfully created a blog post category');
             } else {
-                return redirect()->back()->with('create-blog-post-category-fail', 'A problem occurred while trying to create a blog post category. Please try again.');
+                return redirect()->route('blog.create')->with('create-blog-post-category-fail', 'A problem occurred while trying to create a blog post category. Please try again.');
             }
         }
     }

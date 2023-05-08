@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" id="create-blog-post-categories-container">
     <div class="row pt-3 pb-5">
         <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
             <p><b>N.B.</b><span class="ms-2">Form errors will be display here</span></p>
@@ -17,7 +17,7 @@
         <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
             <div class="card shadow">
                 <div class="card-header bg-primary">
-                    <h3 class="text-center text-uppercase text-white">Blog Categories Portal</h3>
+                    <h3 class="text-center text-uppercase text-white"><b>Blog Categories Portal</b></h3>
                 </div>
                 
                 <div class="card-body">
@@ -126,12 +126,10 @@
                         </div>
 
                         <div class="row pt-3 pb-3">
-                            <div class="col-sm-11 col-md-11 col-lg-11 col-xl-11 col-xxl-11 p-1">
+                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 p-1">
                                 <button type="submit" class="btn btn-primary rounded-pill float-end" id="createBlogPostCategoryButton" data-bs-toggle="tooltip" data-bs-placement="left" 
                                 data-bs-title="Save the information provided to the database"><span>Create Blog Category</span></button> 
                             </div>
-
-                            <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1"></div>
                         </div>
                     </form>
                 </div>

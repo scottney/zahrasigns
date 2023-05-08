@@ -55,7 +55,8 @@
 
                             <div class="row pt-3">
                                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                    <button type="submit" class="btn btn-secondary rounded-pill float-end text-uppercase" id="resetPasswordButton">Reset Password</button>
+                                    <button type="submit" class="btn btn-secondary rounded-pill float-end text-uppercase" id="resetPasswordButton" data-bs-toggle="tooltip" 
+                                    data-bs-placement="right" data-bs-title="Save the information provided and proceed">Reset Password</button>
                                 </div>
                             </div>
                         </form>

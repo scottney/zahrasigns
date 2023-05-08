@@ -52,7 +52,8 @@
 
                                     <input type="password" name="password" class="form-control @error('password') is-invalid @enderror border border-secondary rounded" id="input_password" autofocus>
                                     @if (Route::has('password.request'))
-                                        <a class="float-end pt-1" href="{{ route('password.request') }}">Forgot your password?</a>
+                                        <a class="float-end pt-1" href="{{ route('password.request') }}" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                        data-bs-title="Initiate password reset">Forgot your password?</a>
                                     @endif
 
                                     @error('password')
@@ -70,14 +71,16 @@
                                         <label for="input_remember_me" class="form-label"><b>Remember me ?:</b></label>
                                     </div>
                                     
-                                    <button type="submit" class="btn btn-primary rounded-pill float-end text-uppercase" id="loginButton">Login</button>
+                                    <button type="submit" class="btn btn-primary rounded-pill float-end text-uppercase" id="loginButton" data-bs-toggle="tooltip" 
+                                    data-bs-placement="right" data-bs-title="Proceed and access your account">Login</button>
                                 </div>
                             </div>
                         </form>
 
                         {{--<div class="row pt-3">
                             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                <a class="float-start pt-3" href="{{ route('register') }}">Don't have an account ?</a>
+                                <a class="float-start pt-3" href="{{ route('register') }}" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Register for an account">
+                                    Don't have an account ?</a>
                             </div>
                         </div>--}}
                     </div>

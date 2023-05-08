@@ -68,14 +68,15 @@
 
                             <div class="row pt-3">
                                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                    <button type="submit" class="btn btn-primary rounded-pill float-end text-uppercase" id="registerButton">Register</button>
+                                    <button type="submit" class="btn btn-primary rounded-pill float-end text-uppercase" id="registerButton" data-bs-toggle="tooltip" 
+                                    data-bs-placement="right" data-bs-title="Register an account">Register</button>
                                 </div>
                             </div>
                         </form>
 
                         <div class="row pt-3">
                             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                <a class="float-start" href="{{ route('login') }}">Already registered ?</a>
+                                <a class="float-start" href="{{ route('login') }}" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Proceed and access your account">Already registered ?</a>
                             </div>
                         </div>
                     </div>
