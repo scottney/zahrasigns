@@ -59,9 +59,12 @@ Route::group(['middleware' => ['XSS']], function() {
                         return view('dashboard');
                     })->name('dashboard');
 
-                    Route::get('blog/show/all', 'BlogController@show_all')->name('show-all-index');
+                    Route::get('blog/show/all', 'BlogController@show_all_blog_post_categories')->name('show-all-blog-post-categories');
                     Route::post('blog/create/categories', 'BlogController@store_categories')->name('blog-categories-store');
                     Route::get('blog/create/blog/post/category', 'BlogController@create_blog_post_category')->name('create-blog-post-category-index');
+                    Route::get('blog/show/blog/post/category/{id}', 'BlogController@show_blog_post_category')->name('show-blog-post-category');
+                    Route::get('blog/show/blog/post/category/edit/{id}', 'BlogController@edit_blog_post_category')->name('edit-blog-post-category');
+                    Route::post('blog/show/blog/post/category/edit/{id}', 'BlogController@update_blog_post_category')->name('update-blog-post-category');
                     Route::resource('blog', 'BlogController');
 
                 });

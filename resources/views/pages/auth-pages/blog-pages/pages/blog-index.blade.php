@@ -46,7 +46,7 @@
                                         @if(!$blog_posts_categories_data->isEmpty())
                                             <a href="{{ route('create-blog-post-category-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog category">Create Blog Category</a>
                                             <br>
-                                            <a href="#" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="View all existing blog categories">View All Blog Categories</a>
+                                            <a href="{{ route('show-all-blog-post-categories') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="View all existing blog categories">View All Blog Categories</a>
                                             <br>
                                             <a href="#" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="View all existing blog categories">View All Blog Posts</a>
                                         @endif
@@ -68,7 +68,7 @@
                                                 <a href="#" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
                                                 data-bs-title="View all existing blog posts">View All Blog Posts</a>
                                                 <br>
-                                                <a href="#" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                <a href="{{ route('show-all-blog-post-categories') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
                                                 data-bs-title="View all existing blog categories">View All Blog Categories</a>
                                             </div>
                                         </div>
@@ -85,6 +85,99 @@
 
                                     </div>
                                 </div>
+                            @elseif($source == 'show-all-blog-post-categories')
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                        <p class="mt-3">The table below shows all blog post categories that exist within the system</p>
+
+                                        <div class="row pt-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                <a href="{{ route('blog.create') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                data-bs-title="Create a new blog post">Create Blog Post</a>
+                                                <br>
+                                                <a href="#" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                data-bs-title="View all existing blog posts">View All Blog Posts</a>
+                                                <br>
+                                                <a href="{{ route('create-blog-post-category-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog category">Create Blog Category</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row pt-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                <div class="card shadow">
+                                                    <div class="card-body">
+                                                        @include('pages.auth-pages.blog-pages.pages.mini-pages.blog-post-categories.view-blog-post-categories')
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            @elseif($source == 'show-blog-post-category')
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                        <p class="mt-3">Below you can view information about the blog post category selected</p>
+
+                                        <div class="row pt-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                <a href="{{ route('blog.create') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                data-bs-title="Create a new blog post">Create Blog Post</a>
+                                                <br>
+                                                <a href="#" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                data-bs-title="View all existing blog posts">View All Blog Posts</a>
+                                                <br>
+                                                <a href="{{ route('create-blog-post-category-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog category">Create Blog Category</a>
+                                                <br>
+                                                <a href="{{ route('show-all-blog-post-categories') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                data-bs-title="View all existing blog categories">View All Blog Categories</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row pt-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                <div class="card shadow">
+                                                    <div class="card-body">
+                                                        @include('pages.auth-pages.blog-pages.pages.mini-pages.blog-post-categories.view-single-blog-post-category')
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            @elseif($source == 'edit-blog-post-category')
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                        <p class="mt-3">Below you can edit information about the blog post category selected</p>
+
+                                        <div class="row pt-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                <a href="{{ route('blog.create') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                data-bs-title="Create a new blog post">Create Blog Post</a>
+                                                <br>
+                                                <a href="#" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                data-bs-title="View all existing blog posts">View All Blog Posts</a>
+                                                <br>
+                                                <a href="{{ route('create-blog-post-category-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog category">Create Blog Category</a>
+                                                <br>
+                                                <a href="{{ route('show-all-blog-post-categories') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                data-bs-title="View all existing blog categories">View All Blog Categories</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row pt-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                <div class="card shadow">
+                                                    <div class="card-body">
+                                                        @include('pages.auth-pages.blog-pages.pages.mini-pages.blog-post-categories.edit-single-blog-post-category')
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
                             @endif
                         </div>
                     </div>
@@ -92,31 +185,31 @@
                 </div>
             </div>
 
-            <div class="row pt-3">
-                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <div class="card shadow rounded">
-                        <div class="card-body p-0">
-                            @if($source == 'create')
-                                @if($blog_posts_categories_data->isEmpty())
-                                    <div class="row">
-                                        <div class="col-sm12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                            @include('pages.auth-pages.blog-pages.pages.mini-pages.blog-post-categories.create-blog-post-categories')
+            @if($source == 'create')
+                <div class="row pt-3">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <div class="card shadow rounded">
+                            <div class="card-body p-0">
+                                
+                                    @if($blog_posts_categories_data->isEmpty())
+                                        <div class="row">
+                                            <div class="col-sm12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                @include('pages.auth-pages.blog-pages.pages.mini-pages.blog-post-categories.create-blog-post-categories')
+                                            </div>
                                         </div>
-                                    </div>
-                                @else
-                                    <div class="row">
-                                        <div class="col-sm12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                            @include('pages.auth-pages.blog-pages.pages.mini-pages.blog-posts.create-blog-post')
+                                    @else
+                                        <div class="row">
+                                            <div class="col-sm12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                @include('pages.auth-pages.blog-pages.pages.mini-pages.blog-posts.create-blog-post')
+                                            </div>
                                         </div>
-                                    </div>
-                                @endif
-                            @elseif($source == 'show_all')
-                                <p>Show All</p>
-                            @endif
+                                    @endif
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            @endif
 
         </div>
     </div>

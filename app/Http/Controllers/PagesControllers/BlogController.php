@@ -43,9 +43,47 @@ class BlogController extends Controller
         return view('pages.auth-pages.blog-pages.pages.blog-index', ["source" => "create-blog-post-category"]);
     }
 
-    public function show_all()
+    public function show_all_blog_post_categories()
     {
-        return view('pages.auth-pages.blog-pages.pages.blog-index', ["source"=>"show_all"]);
+        $blog_post_categories = BlogPostCategories::paginate(10);
+        return view('pages.auth-pages.blog-pages.pages.blog-index', ['blog_post_categories' => $blog_post_categories ,"source"=>"show-all-blog-post-categories"]);
+    }
+
+    public function show_blog_post_category($id)
+    {
+        $blog_post_category = BlogPostCategories::findOrFail($id);
+        return view('pages.auth-pages.blog-pages.pages.blog-index', ['blog_post_category' => $blog_post_category ,"source"=>"show-blog-post-category"]);
+    }
+
+    public function edit_blog_post_category($id)
+    {
+        $blog_post_category = BlogPostCategories::findOrFail($id);
+        return view('pages.auth-pages.blog-pages.pages.blog-index', ['blog_post_category' => $blog_post_category ,"source"=>"edit-blog-post-category"]);
+    }
+
+    public function update_blog_post_category(Request $request, $id)
+    {
+        $categories_data = $request->all();
+
+        Validator::make($categories_data, [
+            'blog_category_name' => ['string', 'min:3', 'max:75'],
+            'blog_category_slug' => ['string', 'min:3', 'max:75'],
+            'blog_category_type' => ['string', 'min:3', 'max:95'],
+            'blog_category_description' => ['string', 'min:55', 'max:3000']
+        ]);
+
+        $data_categories = BlogPostCategories::where('id', $id)->update([
+            'blog_category_name' => $categories_data['blog_category_name'],
+            'blog_category_slug' => $categories_data['blog_category_slug'],
+            'blog_category_type' => $categories_data['blog_category_type'],
+            'blog_category_description' => $categories_data['blog_category_description']
+        ]);
+        
+        if($data_categories) {
+            return redirect()->route('show-all-blog-post-categories')->with('update-blog-post-category-success', 'You successfully updated the blog post category');
+        } else {
+            return redirect()->route('show-all-blog-post-categories')->with('update-blog-post-category-fail', 'A problem occurred while trying to update the blog post category. Please try again.');
+        }
     }
 
     public function store_categories(Request $request)

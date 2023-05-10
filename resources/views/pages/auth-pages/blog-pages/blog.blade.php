@@ -51,7 +51,7 @@
                         </div>
 
                         <div class="card-footer text-center" id="blogCardsFooter">
-                            <a href="{{ route('show-all-index') }}" id="redirectToPage" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Click here to proceed...">
+                            <a href="" id="redirectToPage" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Click here to proceed...">
                                 <i class="fa-solid fa-circle-arrow-right me-1"></i><b>GO</b>
                             </a>
                         </div>
