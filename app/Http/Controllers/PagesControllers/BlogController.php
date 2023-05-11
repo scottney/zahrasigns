@@ -18,7 +18,14 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('pages.auth-pages.blog-pages.blog');
+        $blog_post_category_data = BlogPostCategories::get();
+
+        if($blog_post_category_data->isEmpty()) {
+            Session::flash('create-blog-post-category', 'Please create blog post categories so as to proceed further and be able to view other system options');
+            return view('pages.auth-pages.blog-pages.blog', ['blog_post_category_data' => $blog_post_category_data]);
+        } else {
+            return view('pages.auth-pages.blog-pages.blog', ['blog_post_category_data' => $blog_post_category_data]);
+        }
     }
 
     /**
@@ -40,7 +47,8 @@ class BlogController extends Controller
 
     public function create_blog_post_category()
     {
-        return view('pages.auth-pages.blog-pages.pages.blog-index', ["source" => "create-blog-post-category"]);
+        $blog_post_category_data = BlogPostCategories::get();
+        return view('pages.auth-pages.blog-pages.pages.blog-index', ['blog_post_category_data' => $blog_post_category_data, "source" => "create-blog-post-category"]);
     }
 
     public function show_all_blog_post_categories()

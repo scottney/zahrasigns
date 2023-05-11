@@ -60,18 +60,24 @@
                                         <p class="mt-3">Please use the form provided below to create any and all of your blog post categories</p>
                                         <p class="pt-1"><b>N.B.</b><span>You can only create a <b><i>single</i></b> blog post category at a time</span></p>
 
-                                        <div class="row pt-3">
-                                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                                <a href="{{ route('blog.create') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
-                                                data-bs-title="Create a new blog post">Create Blog Post</a>
-                                                <br>
-                                                <a href="#" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
-                                                data-bs-title="View all existing blog posts">View All Blog Posts</a>
-                                                <br>
-                                                <a href="{{ route('show-all-blog-post-categories') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
-                                                data-bs-title="View all existing blog categories">View All Blog Categories</a>
+                                        @if($blog_post_category_data->isEmpty())
+                                            <div class="row pt-3">
+                                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"></div>
                                             </div>
-                                        </div>
+                                        @else
+                                            <div class="row pt-3">
+                                                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                    <a href="{{ route('blog.create') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                    data-bs-title="Create a new blog post">Create Blog Post</a>
+                                                    <br>
+                                                    <a href="#" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                    data-bs-title="View all existing blog posts">View All Blog Posts</a>
+                                                    <br>
+                                                    <a href="{{ route('show-all-blog-post-categories') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                    data-bs-title="View all existing blog categories">View All Blog Categories</a>
+                                                </div>
+                                            </div>
+                                        @endif
                                         
                                         <div class="row pt-3">
                                             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">

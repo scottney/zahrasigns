@@ -832,6 +832,7 @@ a[data-tooltip][data-placement="bottom"]::after {
 #blogCards {
     height: 300px;
     box-shadow: 5px 10px 35px #0067ff;
+    overflow: hidden;
 }
 
 #blogCards:hover {
@@ -856,9 +857,9 @@ a[data-tooltip][data-placement="bottom"]::after {
     color: #eeea00;
 }
 
-#create-blog-image, #view-blog-image {
+#create-blog-post-category-image, #view-blog-post-category-image, #create-blog-post-image, #view-blog-post-image {
     width: 300px;
-    height: 255px;
+    height: 200px;
 }
 
 #blog_management_title_card {
