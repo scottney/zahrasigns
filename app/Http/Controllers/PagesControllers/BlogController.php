@@ -156,7 +156,8 @@ class BlogController extends Controller
     public function edit_blog_post_type($id)
     {
         $blog_post_type = BlogPostTypes::findOrFail($id);
-        return view('pages.auth-pages.blog-pages.pages.blog-index', ['blog_post_type' => $blog_post_type ,"source"=>"edit-blog-post-type"]);
+        $blog_post_categories = BlogPostCategories::get();
+        return view('pages.auth-pages.blog-pages.pages.blog-index', ['blog_post_type' => $blog_post_type, 'blog_post_categories' => $blog_post_categories, "source"=>"edit-blog-post-type"]);
     }
 
     public function update_blog_post_type(Request $request, $id)
@@ -172,6 +173,7 @@ class BlogController extends Controller
         $blog_post_data_types = BlogPostTypes::where('id', $id)->update([
             'blog_post_type_name' => $types_data['blog_post_type_name'],
             'blog_post_type_slug' => $types_data['blog_post_type_slug'],
+            'blog_post_category_id' => $types_data['blog_post_category'],
             'blog_post_type_description' => $types_data['blog_post_type_description']
         ]);
         

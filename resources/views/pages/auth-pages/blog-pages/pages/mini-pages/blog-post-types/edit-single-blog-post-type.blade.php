@@ -21,6 +21,19 @@
                 </div>
 
                 <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 p-3">
+                    <label for="input_blog_category_type" class="form-label"><b>Blog Post Category Type:</b></label>
+                    <br>
+                    <select name="blog_post_category" class="form-control border border-dark rounded p-1" id="input_blog_category_type">
+                        <option value="{{$blog_post_type->blog_post_categories->id}}">{{$blog_post_type->blog_post_categories->blog_post_category_name}}</option>
+                        @foreach($blog_post_categories as $blog_post_category)
+                            <option value="{{$blog_post_category->id}}">{{$blog_post_category->blog_post_category_name}}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+
+            <div class="row pt-3">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 p-3">
                     <label for="input_blog_post_type_description" class="form-label"><b>Blog Post Type Description:</b></label>
                     <br>
                     <textarea class="border border-dark rounded p-1" id="input_blog_post_type_description" name="blog_post_type_description" rows="7">
