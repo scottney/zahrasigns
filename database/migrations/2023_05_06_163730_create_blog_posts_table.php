@@ -16,14 +16,18 @@ return new class extends Migration
         Schema::create('blog_posts', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
-            $table->string('user_name');
-            $table->foreignId('blog_category_id');
-            $table->unsignedBigInteger('blog_category_number');
-            $table->string('blog_category_UUID');
-            $table->unsignedBigInteger('blog_post_number')->unique();
-            $table->string('blog_post_UUID')->unique();
-            $table->string('blog_title')->unique();
-            $table->string('blog_slug')->unique();
+            $table->string('user_number');
+            $table->string('user_UUID');
+            $table->foreignId('blog_post_category_id');
+            $table->unsignedBigInteger('blog_post_category_number');
+            $table->string('blog_post_category_UUID');
+            $table->foreignId('blog_post_type_id');
+            $table->unsignedBigInteger('blog_post_type_number');
+            $table->string('blog_post_type_UUID');
+            $table->unsignedBigInteger('blog_post_number');
+            $table->string('blog_post_UUID');
+            $table->string('blog_title');
+            $table->string('blog_slug');
             $table->text('blog_body');
             $table->text('blog_excerpt')->nullable();
             $table->dateTime('blog_publish_time');
@@ -31,7 +35,7 @@ return new class extends Migration
             $table->string('blog_tags');
             $table->boolean('blog_is_featured')->default(false);
             $table->string('blog_status');
-            $table->string('meta_title')->unique();
+            $table->string('meta_title');
             $table->text('meta_description');
             $table->text('meta_keywords');
             $table->string('blog_featured_image');
@@ -43,7 +47,8 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('no action');
-            $table->foreign('blog_category_id')->references('id')->on('blog_post_categories')->onDelete('no action');
+            $table->foreign('blog_post_category_id')->references('id')->on('blog_post_categories')->onDelete('no action');
+            $table->foreign('blog_post_type_id')->references('id')->on('blog_post_types')->onDelete('no action');
         });
     }
 

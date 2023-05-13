@@ -685,22 +685,21 @@ a[data-tooltip][data-placement="bottom"]::after {
 /******************************* Start of settings styling *******************************/
 
 #input_name, #input_username, #input_email, #input_password, #input_current_password, #password_confirmation, #input_code, #password-confirmation, 
-#input_sessions_password, #input_blog_category_name, #input_blog_category_slug {
+#input_sessions_password {
     border-radius: 25px;
     background: #FFFBE6;
     height: 30px;
 }
 
 #input_name:hover, #input_username:hover, #input_email:hover, #input_password:hover, #input_current_password:hover, #password_confirmation:hover, 
-#input_code:hover, #password-confirmation:hover, #input_sessions_password:hover, #input_blog_category_name:hover, #input_blog_category_slug:hover, 
-#input_blog_category_type:hover, #input_blog_category_description:hover {
+#input_code:hover, #password-confirmation:hover, #input_sessions_password:hover {
     cursor: pointer;
     background: #FFF2B3;
 }
 
 #selectProfileImageButton, #profileInformationSaveButton, #enableTwoFactorButton, #confirmTwoFactorButton, #browserSessionsButton, 
 #confirmDeleteAccountButton, #createBlogPostButton, #profileInformationPasswordSaveButton, #createBlogPostCategoryButton, 
-#updateBlogCategoryButton {
+#updateBlogCategoryButton, #createBlogPostTypeButton, #updateBlogTypeButton {
     border-radius: 25px;
     box-shadow: 2px 2px 2px 2px #000000;
     background: #001166;
@@ -735,14 +734,13 @@ a[data-tooltip][data-placement="bottom"]::after {
 
 #selectProfileImageButton:hover, #profileInformationSaveButton:hover, #enableTwoFactorButton:hover, 
 #confirmTwoFactorButton:hover, #browserSessionsButton:hover, #confirmDeleteAccountButton:hover, 
-#createBlogPostButton:hover, #profileInformationPasswordSaveButton:hover, 
-#createBlogPostCategoryButton:hover, #updateBlogCategoryButton:hover {
+#createBlogPostButton:hover, #profileInformationPasswordSaveButton:hover, #createBlogPostCategoryButton:hover, 
+#updateBlogCategoryButton:hover, #createBlogPostTypeButton:hover, #updateBlogTypeButton:hover {
     background: #116600;
 }
 
 #cancelTwoFactorButton:hover, #disableTwoFactorButton:hover, #cancelBrowserSessionsButton:hover, 
-#deleteAccountButton:hover, #closeApiTokenButton:hover, #cancelApiTokenButton:hover, 
-#deleteApiTokenDeleteButton:hover {
+#deleteAccountButton:hover, #closeApiTokenButton:hover, #cancelApiTokenButton:hover, #deleteApiTokenDeleteButton:hover {
     background: #660000;
 }
 
@@ -760,7 +758,7 @@ a[data-tooltip][data-placement="bottom"]::after {
 #cancelBrowserSessionsButton span, #deleteAccountButton span, #closeApiTokenButton span, 
 #cancelApiTokenButton span, #deleteApiTokenDeleteButton span, #confirmDeleteAccountButton span, 
 #createBlogPostButton span, #profileInformationPasswordSaveButton span, #createBlogPostCategoryButton span, 
-#updateBlogCategoryButton span {
+#updateBlogCategoryButton span, #createBlogPostTypeButton span, #updateBlogTypeButton span {
     display: inline-block;
     position: relative;
     transition: 0.5s;
@@ -772,7 +770,8 @@ a[data-tooltip][data-placement="bottom"]::after {
 #cancelBrowserSessionsButton span:after, #deleteAccountButton span:after, #closeApiTokenButton span:after, 
 #cancelApiTokenButton span:after, #deleteApiTokenDeleteButton span:after, #confirmDeleteAccountButton span:after, 
 #createBlogPostButton span:after, #profileInformationPasswordSaveButton span:after, 
-#createBlogPostCategoryButton span:after, #updateBlogCategoryButton span:after {
+#createBlogPostCategoryButton span:after, #updateBlogCategoryButton span:after, #createBlogPostTypeButton span:after, 
+#updateBlogTypeButton span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -787,7 +786,8 @@ a[data-tooltip][data-placement="bottom"]::after {
 #cancelBrowserSessionsButton:hover span, #deleteAccountButton:hover span, #closeApiTokenButton:hover span, 
 #cancelApiTokenButton:hover span, #deleteApiTokenDeleteButton:hover span, #confirmDeleteAccountButton:hover span, 
 #createBlogPostButton:hover span, #profileInformationPasswordSaveButton:hover span, 
-#createBlogPostCategoryButton:hover span, #updateBlogCategoryButton:hover span {
+#createBlogPostCategoryButton:hover span, #updateBlogCategoryButton:hover span, #createBlogPostTypeButton:hover span, 
+#updateBlogTypeButton:hover span {
     padding-right: 25px;
 }
 
@@ -797,7 +797,7 @@ a[data-tooltip][data-placement="bottom"]::after {
 #cancelBrowserSessionsButton:hover span:after, #deleteAccountButton:hover span:after, #closeApiTokenButton:hover span:after, 
 #cancelApiTokenButton:hover span:after, #deleteApiTokenDeleteButton:hover span:after, #confirmDeleteAccountButton:hover span:after, 
 #createBlogPostButton:hover span:after, #profileInformationPasswordSaveButton:hover span:after, #createBlogPostCategoryButton:hover span:after, 
-#updateBlogCategoryButton:hover span:after {
+#updateBlogCategoryButton:hover span:after, #createBlogPostTypeButton:hover span:after, #updateBlogTypeButton:hover span:after {
     opacity: 1;
     right: 0;
 }
@@ -867,7 +867,7 @@ a[data-tooltip][data-placement="bottom"]::after {
 }
 
 #preview_main_featured_image {
-    width: 300px;
+    width: auto;
     height: 400px;
     background-position: center;
     background-size: cover;
@@ -879,20 +879,29 @@ a[data-tooltip][data-placement="bottom"]::after {
 }
 
 #input_blog_featured_image, #input_blog_title, #input_blog_slug , #input_blog_publish_time, #input_blog_publish_date, #input_blog_status, #input_meta_title, 
-#input_blog_post_category_created_at, #input_blog_post_category_user_name, #input_blog_post_category_name, #input_blog_post_category_slug, #input_blog_post_category_type {
+#input_blog_post_category_created_at, #input_blog_post_category_user_name, #input_blog_post_category_name, #input_blog_post_category_slug, #input_blog_post_type_name, 
+#input_blog_post_type_slug, #input_blog_post_category, #input_blog_post_type_created_at, #input_blog_post_type_name {
     border-radius: 25px;
     background: #FFFBE6;
     height: 30px;
 }
 
-#input_blog_post_category_description {
+#input_blog_post_category {
+    border-radius: 35px;
+    background: #FFFBE6;
+    height: 35px;
+}
+
+#input_blog_post_category_description, #input_blog_post_type_description {
     background: #FFFBE6;
     width: 100%;
 }
 
 #input_blog_featured_image:hover, #input_blog_title:hover, #input_blog_slug:hover, #input_blog_publish_time:hover, #input_blog_publish_date:hover, #input_blog_tags:hover, 
 #input_blog_status:hover, #input_meta_title:hover, #input_meta_description:hover, #input_blog_post_category_created_at:hover, #input_blog_post_category_user_name:hover, 
-#input_blog_post_category_name:hover, #input_blog_post_category_slug:hover, #input_blog_post_category_type:hover, #input_blog_post_category_description:hover {
+#input_blog_post_category_name:hover, #input_blog_post_category_slug:hover, #input_blog_post_category_description:hover, #input_blog_post_type_name:hover, 
+#input_blog_post_type_slug:hover, #input_blog_post_type_description:hover, #input_blog_post_category:hover, #input_blog_post_type_created_at:hover, 
+#input_blog_post_type_name:hover {
     cursor: pointer;
     background: #FFF2B3;
 }

@@ -65,6 +65,12 @@ Route::group(['middleware' => ['XSS']], function() {
                     Route::get('blog/show/blog/post/category/{id}', 'BlogController@show_blog_post_category')->name('show-blog-post-category');
                     Route::get('blog/show/blog/post/category/edit/{id}', 'BlogController@edit_blog_post_category')->name('edit-blog-post-category');
                     Route::post('blog/show/blog/post/category/edit/{id}', 'BlogController@update_blog_post_category')->name('update-blog-post-category');
+                    Route::get('blog/create/post/type', 'BlogController@create_blog_type')->name('create-blog-post-type');
+                    Route::post('blog/create/post/type', 'BlogController@store_blog_type')->name('store-blog-post-type');
+                    Route::get('blog/view/all/blog/post/types', 'BlogController@view_all_blog_post_types')->name('view-all-blog-post-types-index');
+                    Route::get('blog/view/post/type/{id}', 'BlogController@view_single_blog_post_type')->name('view-single-blog-post-index');
+                    Route::get('blog/edit/post/type/{id}', 'BlogController@edit_blog_post_type')->name('edit-single-blog-post');
+                    Route::post('blog/edit/post/type/{id}', 'BlogController@update_blog_post_type')->name('update-single-blog-post');
                     Route::resource('blog', 'BlogController');
 
                 });

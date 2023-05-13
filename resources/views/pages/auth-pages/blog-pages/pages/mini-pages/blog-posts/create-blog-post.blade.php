@@ -23,7 +23,7 @@
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 p-1">
                                         <label for="input_blog_title" class="form-label"><b>Blog Title:</b></label>
-                                        <input name="blog_title" class="form-control @error('blog_title') is-invalid @enderror border border-dark rounded-pill p-1" id="input_blog_title" :value="old('blog_title')" autocomplete="blog_title" placeholder="3D SIGNAGE IN AFRICA" minlength="3" maxlength="20" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="The blog title should contain between 3-20 characters" autofocus>
+                                        <input name="blog_title" class="form-control @error('blog_title') is-invalid @enderror border border-dark rounded-pill p-1" id="input_blog_title" :value="old('blog_title')" autocomplete="blog_title" placeholder="3D SIGNAGE IN AFRICA" minlength="3" maxlength="75" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="The blog title should contain between 3-75 characters" autofocus>
 
                                         @error('blog_title')
                                         <span class="invalid-feedback alert alert-warning" role="alert">
@@ -38,7 +38,7 @@
                                 <div class="row pt-3">
                                     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 p-1">
                                         <label for="input_blog_slug" class="form-label"><b>Blog Slug:</b></label>
-                                        <input name="blog_slug" class="form-control @error('blog_slug') is-invalid @enderror border border-dark rounded-pill p-1" id="input_blog_slug" :value="old('blog_slug')" autocomplete="blog_slug" placeholder="3d-signage-in-africa" minlength="3" maxlength="20" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="The blog slug should contain between 3-20 characters" autofocus>
+                                        <input name="blog_slug" class="form-control @error('blog_slug') is-invalid @enderror border border-dark rounded-pill p-1" id="input_blog_slug" :value="old('blog_slug')" autocomplete="blog_slug" placeholder="3d-signage-in-africa" minlength="3" maxlength="75" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="The blog slug should contain between 3-75 characters" autofocus>
 
                                         @error('blog_slug')
                                         <span class="invalid-feedback alert alert-warning" role="alert">
@@ -56,9 +56,9 @@
                                         <select name="blog_category_id" class="form-control @error('blog_category_id') is-invalid @enderror border border-dark rounded-pill p-1" id="input_blog_category_name" minlength="3" maxlength="95" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="The blog category should contain between 3-95 characters" autofocus>
                                             <option></option>
                                             @if(!$blog_posts_categories_data->isEmpty())
-                                            @foreach($blog_posts_categories_data as $bpcd)
-                                            <option value="{{$bpcd->id}}">{{$bpcd->blog_category_name}}</option>
-                                            @endforeach
+                                                @foreach($blog_posts_categories_data as $bpcd)
+                                                    <option value="{{$bpcd->id}}">{{$bpcd->blog_post_category_name}}</option>
+                                                @endforeach
                                             @endif
                                         </select>
 
@@ -75,7 +75,7 @@
                                 <div class="row pt-3">
                                     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 p-1">
                                         <label for="input_blog_excerpt" class="form-label"><b>Blog Excerpt:</b></label>
-                                        <textarea name="blog_excerpt" class="form-control @error('blog_excerpt') is-invalid @enderror border border-dark rounded p-1" id="input_blog_excerpt" :value="old('blog_excerpt')" placeholder="...as a company we are passionate..." minlength="3" maxlength="100" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="The blog excerpt should contain between 3-100 characters. It will be automatically filled when you write your content" rows="5" autofocus readonly></textarea>
+                                        <textarea name="blog_excerpt" class="form-control @error('blog_excerpt') is-invalid @enderror border border-dark rounded p-1" id="input_blog_excerpt" :value="old('blog_excerpt')" placeholder="...as a company we are passionate..." minlength="3" maxlength="900" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="The blog excerpt should contain between 3-100 characters" rows="5" autofocus></textarea>
 
                                         @error('blog_excerpt')
                                         <span class="invalid-feedback alert alert-warning" role="alert">
@@ -91,8 +91,7 @@
                                     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 p-1">
                                         <div>
                                             <label for="input_blog_featured_image" class="form-label"><b>Featured Image:</b></label>
-                                            <input type="file" name="blog_featured_image" class="form-control @error('blog_featured_image') is-invalid @enderror border border-dark 
-                                                                    rounded-pill p-1" id="input_blog_featured_image" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Select blog featured image" autofocus>
+                                            <input type="file" name="blog_featured_image" class="form-control @error('blog_featured_image') is-invalid @enderror border border-dark rounded-pill p-1" id="input_blog_featured_image" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Select blog featured image" autofocus>
 
                                             @error('blog_featured_image')
                                             <span class="invalid-feedback alert alert-warning" role="alert">
@@ -104,12 +103,6 @@
                                         <div>
                                             <div class="d-flex justify-content-center">
                                                 <img src="/images/dashboard-images/main-featured-image.jpg" class="border border mt-4" id="preview_main_featured_image" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Preview the blog featured image here" />
-                                            </div>
-
-                                            <div class="pt-3">
-                                                <p><b>Image Type:</b></p>
-                                                <p><b>Image Size:</b></p>
-                                                <p><b>Image Dimensions:</b></p>
                                             </div>
                                         </div>
                                     </div>

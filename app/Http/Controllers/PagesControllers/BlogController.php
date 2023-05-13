@@ -4,6 +4,7 @@ namespace App\Http\Controllers\PagesControllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\BlogPostCategories;
+use App\Models\BlogPostTypes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
@@ -35,13 +36,20 @@ class BlogController extends Controller
      */
     public function create()
     {
-        $blog_posts_categories_data = BlogPostCategories::where('user_id', auth()->user()->id)->where('user_name', auth()->user()->name)->get();
+        $blog_posts_categories_data = BlogPostCategories::where('user_id', auth()->user()->id)->get();
 
         if($blog_posts_categories_data->isEmpty()) {
             Session::flash('blog-categories-missing', 'Please create a blog post category');
             return view('pages.auth-pages.blog-pages.pages.blog-index', ['blog_posts_categories_data' => $blog_posts_categories_data, "source"=>"create"]);
         } else {
-            return view('pages.auth-pages.blog-pages.pages.blog-index', ['blog_posts_categories_data' => $blog_posts_categories_data, "source"=>"create"]);
+            $blog_posts_types_data = BlogPostTypes::where('user_id', auth()->user()->id)->get();
+
+            if($blog_posts_types_data->isEmpty()) {
+                Session::flash('blog-types-missing', 'Please create a blog post type');
+                return view('pages.auth-pages.blog-pages.pages.blog-index', ['blog_posts_categories_data' => $blog_posts_categories_data, 'blog_posts_types_data' => $blog_posts_types_data, "source"=>"create"]);
+            } else {
+                return view('pages.auth-pages.blog-pages.pages.blog-index', ['blog_posts_categories_data' => $blog_posts_categories_data, 'blog_posts_types_data' => $blog_posts_types_data, "source"=>"create"]);
+            }
         }
     }
 
@@ -74,17 +82,15 @@ class BlogController extends Controller
         $categories_data = $request->all();
 
         Validator::make($categories_data, [
-            'blog_category_name' => ['string', 'min:3', 'max:75'],
-            'blog_category_slug' => ['string', 'min:3', 'max:75'],
-            'blog_category_type' => ['string', 'min:3', 'max:95'],
-            'blog_category_description' => ['string', 'min:55', 'max:3000']
+            'blog_post_category_name' => ['string', 'min:3', 'max:75'],
+            'blog_post_category_slug' => ['string', 'min:3', 'max:75'],
+            'blog_post_category_description' => ['string', 'min:55', 'max:3000']
         ]);
 
         $data_categories = BlogPostCategories::where('id', $id)->update([
-            'blog_category_name' => $categories_data['blog_category_name'],
-            'blog_category_slug' => $categories_data['blog_category_slug'],
-            'blog_category_type' => $categories_data['blog_category_type'],
-            'blog_category_description' => $categories_data['blog_category_description']
+            'blog_post_category_name' => $categories_data['blog_post_category_name'],
+            'blog_post_category_slug' => $categories_data['blog_post_category_slug'],
+            'blog_post_category_description' => $categories_data['blog_post_category_description']
         ]);
         
         if($data_categories) {
@@ -99,10 +105,9 @@ class BlogController extends Controller
         $categories_data = $request->all();
 
         $validate = Validator::make($categories_data, [
-            'blog_category_name' => ['required', 'string', 'min:3', 'max:75'],
-            'blog_category_slug' => ['required', 'string', 'min:3', 'max:75'],
-            'blog_category_type' => ['required', 'string', 'min:3', 'max:95'],
-            'blog_category_description' => ['required', 'string', 'min:55', 'max:3000']
+            'blog_post_category_name' => ['required', 'string', 'min:3', 'max:75'],
+            'blog_post_category_slug' => ['required', 'string', 'min:3', 'max:75'],
+            'blog_post_category_description' => ['required', 'string', 'min:55', 'max:3000']
         ]);
 
         if($validate->fails()) {
@@ -110,19 +115,106 @@ class BlogController extends Controller
         } else {
             $data_categories = BlogPostCategories::create([
                 'user_id' => auth()->user()->id,
-                'user_name' => auth()->user()->name,
-                'blog_category_name' => $categories_data['blog_category_name'],
-                'blog_category_slug' => $categories_data['blog_category_slug'],
-                'blog_category_type' => $categories_data['blog_category_type'],
-                'blog_category_number' => (int)strtotime("now"),
-                'blog_category_UUID' => Str::uuid()->toString(),
-                'blog_category_description' => $categories_data['blog_category_description']
+                'user_number' => auth()->user()->user_number,
+                'user_UUID' => auth()->user()->user_UUID,
+                'blog_post_category_name' => $categories_data['blog_post_category_name'],
+                'blog_post_category_slug' => $categories_data['blog_post_category_slug'],
+                'blog_post_category_number' => (int)strtotime("now"),
+                'blog_post_category_UUID' => Str::uuid()->toString(),
+                'blog_post_category_description' => $categories_data['blog_post_category_description']
             ]);
 
             if($data_categories) {
                 return redirect()->route('blog.create')->with('create-blog-post-category-success', 'You successfully created a blog post category');
             } else {
                 return redirect()->route('blog.create')->with('create-blog-post-category-fail', 'A problem occurred while trying to create a blog post category. Please try again.');
+            }
+        }
+    }
+
+    public function create_blog_type()
+    {
+        $blog_post_type_data = BlogPostTypes::get();
+        $blog_posts_category_data = BlogPostCategories::get();
+        
+        return view('pages.auth-pages.blog-pages.pages.blog-index', ['blog_posts_category_data' => $blog_posts_category_data, 'blog_post_type_data' => $blog_post_type_data, "source" => "create-blog-post-type"]);
+    }
+
+    public function view_all_blog_post_types()
+    {
+        $blog_post_type_data = BlogPostTypes::with('blog_post_categories')->paginate(10);
+        
+        return view('pages.auth-pages.blog-pages.pages.blog-index', ['blog_post_type_data' => $blog_post_type_data, "source" => "view-all-blog-post-types"]);
+    }
+
+    public function view_single_blog_post_type($id)
+    {
+        $blog_post_type_data = BlogPostTypes::findOrFail($id);
+        return view('pages.auth-pages.blog-pages.pages.blog-index',['blog_post_type_data' => $blog_post_type_data, "source" => "view-single-blog-post"]);
+    }
+
+    public function edit_blog_post_type($id)
+    {
+        $blog_post_type = BlogPostTypes::findOrFail($id);
+        return view('pages.auth-pages.blog-pages.pages.blog-index', ['blog_post_type' => $blog_post_type ,"source"=>"edit-blog-post-type"]);
+    }
+
+    public function update_blog_post_type(Request $request, $id)
+    {
+        $types_data = $request->all();
+
+        Validator::make($types_data, [
+            'blog_post_type_name' => ['string', 'min:3', 'max:75'],
+            'blog_post_type_slug' => ['string', 'min:3', 'max:75'],
+            'blog_post_type_description' => ['string', 'min:55', 'max:3000']
+        ]);
+
+        $blog_post_data_types = BlogPostTypes::where('id', $id)->update([
+            'blog_post_type_name' => $types_data['blog_post_type_name'],
+            'blog_post_type_slug' => $types_data['blog_post_type_slug'],
+            'blog_post_type_description' => $types_data['blog_post_type_description']
+        ]);
+        
+        if($blog_post_data_types) {
+            return redirect()->route('view-all-blog-post-types-index')->with('update-blog-post-type-success', 'You successfully updated the blog post type');
+        } else {
+            return redirect()->route('view-all-blog-post-types-index')->with('update-blog-post-type-fail', 'A problem occurred while trying to update the blog post type. Please try again.');
+        }
+    }
+
+    public function store_blog_type(Request $request) 
+    {
+        $blog_data_type = $request->all();
+
+        $validate = Validator::make($blog_data_type, [
+            'blog_post_type_name' => ['required', 'string', 'min:3', 'max:75'],
+            'blog_post_type_slug' => ['required', 'string', 'min:3', 'max:75'],
+            'blog_post_type_description' => ['required', 'string', 'min:55', 'max:3000']
+        ]);
+
+        if($validate->fails()) {
+            return redirect()->back()->withErrors($validate->errors())->withInput();
+        } else {
+            $blog_post_category_data = BlogPostCategories::where('id', $blog_data_type['blog_post_category'])->first();
+
+            $data_blog_post_types = BlogPostTypes::create([
+                'user_id' => auth()->user()->id,
+                'user_number' => auth()->user()->user_number,
+                'user_UUID' => auth()->user()->user_UUID,
+                'blog_post_type_name' => $blog_data_type['blog_post_type_name'],
+                'blog_post_type_slug' => $blog_data_type['blog_post_type_slug'],
+                'blog_post_category_id' => $blog_data_type['blog_post_category'],
+                'blog_post_type_number' => (int)strtotime("now"),
+                'blog_post_type_UUID' => Str::uuid()->toString(),
+                'blog_post_category_number' => $blog_post_category_data->blog_post_category_number,
+                'blog_post_category_UUID' => $blog_post_category_data->blog_post_category_UUID,
+                'blog_post_type_description' => $blog_data_type['blog_post_type_description']
+            ]);
+
+            if($data_blog_post_types) {
+                return redirect()->route('blog.create')->with('create-blog-post-type-success', 'You successfully created a blog post type');
+            } else {
+                return redirect()->route('blog.create')->with('create-blog-post-type-fail', 'A problem occurred while trying to create a blog post type. Please try again.');
             }
         }
     }
@@ -135,7 +227,9 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $blog_posts_data = $request->all();
+
+        dd($blog_posts_data);
     }
 
     /**

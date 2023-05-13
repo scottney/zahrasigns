@@ -13,19 +13,23 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('blog_post_categories', function (Blueprint $table) {
+        Schema::create('blog_post_types', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('user_number');
             $table->string('user_UUID');
-            $table->string('blog_post_category_name');
-            $table->string('blog_post_category_slug');
+            $table->unsignedBigInteger('blog_post_type_number');
+            $table->string('blog_post_type_UUID');
+            $table->unsignedBigInteger('blog_post_category_id');
             $table->unsignedBigInteger('blog_post_category_number');
             $table->string('blog_post_category_UUID');
-            $table->text('blog_post_category_description');
+            $table->string('blog_post_type_name');
+            $table->string('blog_post_type_slug');
+            $table->text('blog_post_type_description');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('no action');
+            $table->foreign('blog_post_category_id')->references('id')->on('blog_post_categories')->onDelete('no action');
         });
     }
 
@@ -36,6 +40,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('blog_posts_categories');
+        Schema::dropIfExists('blog_post_types');
     }
 };
