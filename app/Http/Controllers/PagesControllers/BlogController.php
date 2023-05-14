@@ -4,6 +4,7 @@ namespace App\Http\Controllers\PagesControllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\BlogPostCategories;
+use App\Models\BlogPosts;
 use App\Models\BlogPostTypes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -231,7 +232,84 @@ class BlogController extends Controller
     {
         $blog_posts_data = $request->all();
 
-        dd($blog_posts_data);
+        $validate = Validator::make($blog_posts_data, [
+            'blog_body' => ['required', 'string', 'min:300', 'max:900000'],
+            'blog_title' => ['required', 'string', 'min:3', 'max:75'],
+            'blog_slug' => ['required', 'string', 'min:3', 'max:75'],
+            'blog_category' => ['required', 'string'],
+            'blog_type' => ['required', 'string'],
+            'blog_excerpt' => ['required', 'string', 'min:30', 'max:9000'],
+            'blog_featured_image' => ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:8192'],
+            'blog_publish_time' => ['required', 'date_format:H:i'],
+            'blog_publish_date' => ['required', 'date', 'date_format:Y-m-d'],
+            'blog_tags' => ['required', 'string'],
+            'blog_is_featured' => ['required'],
+            'blog_status' => ['required', 'string', 'min:3', 'max:30'],
+            'meta_title' => ['required', 'string', 'min:3', 'max:30'],
+            'meta_keywords' => ['required', 'string'],
+            'meta_description' => ['required', 'string', 'min:30', 'max:9000']
+        ]);
+
+        if($validate->fails()) {
+            return redirect()->back()->withErrors($validate->errors())->withInput();
+        } else {
+            $blog_post_category_data = BlogPostCategories::where('id', $blog_posts_data['blog_category'])->first();
+            $blog_post_type_data = BlogPostTypes::where('id', $blog_posts_data['blog_type'])->first();
+
+            //Get filename with the extension
+            $imageFileWithExt = $request->file('blog_featured_image')->getClientOriginalName();
+            //Get just filename
+            $filenameImage = pathinfo($imageFileWithExt,PATHINFO_FILENAME);
+            //Get just ext
+            $extensionImage = $request->file('blog_featured_image')->getClientOriginalExtension();
+            //Filename to store
+            $fileNameImageToStore = $filenameImage.'_'.time().'.'.$extensionImage;
+            $pathImage = $request->file('blog_featured_image')->storeAs('public/images/blog-posts-images',$fileNameImageToStore);
+            
+            $data_blog_posts = BlogPosts::create([
+                'user_id' => auth()->user()->id,
+                'user_number' => auth()->user()->user_number,
+                'user_UUID' => auth()->user()->user_UUID,
+                'blog_post_category_id' => $blog_posts_data['blog_category'],
+                'blog_post_category_number' => $blog_post_category_data->blog_post_category_number,
+                'blog_post_category_UUID' => $blog_post_category_data->blog_post_category_UUID,
+                'blog_post_type_id' => $blog_posts_data['blog_type'],
+                'blog_post_type_number' => $blog_post_type_data->blog_post_type_number,
+                'blog_post_type_UUID' => $blog_post_type_data->blog_post_type_UUID,
+                'blog_post_number' => (int)strtotime("now"),
+                'blog_post_UUID' =>  Str::uuid()->toString(),
+                'blog_title' => $blog_posts_data['blog_title'],
+                'blog_slug' => $blog_posts_data['blog_slug'],
+                'blog_body' => $blog_posts_data['blog_body'],
+                'blog_excerpt' => $blog_posts_data['blog_excerpt'],
+                'blog_publish_time' => $blog_posts_data['blog_publish_time'],
+                'blog_publish_date' => $blog_posts_data['blog_publish_date'],
+                'blog_tags' => $blog_posts_data['blog_tags'],
+                'blog_is_featured' => $blog_posts_data['blog_is_featured'],
+                'blog_status' => $blog_posts_data['blog_status'],
+                'meta_title' => $blog_posts_data['meta_title'],
+                'meta_description' => $blog_posts_data['meta_description'],
+                'meta_keywords' => $blog_posts_data['meta_keywords'],
+                'blog_featured_image' => $pathImage,
+                'created_by' => auth()->user()->name,
+                'ratings' => 0,
+                'views' => 0,
+                'updated_by' => auth()->user()->name,
+                'number_of_times_updated' => 0,
+            ]);
+
+            if($data_blog_posts) {
+                return redirect()->route('blog.create')->with('create-blog-success', 'You successfully created a blog post');
+            } else {
+                return redirect()->route('blog.create')->with('create-blog-fail', 'A problem occurred while trying to create a blog post. Please try again.');
+            }
+        }
+    }
+
+    public function show_all_blog_posts()
+    {
+        $all_blog_posts = BlogPosts::paginate(10);
+        return view('pages.auth-pages.blog-pages.pages.blog-index', ['all_blog_posts' => $all_blog_posts, "source"=>"show-all-blog-posts"]);
     }
 
     /**

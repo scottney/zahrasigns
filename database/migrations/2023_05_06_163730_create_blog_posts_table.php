@@ -30,10 +30,10 @@ return new class extends Migration
             $table->string('blog_slug');
             $table->text('blog_body');
             $table->text('blog_excerpt')->nullable();
-            $table->dateTime('blog_publish_time');
+            $table->time('blog_publish_time');
             $table->date('blog_publish_date');
-            $table->string('blog_tags');
-            $table->boolean('blog_is_featured')->default(false);
+            $table->text('blog_tags');
+            $table->boolean('blog_is_featured')->default(0);
             $table->string('blog_status');
             $table->string('meta_title');
             $table->text('meta_description');

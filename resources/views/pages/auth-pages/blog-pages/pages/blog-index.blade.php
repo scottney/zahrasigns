@@ -9,6 +9,18 @@
                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <!-- Start of system notifications area -->
                     @if($source == 'create')
+                        @if(Session::has('create-blog-success'))
+                            <div class="alert alert-success p-1" id="system-notification-container">
+                                <p class="p-1"><b>{!! Session::get('create-blog-success') !!}</b><button type="button" class="btn btn-close float-end" data-bs-dismiss="alert">&times;</button></p>
+                            </div>
+                        @endif
+
+                        @if(Session::has('create-blog-fail'))
+                            <div class="alert alert-danger p-1" id="system-notification-container">
+                                <p class="p-1"><b>{!! Session::get('create-blog-fail') !!}</b><button type="button" class="btn btn-close float-end" data-bs-dismiss="alert">&times;</button></p>
+                            </div>
+                        @endif
+
                         @if($blog_posts_categories_data->isEmpty())
                             @if(Session::has('blog-categories-missing'))
                                 <div class="alert alert-warning p-1" id="system-notification-container">
@@ -63,24 +75,78 @@
                                     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                         <p class="mt-3">Please use the form provided below to create any and all of your blog posts</p>
                                         <p class="pt-1"><b>N.B.</b><span>You can only create a <b><i>single</i></b> blog post at a time</span></p>
-                                        @if(!$blog_posts_categories_data->isEmpty())
-                                            @if($blog_posts_types_data->isEmpty())
-                                                <a href="{{ route('create-blog-post-type') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog type">Create Blog Type</a>
-                                            @else
+                                        
+                                        <div class="row pt-1">
+                                            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 p-3">
+                                                <p class="text-sm"><b>N.B.</b><span>Incase of any errors, all errors will appear here</span></p>
+                                                <div class="border border-dark border-rounded p-3" id="errorArea">
+                                                    @if($errors->any())
+                                                    <ul class="list-group">
+                                                        @foreach($errors->all() as $error)                                
+                                                            <li class="alert alert-danger">
+                                                                <strong class="text-danger"><i class="fa-solid fa-circle-exclamation"></i>{{$error}}</strong>
+                                                                <button type="button" class="btn btn-close float-end" data-bs-dismiss="alert">&times;</button>
+                                                            </li>
+                                                        @endforeach
+                                                    </ul>
+                                                    @endif
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 p-3">
+                                                @if(!$blog_posts_categories_data->isEmpty())
+                                                    @if($blog_posts_types_data->isEmpty())
+                                                        <a href="{{ route('create-blog-post-type') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog type">Create Blog Type</a>
+                                                    @else
+                                                        <a href="{{ route('create-blog-post-category-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog category">Create Blog Category</a>
+                                                        <br>
+                                                        <a href="{{ route('show-all-blog-post-categories') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="View all existing blog categories">View All Blog Categories</a>
+                                                        <br>
+                                                        <a href="{{ route('show-all-blog-posts-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="View all existing blog categories">View All Blog Posts</a>
+                                                        <br>
+                                                        <a href="{{ route('create-blog-post-type') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog type">Create Blog Type</a>
+                                                        <br>
+                                                        <a href="{{ route('view-all-blog-post-types-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="View All Blog Types">View All Blog Types</a>
+                                                    @endif
+                                                @endif
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @elseif($source == 'show-all-blog-posts')
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                        <p class="mt-3">The table below shows all blog posts that exist within the system</p>
+
+                                        <div class="row pt-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                <a href="{{ route('blog.create') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                data-bs-title="Create a new blog post">Create Blog Post</a>
+                                                <br>
+                                                <a href="{{ route('show-all-blog-post-categories') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                data-bs-title="View all existing blog categories">View All Blog Categories</a>
+                                                <br>
                                                 <a href="{{ route('create-blog-post-category-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog category">Create Blog Category</a>
-                                                <br>
-                                                <a href="{{ route('show-all-blog-post-categories') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="View all existing blog categories">View All Blog Categories</a>
-                                                <br>
-                                                <a href="#" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="View all existing blog categories">View All Blog Posts</a>
                                                 <br>
                                                 <a href="{{ route('create-blog-post-type') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog type">Create Blog Type</a>
                                                 <br>
                                                 <a href="{{ route('view-all-blog-post-types-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="View All Blog Types">View All Blog Types</a>
-                                            @endif
-                                        @endif
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row pt-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                <div class="card shadow">
+                                                    <div class="card-body">
+                                                        @include('pages.auth-pages.blog-pages.pages.mini-pages.blog-posts.view-all-blog-posts')
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
-                                </div>    
-                            @endif
+                                </div>
+                            @endif      
 
                             @if($source == 'create-blog-post-category')
                                 <div class="row">
@@ -98,7 +164,7 @@
                                                     <a href="{{ route('blog.create') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
                                                     data-bs-title="Create a new blog post">Create Blog Post</a>
                                                     <br>
-                                                    <a href="#" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                    <a href="{{ route('show-all-blog-posts-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
                                                     data-bs-title="View all existing blog posts">View All Blog Posts</a>
                                                     <br>
                                                     <a href="{{ route('show-all-blog-post-categories') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
@@ -145,7 +211,7 @@
                                                 <a href="{{ route('blog.create') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
                                                 data-bs-title="Create a new blog post">Create Blog Post</a>
                                                 <br>
-                                                <a href="#" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                <a href="{{ route('show-all-blog-posts-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
                                                 data-bs-title="View all existing blog posts">View All Blog Posts</a>
                                                 <br>
                                                 <a href="{{ route('create-blog-post-category-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog category">Create Blog Category</a>
@@ -178,7 +244,7 @@
                                                 <a href="{{ route('blog.create') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
                                                 data-bs-title="Create a new blog post">Create Blog Post</a>
                                                 <br>
-                                                <a href="#" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                <a href="{{ route('show-all-blog-posts-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
                                                 data-bs-title="View all existing blog posts">View All Blog Posts</a>
                                                 <br>
                                                 <a href="{{ route('create-blog-post-category-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog category">Create Blog Category</a>
@@ -214,7 +280,7 @@
                                                 <a href="{{ route('blog.create') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
                                                 data-bs-title="Create a new blog post">Create Blog Post</a>
                                                 <br>
-                                                <a href="#" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                <a href="{{ route('show-all-blog-posts-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
                                                 data-bs-title="View all existing blog posts">View All Blog Posts</a>
                                                 <br>
                                                 <a href="{{ route('create-blog-post-category-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog category">Create Blog Category</a>
@@ -257,7 +323,7 @@
                                                 <a href="{{ route('blog.create') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
                                                 data-bs-title="Create a new blog post">Create Blog Post</a>
                                                 <br>
-                                                <a href="#" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                <a href="{{ route('show-all-blog-posts-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
                                                 data-bs-title="View all existing blog posts">View All Blog Posts</a>
                                                 <br>
                                                 <a href="{{ route('create-blog-post-category-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog category">Create Blog Category</a>
@@ -305,7 +371,7 @@
                                                 <a href="{{ route('blog.create') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
                                                 data-bs-title="Create a new blog post">Create Blog Post</a>
                                                 <br>
-                                                <a href="#" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                <a href="{{ route('show-all-blog-posts-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
                                                 data-bs-title="View all existing blog posts">View All Blog Posts</a>
                                                 <br>
                                                 <a href="{{ route('create-blog-post-category-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog category">Create Blog Category</a>
@@ -338,7 +404,7 @@
                                                 <a href="{{ route('blog.create') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
                                                 data-bs-title="Create a new blog post">Create Blog Post</a>
                                                 <br>
-                                                <a href="#" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                <a href="{{ route('show-all-blog-posts-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
                                                 data-bs-title="View all existing blog posts">View All Blog Posts</a>
                                                 <br>
                                                 <a href="{{ route('create-blog-post-category-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog category">Create Blog Category</a>
@@ -374,7 +440,7 @@
                                                 <a href="{{ route('blog.create') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
                                                 data-bs-title="Create a new blog post">Create Blog Post</a>
                                                 <br>
-                                                <a href="#" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                <a href="{{ route('show-all-blog-posts-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
                                                 data-bs-title="View all existing blog posts">View All Blog Posts</a>
                                                 <br>
                                                 <a href="{{ route('create-blog-post-category-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog category">Create Blog Category</a>
