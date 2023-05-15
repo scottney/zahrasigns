@@ -887,7 +887,9 @@ a[data-tooltip][data-placement="bottom"]::after {
 
 #input_blog_featured_image, #input_blog_title, #input_blog_slug , #input_blog_publish_time, #input_blog_publish_date, #input_blog_status, #input_meta_title, 
 #input_blog_post_category_created_at, #input_blog_post_category_user_name, #input_blog_post_category_name, #input_blog_post_category_slug, #input_blog_post_type_name, 
-#input_blog_post_type_slug, #input_blog_post_category, #input_blog_post_type_created_at, #input_blog_post_type_name {
+#input_blog_post_type_slug, #input_blog_post_category, #input_blog_post_type_created_at, #input_blog_post_type_name, #input_blog_post_name, #input_blog_title, 
+#input_blog_publish_date, #input_blog_publish_time, #input_meta_title, #input_ratings, #input_views, #input_no_of_times_updated, 
+#input_blog_post_created_at {
     border-radius: 25px;
     background: #FFFBE6;
     height: 30px;
@@ -899,7 +901,7 @@ a[data-tooltip][data-placement="bottom"]::after {
     height: 35px;
 }
 
-#input_blog_post_category_description, #input_blog_post_type_description {
+#input_blog_post_category_description, #input_blog_post_type_description, #input_blog_tags, #input_meta_description, #input_meta_keywords, #input_blog_excerpt {
     background: #FFFBE6;
     width: 100%;
 }
@@ -908,7 +910,9 @@ a[data-tooltip][data-placement="bottom"]::after {
 #input_blog_status:hover, #input_meta_title:hover, #input_meta_description:hover, #input_blog_post_category_created_at:hover, #input_blog_post_category_user_name:hover, 
 #input_blog_post_category_name:hover, #input_blog_post_category_slug:hover, #input_blog_post_category_description:hover, #input_blog_post_type_name:hover, 
 #input_blog_post_type_slug:hover, #input_blog_post_type_description:hover, #input_blog_post_category:hover, #input_blog_post_type_created_at:hover, 
-#input_blog_post_type_name:hover, #input_meta_keywords:hover {
+#input_blog_post_type_name:hover, #input_meta_keywords:hover, #input_blog_title:hover, #input_blog_excerpt:hover, #input_blog_publish_date:hover, 
+#input_blog_publish_time:hover, #input_blog_tags:hover, #input_meta_title:hover, #input_meta_description:hover, #input_ratings:hover, #input_views:hover, 
+#input_no_of_times_updated:hover, #input_blog_post_created_at:hover {
     cursor: pointer;
     background: #FFF2B3;
 }

@@ -146,8 +146,43 @@
 
                                     </div>
                                 </div>
-                            @endif      
+                            @elseif($source == 'show-single-blog-post')
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                        <p class="mt-3">Below you can view information about the blog post selected</p>
 
+                                        <div class="row pt-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                <a href="{{ route('blog.create') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                data-bs-title="Create a new blog post">Create Blog Post</a>
+                                                <br>
+                                                <a href="{{ route('show-all-blog-posts-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                data-bs-title="View all existing blog posts">View All Blog Posts</a>
+                                                <br>
+                                                <a href="{{ route('create-blog-post-category-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog category">Create Blog Category</a>
+                                                <br>
+                                                <a href="{{ route('show-all-blog-post-categories') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                data-bs-title="View all existing blog categories">View All Blog Categories</a>
+                                                <br>
+                                                <a href="{{ route('create-blog-post-type') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog type">Create Blog Type</a>
+                                                <br>
+                                                <a href="{{ route('view-all-blog-post-types-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="View All Blog Types">View All Blog Types</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row pt-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                <div class="card shadow">
+                                                    <div class="card-body">
+                                                        @include('pages.auth-pages.blog-pages.pages.mini-pages.blog-posts.view-single-blog-post')
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            @endif      
                             @if($source == 'create-blog-post-category')
                                 <div class="row">
                                     <div class="col-sm12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">

@@ -144,7 +144,6 @@ class BlogController extends Controller
     public function view_all_blog_post_types()
     {
         $blog_post_type_data = BlogPostTypes::with('blog_post_categories')->paginate(10);
-        
         return view('pages.auth-pages.blog-pages.pages.blog-index', ['blog_post_type_data' => $blog_post_type_data, "source" => "view-all-blog-post-types"]);
     }
 
@@ -310,6 +309,12 @@ class BlogController extends Controller
     {
         $all_blog_posts = BlogPosts::paginate(10);
         return view('pages.auth-pages.blog-pages.pages.blog-index', ['all_blog_posts' => $all_blog_posts, "source"=>"show-all-blog-posts"]);
+    }
+
+    public function show_single_blog_post($id)
+    {
+        $single_blog_post = BlogPosts::findOrFail($id);
+        return view('pages.auth-pages.blog-pages.pages.blog-index', ['single_blog_post' => $single_blog_post, "source"=>"show-single-blog-post"]);
     }
 
     /**
