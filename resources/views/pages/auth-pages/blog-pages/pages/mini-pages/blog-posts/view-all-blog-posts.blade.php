@@ -21,8 +21,8 @@
                 <td>{{$abp->ratings}}</td>
                 <td>{{$abp->views}}</td>
                 <td>
-                    <a href="" class="fa-solid fa-pen-to-square" id="edit-button"></a>
-                    <a href="{{ route('view-single-blog-post', $abp->id) }}" class="fa-solid fa-eye" id="view-button"></a>
+                    <a href="{{ route('blog.edit', $abp->id) }}" class="fa-solid fa-pen-to-square" id="edit-button"></a>
+                    <a href="{{ route('blog.show', $abp->id) }}" class="fa-solid fa-eye" id="view-button"></a>
                 </td>
             </tr>
         @endforeach

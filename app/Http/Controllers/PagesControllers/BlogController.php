@@ -311,12 +311,6 @@ class BlogController extends Controller
         return view('pages.auth-pages.blog-pages.pages.blog-index', ['all_blog_posts' => $all_blog_posts, "source"=>"show-all-blog-posts"]);
     }
 
-    public function show_single_blog_post($id)
-    {
-        $single_blog_post = BlogPosts::findOrFail($id);
-        return view('pages.auth-pages.blog-pages.pages.blog-index', ['single_blog_post' => $single_blog_post, "source"=>"show-single-blog-post"]);
-    }
-
     /**
      * Display the specified resource.
      *
@@ -325,7 +319,8 @@ class BlogController extends Controller
      */
     public function show($id)
     {
-        //
+        $single_blog_post = BlogPosts::findOrFail($id);
+        return view('pages.auth-pages.blog-pages.pages.blog-index', ['single_blog_post' => $single_blog_post, "source"=>"show-single-blog-post"]);
     }
 
     /**
@@ -336,7 +331,8 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        //
+        $edit_single_blog_post_data = BlogPosts::findOrFail($id);
+        return view('pages.auth-pages.blog-pages.pages.blog-index', ['edit_single_blog_post_data' => $edit_single_blog_post_data, "source"=>"edit-single-blog"]);
     }
 
     /**
@@ -348,7 +344,33 @@ class BlogController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $blog_data = $request->all();
+
+        Validator::make($blog_data, [
+            'blog_title' => ['string', 'min:3', 'max:75'],
+            'meta_title' => ['string', 'min:3', 'max:30'],
+            'blog_tags' => ['string'],
+            'blog_excerpt' => ['string', 'min:30', 'max:9000'],
+            'meta_keywords' => ['required', 'string'],
+            'meta_description' => ['string', 'min:30', 'max:9000'],
+            'blog_body' => ['string', 'min:300', 'max:900000']
+        ]);
+
+        $blog_post_data = BlogPosts::where('id', $id)->update([
+            'blog_title' => $blog_data['blog_title'],
+            'meta_title' => $blog_data['meta_title'],
+            'blog_tags' => $blog_data['blog_tags'],
+            'blog_excerpt' => $blog_data['blog_excerpt'],
+            'meta_keywords' => $blog_data['meta_keywords'],
+            'meta_description' => $blog_data['meta_description'],
+            'blog_body' => $blog_data['blog_body'],
+        ]);
+        
+        if($blog_post_data) {
+            return redirect()->route('show-all-blog-posts-index')->with('update-blog-post-success', 'You successfully updated the blog post');
+        } else {
+            return redirect()->route('show-all-blog-posts-index')->with('update-blog-post-fail', 'A problem occurred while trying to update the blog post. Please try again.');
+        }
     }
 
     /**

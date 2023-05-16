@@ -699,7 +699,7 @@ a[data-tooltip][data-placement="bottom"]::after {
 
 #selectProfileImageButton, #profileInformationSaveButton, #enableTwoFactorButton, #confirmTwoFactorButton, #browserSessionsButton, 
 #confirmDeleteAccountButton, #createBlogPostButton, #profileInformationPasswordSaveButton, #createBlogPostCategoryButton, 
-#updateBlogCategoryButton, #createBlogPostTypeButton, #updateBlogTypeButton {
+#updateBlogCategoryButton, #createBlogPostTypeButton, #updateBlogTypeButton, #updateBlogPostButton {
     border-radius: 25px;
     box-shadow: 2px 2px 2px 2px #000000;
     background: #001166;
@@ -735,7 +735,8 @@ a[data-tooltip][data-placement="bottom"]::after {
 #selectProfileImageButton:hover, #profileInformationSaveButton:hover, #enableTwoFactorButton:hover, 
 #confirmTwoFactorButton:hover, #browserSessionsButton:hover, #confirmDeleteAccountButton:hover, 
 #createBlogPostButton:hover, #profileInformationPasswordSaveButton:hover, #createBlogPostCategoryButton:hover, 
-#updateBlogCategoryButton:hover, #createBlogPostTypeButton:hover, #updateBlogTypeButton:hover {
+#updateBlogCategoryButton:hover, #createBlogPostTypeButton:hover, #updateBlogTypeButton:hover, 
+#updateBlogPostButton:hover {
     background: #116600;
 }
 
@@ -758,7 +759,8 @@ a[data-tooltip][data-placement="bottom"]::after {
 #cancelBrowserSessionsButton span, #deleteAccountButton span, #closeApiTokenButton span, 
 #cancelApiTokenButton span, #deleteApiTokenDeleteButton span, #confirmDeleteAccountButton span, 
 #createBlogPostButton span, #profileInformationPasswordSaveButton span, #createBlogPostCategoryButton span, 
-#updateBlogCategoryButton span, #createBlogPostTypeButton span, #updateBlogTypeButton span {
+#updateBlogCategoryButton span, #createBlogPostTypeButton span, #updateBlogTypeButton span, 
+#updateBlogPostButton span {
     display: inline-block;
     position: relative;
     transition: 0.5s;
@@ -771,7 +773,7 @@ a[data-tooltip][data-placement="bottom"]::after {
 #cancelApiTokenButton span:after, #deleteApiTokenDeleteButton span:after, #confirmDeleteAccountButton span:after, 
 #createBlogPostButton span:after, #profileInformationPasswordSaveButton span:after, 
 #createBlogPostCategoryButton span:after, #updateBlogCategoryButton span:after, #createBlogPostTypeButton span:after, 
-#updateBlogTypeButton span:after {
+#updateBlogTypeButton span:after, #updateBlogPostButton span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -787,7 +789,7 @@ a[data-tooltip][data-placement="bottom"]::after {
 #cancelApiTokenButton:hover span, #deleteApiTokenDeleteButton:hover span, #confirmDeleteAccountButton:hover span, 
 #createBlogPostButton:hover span, #profileInformationPasswordSaveButton:hover span, 
 #createBlogPostCategoryButton:hover span, #updateBlogCategoryButton:hover span, #createBlogPostTypeButton:hover span, 
-#updateBlogTypeButton:hover span {
+#updateBlogTypeButton:hover span, #updateBlogPostButton:hover span {
     padding-right: 25px;
 }
 
@@ -797,7 +799,8 @@ a[data-tooltip][data-placement="bottom"]::after {
 #cancelBrowserSessionsButton:hover span:after, #deleteAccountButton:hover span:after, #closeApiTokenButton:hover span:after, 
 #cancelApiTokenButton:hover span:after, #deleteApiTokenDeleteButton:hover span:after, #confirmDeleteAccountButton:hover span:after, 
 #createBlogPostButton:hover span:after, #profileInformationPasswordSaveButton:hover span:after, #createBlogPostCategoryButton:hover span:after, 
-#updateBlogCategoryButton:hover span:after, #createBlogPostTypeButton:hover span:after, #updateBlogTypeButton:hover span:after {
+#updateBlogCategoryButton:hover span:after, #createBlogPostTypeButton:hover span:after, #updateBlogTypeButton:hover span:after, 
+#updateBlogPostButton:hover span:after {
     opacity: 1;
     right: 0;
 }
@@ -901,7 +904,8 @@ a[data-tooltip][data-placement="bottom"]::after {
     height: 35px;
 }
 
-#input_blog_post_category_description, #input_blog_post_type_description, #input_blog_tags, #input_meta_description, #input_meta_keywords, #input_blog_excerpt {
+#input_blog_post_category_description, #input_blog_post_type_description, #input_blog_tags, #input_meta_description, #input_meta_keywords, 
+#input_blog_excerpt {
     background: #FFFBE6;
     width: 100%;
 }
@@ -952,6 +956,10 @@ a[data-tooltip][data-placement="bottom"]::after {
 #view-button:hover {
     cursor: pointer;
     box-shadow: 1px 2px 2px 2px #000;
+}
+
+#text-area-container {
+    height: 1800px;
 }
 
 /******************************* End of blog styling *******************************/

@@ -72,7 +72,6 @@ Route::group(['middleware' => ['XSS']], function() {
                     Route::get('blog/edit/post/type/{id}', 'BlogController@edit_blog_post_type')->name('edit-single-blog-post');
                     Route::post('blog/edit/post/type/{id}', 'BlogController@update_blog_post_type')->name('update-single-blog-post');
                     Route::get('blog/show/all/blog/posts', 'BlogController@show_all_blog_posts')->name('show-all-blog-posts-index');
-                    Route::get('blog/view/single/post/{id}', 'BlogController@show_single_blog_post')->name('view-single-blog-post');
                     Route::resource('blog', 'BlogController');
 
                 });

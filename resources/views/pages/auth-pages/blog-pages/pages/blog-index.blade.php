@@ -114,6 +114,17 @@
                                     </div>
                                 </div>
                             @elseif($source == 'show-all-blog-posts')
+                                @if(Session::has('update-blog-post-success'))
+                                    <div class="alert alert-success p-1" id="system-notification-container">
+                                        <p class="p-1"><b>{!! Session::get('update-blog-post-success') !!}</b><button type="button" class="btn btn-close float-end" data-bs-dismiss="alert">&times;</button></p>
+                                    </div>
+                                @endif
+
+                                @if(Session::has('update-blog-post-fail'))
+                                    <div class="alert alert-danger p-1" id="system-notification-container">
+                                        <p class="p-1"><b>{!! Session::get('update-blog-post-fail') !!}</b><button type="button" class="btn btn-close float-end" data-bs-dismiss="alert">&times;</button></p>
+                                    </div>
+                                @endif
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                         <p class="mt-3">The table below shows all blog posts that exist within the system</p>
@@ -175,6 +186,42 @@
                                                 <div class="card shadow">
                                                     <div class="card-body">
                                                         @include('pages.auth-pages.blog-pages.pages.mini-pages.blog-posts.view-single-blog-post')
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            @elseif($source == 'edit-single-blog-post')
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                        <p class="mt-3">Below you can edit information about the blog post selected</p>
+
+                                        <div class="row pt-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                <a href="{{ route('blog.create') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                data-bs-title="Create a new blog post">Create Blog Post</a>
+                                                <br>
+                                                <a href="{{ route('show-all-blog-posts-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                data-bs-title="View all existing blog posts">View All Blog Posts</a>
+                                                <br>
+                                                <a href="{{ route('create-blog-post-category-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog category">Create Blog Category</a>
+                                                <br>
+                                                <a href="{{ route('show-all-blog-post-categories') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                                data-bs-title="View all existing blog categories">View All Blog Categories</a>
+                                                <br>
+                                                <a href="{{ route('create-blog-post-type') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Create a new blog type">Create Blog Type</a>
+                                                <br>
+                                                <a href="{{ route('view-all-blog-post-types-index') }}" class="float-end" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="View All Blog Types">View All Blog Types</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row pt-3">
+                                            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                <div class="card shadow">
+                                                    <div class="card-body">
+                                                        @include('pages.auth-pages.blog-pages.pages.mini-pages.blog-posts.edit-single-blog-post')
                                                     </div>
                                                 </div>
                                             </div>
@@ -429,7 +476,7 @@
 
                                     </div>
                                 </div>
-                            @elseif($source == 'view-single-blog-post')
+                            @elseif($source == 'view-single-blog-post-type')
                                 <div class="row">
                                     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                         <p class="mt-3">Below you can view information about the blog post type selected</p>
@@ -507,7 +554,6 @@
 
                 </div>
             </div>
-
             @if($source == 'create')
                 <div class="row pt-3">
                     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
